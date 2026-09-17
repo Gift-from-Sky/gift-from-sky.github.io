@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>生成AI横並び検証室｜注力媒体ランキングと投稿計画（Claude案 v3）</title>
+<meta name="description" content="生成AI横並び検証室｜SNS媒体選定と投稿計画の分析（Claude側の回答全文）">
+<style>
+:root{--ink:#1f2933;--muted:#5b6b7a;--line:#dfe5ea;--accent:#1f5f8b;--accent-bg:#eef4f9;--zebra:#f7f9fb;--note-bg:#fff8e6;--note-line:#f0d58c}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;font-size:16px;line-height:1.9;font-feature-settings:"palt"}
+.wrap{max-width:880px;margin:0 auto;padding:24px 16px 64px}
+header.top{border-bottom:2px solid var(--accent);padding:8px 0 16px;margin-bottom:24px}
+header.top .kicker{color:var(--accent);font-size:13px;letter-spacing:.08em;font-weight:700;margin:0 0 4px}
+header.top h1{font-size:22px;line-height:1.5;margin:0 0 8px}
+header.top .meta{color:var(--muted);font-size:13px;margin:0}
+nav.toc{background:var(--accent-bg);border-radius:10px;padding:12px 16px;margin:0 0 28px;font-size:14px}
+nav.toc p{margin:0 0 4px;font-weight:700;color:var(--accent)}
+nav.toc ul{margin:0;padding-left:0;list-style:none;columns:2;column-gap:24px}
+nav.toc li{break-inside:avoid;margin:2px 0}
+nav.toc a{color:var(--ink);text-decoration:none;display:block;padding:2px 0 2px 12px;border-left:3px solid var(--line)}
+nav.toc a:hover{text-decoration:underline}
+h2{font-size:20px;line-height:1.5;margin:44px 0 14px;padding-left:12px;border-left:5px solid var(--accent)}
+h2.deliv{background:var(--accent-bg);border-left-color:var(--accent);padding:8px 12px;border-radius:0 8px 8px 0}
+h3{font-size:17px;line-height:1.6;margin:30px 0 10px;color:var(--accent)}
+p{margin:0 0 16px}
+a{color:var(--accent)}
+a.cite{text-decoration:none;font-size:.85em;color:var(--muted);white-space:nowrap}
+a.cite:hover{text-decoration:underline}
+hr{border:0;border-top:1px solid var(--line);margin:32px 0}
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 20px;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.6}
+th,td{border-bottom:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--accent-bg);color:var(--accent);font-weight:700;white-space:nowrap}
+tbody tr:nth-child(even) td{background:var(--zebra)}
+td{min-width:4em}
+.note{background:var(--note-bg);border:1px solid var(--note-line);border-radius:8px;padding:12px 14px;margin:0 0 20px;font-size:15px}
+.srclist{display:grid;grid-template-columns:1fr;gap:10px;margin:0 0 20px}
+.src{border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:14px;line-height:1.7}
+.src-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+.src .num{font-weight:700;color:var(--accent)}
+.src .kind{font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:0 8px}
+.src p{margin:0 0 4px}
+.src-title{font-weight:600}
+.src-url{word-break:break-all;font-size:13px}
+.src-support{color:var(--muted)}
+.rev{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+.rev h2{font-size:15px;border:0;padding:0;margin:0 0 6px;color:var(--muted)}
+.rev ul{margin:0;padding-left:20px}
+@media (max-width:600px){
+  body{font-size:15px}
+  .wrap{padding:16px 14px 48px}
+  header.top h1{font-size:19px}
+  nav.toc ul{columns:1}
+  h2{font-size:18px}
+  table{font-size:13px}
+  th,td{padding:6px 8px}
+}
+@media print{
+  .wrap{max-width:none;padding:0}
+  nav.toc{display:none}
+  .tbl{border:0;overflow:visible}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<p class="kicker">生成AI横並び検証室｜最上位プラン検証</p>
+<h1>生成AI横並び検証室｜注力媒体ランキングと投稿計画（Claude案 v3）</h1>
+<p class="meta">Claude側の回答全文（v3）｜調査基準日 2026年9月16日</p>
+</header>
+<nav class="toc"><p>目次</p><ul><li><a href="#sec-納品物1媒体ランキング投稿計画の統合表">【納品物1】媒体ランキング・投稿計画の統合表</a></li><li><a href="#sec-納品物2継続媒体の投稿計画note">【納品物2】継続媒体の投稿計画（note）</a></li><li><a href="#sec-1結論の要約と実際に運用する媒体の組み合わせ">1. 結論の要約と、実際に運用する媒体の組み合わせ</a></li><li><a href="#sec-2読者の整理と媒体の評価基準">2. 読者の整理と媒体の評価基準</a></li><li><a href="#sec-3媒体ランキングの根拠">3. 媒体ランキングの根拠</a></li><li><a href="#sec-4投稿形式頻度曜日時間帯の根拠">4. 投稿形式・頻度・曜日・時間帯の根拠</a></li><li><a href="#sec-5週40時間以内の作業配分と週間スケジュール例">5. 週40時間以内の作業配分と週間スケジュール例</a></li><li><a href="#sec-6不確実な点と運用開始後に検証すべき項目">6. 不確実な点と、運用開始後に検証すべき項目</a></li><li><a href="#sec-主要な判断と出典の対応表">主要な判断と出典の対応表</a></li></ul></nav>
+<h2 id="sec-納品物1媒体ランキング投稿計画の統合表" class="deliv">【納品物1】媒体ランキング・投稿計画の統合表</h2>
+<p>曜日・時間帯は、今回の条件で読者側の根拠から選んだ第一候補です。作業工程の都合は反映していません（作業との調整は本文5章の注釈）。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th style="text-align: center;">順位</th>
+<th>媒体・投稿形式</th>
+<th>投稿頻度</th>
+<th>曜日</th>
+<th>時間帯（日本時間）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td>YouTube・長尺動画（5〜8分）</td>
+<td>週1本</td>
+<td>日</td>
+<td>21:00</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td>YouTube・ショート（45秒前後）</td>
+<td>週3本</td>
+<td>月・水・土</td>
+<td>21:00</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>X・検証結果投稿（本文＋返信3・画像4）</td>
+<td>週2本</td>
+<td>火・木</td>
+<td>21:00</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>X・補助投稿（数値画像1枚＋短文）</td>
+<td>週3本</td>
+<td>月・水・金</td>
+<td>21:00</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td>Instagram・カルーセル（画像4〜6枚）</td>
+<td>週2本</td>
+<td>火・木</td>
+<td>21:00</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td>Instagram・リール（ショートと同一動画）</td>
+<td>週3本</td>
+<td>月・水・土</td>
+<td>21:00</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>Threads・検証結果投稿（本文＋返信・画像）</td>
+<td>週2本</td>
+<td>火・木</td>
+<td>21:00</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>Threads・補助投稿（数値画像1枚＋短文）</td>
+<td>週3本</td>
+<td>月・水・金</td>
+<td>21:00</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td>TikTok・縦動画（ショートと同一動画）</td>
+<td>週3本</td>
+<td>月・水・土</td>
+<td>21:00</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td>Pinterest・結果画像ピン（2:3、noteリンク）</td>
+<td>条件付き・当面なし</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td>LinkedIn・テキスト投稿／記事</td>
+<td>見送り</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="sec-納品物2継続媒体の投稿計画note" class="deliv">【納品物2】継続媒体の投稿計画（note）</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>媒体・投稿形式</th>
+<th>投稿頻度</th>
+<th>曜日</th>
+<th>時間帯（日本時間）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>note・検証記事（全文・全データ、無料）</td>
+<td>週2本</td>
+<td>火・木</td>
+<td>20:00</td>
+</tr>
+<tr>
+<td>note・検証一覧（固定記事）の更新</td>
+<td>週1回</td>
+<td>木</td>
+<td>20:30</td>
+</tr>
+</tbody>
+</table></div>
+<div class="note">媒体順位は、想定読者・発信内容・目的と公開情報に基づく提案です。投稿頻度・曜日・時間帯は初期検証のための仮説を含み、このアカウントで効果を実証したものではありません。</div>
+<hr />
+<h2 id="sec-根拠の本文">根拠の本文</h2>
+<h3 id="sec-1結論の要約と実際に運用する媒体の組み合わせ">1. 結論の要約と、実際に運用する媒体の組み合わせ</h3>
+<p>調査基準日は2026年9月16日です。運用する組み合わせは、YouTube（ショート＋長尺）を発見と理解の主軸、Xをテキストと数値の主軸、InstagramとThreadsは同じ素材の再利用で継続、TikTokは縦動画の再利用のみに縮小、の5媒体と原典のnote週2本です。Pinterestは条件付きで当面は含めず、LinkedInは見送ります。週2回の検証（固定12時間）を起点に、SNS向けの制作・投稿・分析を約20時間と見積もり、予備8時間を含めて週40時間に収めます。順位は5基準による筆者の判断で実測ではなく、時間帯は日本の公的調査で最も利用者が多い21時台に全媒体を揃え、曜日は平日と休日の利用時間の差から決めた「最初に試す仮説」です。</p>
+<p>閲覧できたのはYouTubeとnoteで、「最上位プラン同士を同じ指示で比較、全記事無料」の趣旨を確認しました。他の4媒体は自動取得が拒否されたため、発信内容は依頼文に基づきます。</p>
+<h3 id="sec-2読者の整理と媒体の評価基準">2. 読者の整理と媒体の評価基準</h3>
+<p>想定読者は、自分のお金で月3万円程度のAI課金を検討中、または継続・乗り換えを検討中の日本語読者です。用途は幅広いものの、必要な判断材料は共通で、成果物の実物、所要時間、人間の介入と手間、使用量、検証条件（プラン・モデル・指示文）、複数の検証を横に比べられる一貫性の6点です。</p>
+<p>読者の規模を直接示す調査はなく、代わりに総務省の令和8年版情報通信白書（インターネット調査、2026年1〜2月、日本1,236件）では生成AIの利用経験58.8%<a class="cite" href="#src-S2">[S2]</a>、野村総合研究所の4か国調査（2025年9月、インターネット調査、15〜69歳、日本3,148人）では月数回以上の利用者が34.9%、利用者のうち自分でお金を払う人は15.5%です<a class="cite" href="#src-S3">[S3]</a>。有料利用者は少数派で、月3万円級を検討する層はさらに少ないと推論できます。したがって「利用者が多い媒体」と「この読者に届く媒体」は別物で、フォロワー外にも興味で配信する推薦や検索、成果物を見せられる形式、続けて見てもらう仕組みが要ります。年代や性別では絞りません。若い層ほど利用経験率が高い<a class="cite" href="#src-S2">[S2]</a>一方、月3万円の課金は可処分所得と結びつくため、20〜50代を中心に幅広く想定します（推論）。用途別の違いは媒体ではなく検証テーマ（仕事なら資料・HP、副業・創作なら動画・画像、学習ならアプリ）で対応します。</p>
+<p>以上から、媒体は5基準で評価します。発見（フォロワー外に届く推薦・検索の仕組みと日本での利用率）、理解（成果物・数値・条件を媒体内で伝えられる形式）、継続（フォロー通知・シリーズ化・寿命）、導線（noteへのクリック可能なリンク）、制作負荷（既存素材の再利用性）です。重みは発見と理解を最重視し、継続、導線、制作負荷の順で、これも筆者の判断です。</p>
+<h3 id="sec-3媒体ランキングの根拠">3. 媒体ランキングの根拠</h3>
+<p>下表の◎○△は筆者の判断で実測値ではなく、細かな点差はつけていません。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>媒体</th>
+<th style="text-align: center;">発見</th>
+<th style="text-align: center;">理解</th>
+<th style="text-align: center;">継続</th>
+<th style="text-align: center;">導線</th>
+<th style="text-align: center;">制作負荷</th>
+<th>推奨判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>YouTube</td>
+<td style="text-align: center;">◎</td>
+<td style="text-align: center;">◎</td>
+<td style="text-align: center;">◎</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">△</td>
+<td>重点化</td>
+</tr>
+<tr>
+<td>X</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">◎</td>
+<td style="text-align: center;">◎</td>
+<td>重点化</td>
+</tr>
+<tr>
+<td>Instagram</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">△</td>
+<td style="text-align: center;">◎</td>
+<td>継続</td>
+</tr>
+<tr>
+<td>Threads</td>
+<td style="text-align: center;">△</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">◎</td>
+<td style="text-align: center;">◎</td>
+<td>継続</td>
+</tr>
+<tr>
+<td>TikTok</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">△</td>
+<td style="text-align: center;">△</td>
+<td style="text-align: center;">△</td>
+<td style="text-align: center;">◎</td>
+<td>縮小</td>
+</tr>
+<tr>
+<td>Pinterest</td>
+<td style="text-align: center;">△</td>
+<td style="text-align: center;">△</td>
+<td style="text-align: center;">△</td>
+<td style="text-align: center;">◎</td>
+<td style="text-align: center;">○</td>
+<td>条件付き・当面なし</td>
+</tr>
+<tr>
+<td>LinkedIn</td>
+<td style="text-align: center;">△</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">△</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">△</td>
+<td>見送り</td>
+</tr>
+</tbody>
+</table></div>
+<p>YouTube（1位）。総務省の令和7年度調査（2025年12月、13〜79歳1,800人）で利用率81.5%、30代94.0%、40代91.6%、50代84.9%と、全年代に最も広く届きます<a class="cite" href="#src-S1">[S1]</a>。公式ヘルプは、おすすめが視聴履歴・視聴時間・満足度調査で決まること<a class="cite" href="#src-S9">[S9]</a>、ショートは発見に役立ち長尺に悪影響がないこと<a class="cite" href="#src-S5">[S5]</a>を明記しています。長尺なら成果物の操作画面・数値・条件を媒体内で見せられ、登録で継続につながります。公式が「アップロード間隔と視聴回数の増加は相関しない」「休止にペナルティはない」とする点<a class="cite" href="#src-S4">[S4]</a>は、週1本の長尺を続ける根拠です。弱点は長尺の制作負荷と、ショートの説明欄・コメントのURLがクリックできないこと<a class="cite" href="#src-S7">[S7]</a>で、後者は関連動画リンク<a class="cite" href="#src-S10">[S10]</a>で補います。</p>
+<p>X（2位）。利用率44.7%、20代73.4%、30代67.7%、40代57.0%<a class="cite" href="#src-S1">[S1]</a>。280字と画像4枚<a class="cite" href="#src-S25">[S25]</a>で数値と成果物画像を最も速く出せ、返信ツリーに詳細を積め、本文にリンクを置けます。2026年1月公開のアルゴリズムのコードでは、反応・クリック・滞在の予測確率の加重和でスコアを決め、外部リンクを減点する項は見当たりません<a class="cite" href="#src-S26">[S26]</a>。リンク投稿の扱いは、経営陣が2026年7月に「返信に置く必要はもうない」「1年以上前から」と述べています<a class="cite" href="#src-S27">[S27]</a>が、公式文書ではなく発言です。弱点は投稿の寿命の短さ、強みは制作負荷の小ささです。</p>
+<p>Instagram（3位）。利用率54.8%、20代82.6%、30代76.6%、40代67.1%<a class="cite" href="#src-S1">[S1]</a>。公式は、適格な投稿をフォロワー外の小規模な視聴者にまず表示し独自コンテンツを優先すること<a class="cite" href="#src-S16">[S16]</a>、3分以下のリールをフォロワー外に推薦すること<a class="cite" href="#src-S15">[S15]</a><a class="cite" href="#src-S17">[S17]</a>、成長上位が月10本以上のリールを投稿していること<a class="cite" href="#src-S15">[S15]</a>を示し、主要な信号は視聴時間・いいね・送信だと責任者が述べています<a class="cite" href="#src-S18">[S18]</a>。最大20枚のカルーセルに要約を置けば、リンクを踏まなくても媒体内で理解できます。弱点はリンクがプロフィールとストーリーズに限られる点です。</p>
+<p>Threads（4位）。500字・リンク・画像・5分動画<a class="cite" href="#src-S20">[S20]</a>に加え、2025年9月から1万字の本文添付ができ<a class="cite" href="#src-S22">[S22]</a>、要約を媒体内に置けます。Metaは週2〜5回の投稿、返信が閲覧の約半分、週末投稿の効果を示します<a class="cite" href="#src-S21">[S21]</a>が、算出方法は非公開です。リンクは降格しないがクリック確率を重視しないという責任者の発言と、2025年の改善の発言があります<a class="cite" href="#src-S23">[S23]</a>。最大の不確実性は日本の利用規模を示す公的データがないことです（総務省調査の項目外<a class="cite" href="#src-S1">[S1]</a>）。Xと同じ素材で追加負荷がほぼゼロのため継続します。</p>
+<p>TikTok（5位）。利用率36.7%、30代44.7%、40代42.6%<a class="cite" href="#src-S1">[S1]</a>。公式発表の日本の月間利用者は約4,950万（2026年5月末、Lite含む）です<a class="cite" href="#src-S12">[S12]</a>。おすすめはフォロワー数に依らない<a class="cite" href="#src-S11">[S11]</a>ため新規発見の力はあります。弱点は数値中心の内容との相性、継続の仕組み、プロフィールのリンクに1,000フォロワーかビジネスアカウントが要ること<a class="cite" href="#src-S13">[S13]</a>、予約がビジネスアカウントのWeb投稿に限られること<a class="cite" href="#src-S14">[S14]</a>です。縦動画の再利用に絞れば負荷はほぼゼロなので継続します。4位との差は小さいです。</p>
+<p>Pinterest（6位）。ピンにリンクを付けられ、公式は「数時間後から数年後まで反応が続く」「週1回は独自コンテンツを」とし<a class="cite" href="#src-S29">[S29]</a>、予約はビジネスアカウントで30日先・最大10件です<a class="cite" href="#src-S28">[S28]</a>。日本の利用者は870万人（2021年、ニールセン調べ）<a class="cite" href="#src-S30">[S30]</a>、広告リーチ推計922万（2025年初、MAUではない）<a class="cite" href="#src-S31">[S31]</a>と小さめです。検索型で寿命が長い性質はnote記事の長期閲覧<a class="cite" href="#src-S35">[S35]</a>と相性がよい一方、AI比較というテーマの需要を示す根拠がなく、議論や継続の仕組みも弱いため当面は含めません。条件は「主要4媒体の週次運用が4週安定すること」で、満たせば月10ピンの試験に入ります。</p>
+<p>LinkedIn（7位）。日本の会員は2025年12月に500万人<a class="cite" href="#src-S32">[S32]</a>。業務・キャリア文脈の場で、企業の購買担当者を主対象にしない前提と合わないため見送ります。Facebook・LINE VOOM・Bluesky等は、フォロワー外に届く仕組みを確認していないため対象外です。</p>
+<h3 id="sec-4投稿形式頻度曜日時間帯の根拠">4. 投稿形式・頻度・曜日・時間帯の根拠</h3>
+<p>素材の流れ（1検証あたり）。note記事と結果画像（4:5、4枚）は固定の6時間内で作り、そこから縦動画1本（ショート・リール・TikTok共通、40〜45秒）、X・Threadsの検証結果投稿（本文＋結果画像＋返信）、Instagramカルーセル（結果画像に表紙1枚）を派生させ、週1本の長尺はその週の2検証をまとめます。縦動画は3組の数字と成果物の画面、カルーセルは条件・数値・成果物画像の順、Xは数値の速報と本文リンク、Threadsは同文にトピック「生成AI」、長尺は成果物の操作画面を主役にします。どの媒体でも結論と主要数値を隠さず、noteは「全データを見たい人」向けの導線とします。ショート・リール・TikTokは説明欄のURLが機能しないか条件付きのため<a class="cite" href="#src-S7">[S7]</a><a class="cite" href="#src-S13">[S13]</a>、媒体内で完結する要約が必須です。</p>
+<p>頻度の根拠。縦動画週3本は、Instagram公式の「成長上位は月10本以上のリール」<a class="cite" href="#src-S15">[S15]</a>と、YouTube公式の「頻度より一貫した品質」<a class="cite" href="#src-S9">[S9]</a>から、月13本前後の持続可能な水準にしました。長尺週1本は、公式が休止や間隔を問題にしない<a class="cite" href="#src-S4">[S4]</a>ため固定枠を優先した数です。X・Threads週5本はMetaの「週2〜5回」<a class="cite" href="#src-S21">[S21]</a>の上限側で、Xに公式指針はなく仮説です。カルーセル週2本は検証数と同数です。</p>
+<p>曜日・時間帯の根拠。時間帯の主な根拠は総務省令和7年度調査の「時間帯別行為者率（インターネット利用、全年代）」です。平日は21時台40.1%が最大で、20〜22時台が35%超、12時台34.2%が日中の山です。休日も21時台39.7%が最大で、午前から午後は23〜28%と平坦です<a class="cite" href="#src-S1">[S1]</a>。平日・休日を問わず最も多くの人がネットを使う1時間は21時台で、これが全媒体で21:00を第一候補にした理由です。ビデオリサーチの関東調査（2025年4〜6月、12〜69歳、標本数の記載なし、平日のみ）も、X利用の最大の山を21〜22時台としています<a class="cite" href="#src-S36">[S36]</a>。曜日の根拠は弱くなります。休日は「動画投稿・共有サービスを見る」時間（平日54.5分、休日73.1分）と「ソーシャルメディアを見る・書く」時間（36.2分、45.4分）が長い<a class="cite" href="#src-S1">[S1]</a>ため、長尺は日曜、縦動画の1本は土曜に置きます。X・Threads・カルーセルの火・木は、平日21時台の山と海外ベンダー調査の中日傾向<a class="cite" href="#src-S37">[S37]</a><a class="cite" href="#src-S38">[S38]</a>によりますが、日本の内訳がなく結論も互いに異なるので根拠は低です。行為者率は利用者の割合であり、投稿が読まれる確率ではなく、競合投稿の影響も不明です。以下はすべて検証用の仮説です。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>媒体・形式</th>
+<th>候補</th>
+<th style="text-align: center;">推奨度</th>
+<th style="text-align: center;">根拠の強さ</th>
+<th>根拠（事実）と仮説</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>縦動画（ショート・リール・TikTok）</td>
+<td>月・水・土 21:00</td>
+<td style="text-align: center;">◎</td>
+<td style="text-align: center;">中</td>
+<td>平日・休日とも21時台が最大、休日は動画視聴時間が長い<a class="cite" href="#src-S1">[S1]</a></td>
+</tr>
+<tr>
+<td>同上</td>
+<td>平日 12:00</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">中</td>
+<td>12時台は日中の山<a class="cite" href="#src-S1">[S1]</a>。昼向き（仮説）</td>
+</tr>
+<tr>
+<td>YouTube 長尺</td>
+<td>日 21:00</td>
+<td style="text-align: center;">◎</td>
+<td style="text-align: center;">中</td>
+<td>休日21時台が最大、休日は動画視聴時間が長い<a class="cite" href="#src-S1">[S1]</a>。土日の差は根拠なし</td>
+</tr>
+<tr>
+<td>同上</td>
+<td>土 21:00</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">低</td>
+<td>同上。土日の差は仮説</td>
+</tr>
+<tr>
+<td>X・Threads 検証結果／補助</td>
+<td>火・木／月・水・金 21:00</td>
+<td style="text-align: center;">◎</td>
+<td style="text-align: center;">時間帯は中、曜日は低</td>
+<td>21時台が最大<a class="cite" href="#src-S1">[S1]</a><a class="cite" href="#src-S36">[S36]</a>。中日は海外調査の傾向<a class="cite" href="#src-S37">[S37]</a></td>
+</tr>
+<tr>
+<td>同上</td>
+<td>土 21:00</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">低</td>
+<td>休日はSNS利用時間が長い<a class="cite" href="#src-S1">[S1]</a>。Metaの週末説<a class="cite" href="#src-S21">[S21]</a>（方法非公開）</td>
+</tr>
+<tr>
+<td>同上</td>
+<td>月・水・金 12:00</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">中</td>
+<td>12時台の山<a class="cite" href="#src-S1">[S1]</a>。画像1枚は昼向き（仮説）</td>
+</tr>
+<tr>
+<td>Instagram カルーセル</td>
+<td>火・木 21:00</td>
+<td style="text-align: center;">◎</td>
+<td style="text-align: center;">中</td>
+<td>21時台が最大<a class="cite" href="#src-S1">[S1]</a>。公式は活動時間を推奨<a class="cite" href="#src-S15">[S15]</a></td>
+</tr>
+<tr>
+<td>note 検証記事</td>
+<td>火・木 20:00</td>
+<td style="text-align: center;">◎</td>
+<td style="text-align: center;">低</td>
+<td>公式データなし<a class="cite" href="#src-S35">[S35]</a>。20時台は35%超<a class="cite" href="#src-S1">[S1]</a>。21時の告知前に公開（仮説）</td>
+</tr>
+<tr>
+<td>同上</td>
+<td>火・木 12:00</td>
+<td style="text-align: center;">○</td>
+<td style="text-align: center;">低</td>
+<td>昼にnote読者へ、夜にSNSで二度目の山（仮説）</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="sec-5週40時間以内の作業配分と週間スケジュール例">5. 週40時間以内の作業配分と週間スケジュール例</h3>
+<p>作業時間の配分（検証2回の週。AIの処理待ちは含めず、確認・修正・投稿作業は含む）</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>工程</th>
+<th style="text-align: right;">週の時間</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>検証の実施〜note記事完成（2回）</td>
+<td style="text-align: right;">12.0</td>
+<td>固定前提。結果画像もここで作成</td>
+</tr>
+<tr>
+<td>縦動画3本＋長尺1本の制作</td>
+<td style="text-align: right;">8.5</td>
+<td>見積もり。縦1.5時間×3、長尺4時間</td>
+</tr>
+<tr>
+<td>Instagramカルーセル（2本）</td>
+<td style="text-align: right;">1.0</td>
+<td>見積もり</td>
+</tr>
+<tr>
+<td>X・Threadsの投稿（検証結果各2本、補助各3本）</td>
+<td style="text-align: right;">3.5</td>
+<td>見積もり。返信ツリー含む</td>
+</tr>
+<tr>
+<td>縦動画の投稿（3媒体×3本、予約）</td>
+<td style="text-align: right;">1.5</td>
+<td>見積もり</td>
+</tr>
+<tr>
+<td>コメント・返信対応（平日）</td>
+<td style="text-align: right;">3.0</td>
+<td>見積もり</td>
+</tr>
+<tr>
+<td>計測・週次分析・翌週計画、note一覧更新</td>
+<td style="text-align: right;">2.5</td>
+<td>見積もり</td>
+</tr>
+<tr>
+<td>予備（作り直し・不具合・学習）</td>
+<td style="text-align: right;">8.0</td>
+<td></td>
+</tr>
+<tr>
+<td>合計</td>
+<td style="text-align: right;">40.0</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>週間スケジュール例（作業日は月〜金）</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>曜日</th>
+<th>人間の作業（見積もり）</th>
+<th>公開されるもの</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>月</td>
+<td>検証A〜note記事A（6h）、返信・投稿準備（7.5h）</td>
+<td>21:00 縦動画①（先週まとめ）、補助①</td>
+</tr>
+<tr>
+<td>火</td>
+<td>縦動画A、カルーセルA、投稿文と計測リンク、検証結果A＋返信ツリー（5h）</td>
+<td>20:00 note A、21:00 検証結果A・カルーセルA</td>
+</tr>
+<tr>
+<td>水</td>
+<td>検証B〜note記事B（6h）、返信（7h）</td>
+<td>21:00 縦動画②（A）、補助②</td>
+</tr>
+<tr>
+<td>木</td>
+<td>縦動画B、カルーセルB、長尺の録画、検証結果B（7h）</td>
+<td>20:00 note B・一覧更新、21:00 検証結果B・カルーセルB</td>
+</tr>
+<tr>
+<td>金</td>
+<td>長尺の仕上げ、週まとめ縦動画、翌週の予約、週次分析（6.5h）</td>
+<td>21:00 補助③</td>
+</tr>
+<tr>
+<td>土・日</td>
+<td>作業なし</td>
+<td>土 21:00 縦動画③（B）、日 21:00 長尺（予約）</td>
+</tr>
+</tbody>
+</table></div>
+<p>小計は32時間、予備は8時間です。予約投稿はYouTube<a class="cite" href="#src-S40">[S40]</a>・X<a class="cite" href="#src-S25">[S25]</a>・Instagram（75日先まで）<a class="cite" href="#src-S19">[S19]</a>・Threads<a class="cite" href="#src-S24">[S24]</a>・TikTok（ビジネスアカウントのWeb、15分〜10日先）<a class="cite" href="#src-S14">[S14]</a>で使え、noteの無料プランは予約投稿がないため手動公開です<a class="cite" href="#src-S33">[S33]</a>。</p>
+<div class="note">注釈（曜日・時間帯と作業工程の関係）。統合表の曜日・時間帯は読者側の根拠だけで選んだ第一候補で、作業の都合は反映していません。作業側の制約は次の4点で、表の時刻は動かさず作業側を合わせます。①火・木はnoteの手動公開（20:00）とX・Threadsの返信ツリーの手動投稿（21:00〜）があるため、日中の作業を減らして夕方以降に振り替えます（週の合計は不変）。②XとThreadsの返信ツリーは同時刻に手動投稿できないため、実際には数分〜15分の前後が出ます。③土・日の投稿は予約で出し、コメントや返信への対応は月曜になります。週末の反応を測る際はこの遅れが影響しえます。④6章の土曜テストの週は、返信ツリーの手動投稿（約30分）が土曜に発生するため、金曜の作業から振り替えます。</div>
+<h3 id="sec-6不確実な点と運用開始後に検証すべき項目">6. 不確実な点と、運用開始後に検証すべき項目</h3>
+<p>第一に、曜日・時間帯はすべて仮説です。まず全媒体を21:00で4週続け、次の4週は縦動画と補助投稿を12:00に移して同じ形式で比べます。X・Threadsの検証結果投稿は隔週で1本を土曜21:00に回し、週末説<a class="cite" href="#src-S21">[S21]</a>と休日のSNS利用時間の長さ<a class="cite" href="#src-S1">[S1]</a>を確かめます。長尺は日曜と土曜を4週ずつ入れ替えます。Instagramの活動時間の指標はフォロワー100人未満では提供されない<a class="cite" href="#src-S39">[S39]</a>ため、到達後に見直します。YouTubeは公開28日後に「視聴者がアクセスしている時間帯」<a class="cite" href="#src-S8">[S8]</a>を確認します。</p>
+<p>第二に、頻度の効果は未検証です。縦動画週3本と長尺週1本を8週続け、長尺の制作時間が見積もりを2回連続で超えれば隔週にします。</p>
+<p>第三に、導線です。Xは「本文にリンク」と「返信にリンク」を隔週で入れ替え、計測リンクのクリックを比べます。Instagram・TikTokは媒体内の要約が主で、リンクは補助です。</p>
+<p>第四に、媒体の存廃です。ThreadsとTikTokは8週後に投稿あたりの閲覧と返信を他媒体と並べて判断し、Pinterestは前述の条件を満たせば試験に入ります。</p>
+<p>第五に、本分析は公開情報と推論に基づき、届いた実績ではありません。再生数や表示回数は媒体ごとに定義が異なるため単純比較せず、計測リンクのクリックとnoteの閲覧を共通の物差しにします。</p>
+<hr />
+<h2 id="sec-主要な判断と出典の対応表">主要な判断と出典の対応表</h2>
+<div class="srclist"><div class="src" id="src-S1"><div class="src-head"><span class="num">S1</span><span class="kind">①②</span></div><p class="src-title">総務省情報通信政策研究所「令和7年度 情報通信メディアの利用時間と情報行動に関する調査」報道資料（2026年6月26日）。調査期間2025年12月1〜7日、全国13〜79歳の男女1,800人、訪問留置調査、全国125地点でランダムロケーションクォータサンプリング</p><p class="src-url"><a href="https://www.soumu.go.jp/menu_news/s-news/01iicp01_02000130.html">https://www.soumu.go.jp/menu_news/s-news/01iicp01_02000130.html</a> （概要 <a href="https://www.soumu.go.jp/main_content/001079136.pdf">https://www.soumu.go.jp/main_content/001079136.pdf</a> 、報告書 <a href="https://www.soumu.go.jp/main_content/001079141.pdf">https://www.soumu.go.jp/main_content/001079141.pdf</a> ）</p><p class="src-support">SNS別・年代別利用率（LINE92.9／YouTube81.5／Instagram54.8／X44.7／TikTok36.7／Facebook27.0%）、時間帯別行為者率（平日12時台34.2%、21時台40.1%、休日21時台39.7%）、動画投稿・共有サービスの利用時間（平日54.5分／休日73.1分）。Threads・Pinterestは調査項目にない</p></div><div class="src" id="src-S2"><div class="src-head"><span class="num">S2</span><span class="kind">②</span></div><p class="src-title">総務省「令和8年版 情報通信白書」第Ⅰ部第1章（2026年7月）。個人向けインターネットアンケート、2026年1〜2月、日本1,236件・米独中各624件</p><p class="src-url"><a href="https://www.soumu.go.jp/johotsusintokei/whitepaper/ja/r08/html/nd111110.html">https://www.soumu.go.jp/johotsusintokei/whitepaper/ja/r08/html/nd111110.html</a> （概要 <a href="https://www.soumu.go.jp/main_content/001082851.pdf">https://www.soumu.go.jp/main_content/001082851.pdf</a> ）</p><p class="src-support">生成AI利用経験58.8%（2025年度、前年度26.7%）、20歳以上では52.2%。若年層ほど高い</p></div><div class="src" id="src-S3"><div class="src-head"><span class="num">S3</span><span class="kind">②</span></div><p class="src-title">野村総合研究所「日・米・中・独4か国調査にみる生活者におけるAI利用の現在地」（コラム2026年4月10日）、資料「AI利用の受容性…」（2026年3月16日）。2025年9月、インターネットリサーチ、15〜69歳、日本3,148人</p><p class="src-url"><a href="https://www.nri.com/jp/media/column/extending_society_with_ai/20260410.html">https://www.nri.com/jp/media/column/extending_society_with_ai/20260410.html</a> （資料 <a href="https://www.nri.com/jp/knowledge/report/files/000059063.pdf">https://www.nri.com/jp/knowledge/report/files/000059063.pdf</a> ）</p><p class="src-support">月数回以上の生成AI利用34.9%、利用者のうち有料15.5%（分母は生成AI利用者）。民間調査で公的統計ではない</p></div><div class="src" id="src-S4"><div class="src-head"><span class="num">S4</span><span class="kind">①</span></div><p class="src-title">YouTubeヘルプ「YouTube のパフォーマンスに関するよくある質問とトラブルシューティング」</p><p class="src-url"><a href="https://support.google.com/youtube/answer/141805?hl=ja">https://support.google.com/youtube/answer/141805?hl=ja</a></p><p class="src-support">アップロード間隔と視聴回数の増加は相関しない、休止にペナルティなし、公開タイミングが長期成果に影響するかは不明（ライブ・プレミア公開を除く）</p></div><div class="src" id="src-S5"><div class="src-head"><span class="num">S5</span><span class="kind">①</span></div><p class="src-title">YouTubeヘルプ「検索と見つけやすさのヒント（ショート動画）」</p><p class="src-url"><a href="https://support.google.com/youtube/answer/11914225?hl=ja&amp;co=YOUTUBE._YTVideoType%3Dshorts">https://support.google.com/youtube/answer/11914225?hl=ja&amp;co=YOUTUBE._YTVideoType%3Dshorts</a></p><p class="src-support">ショートは発見に役立ち、長尺のおすすめに悪影響なし。ランキング信号は視聴選択率・平均視聴時間・平均視聴率</p></div><div class="src" id="src-S6"><div class="src-head"><span class="num">S6</span><span class="kind">①</span></div><p class="src-title">YouTubeヘルプ「3 分間の YouTube ショートについて」</p><p class="src-url"><a href="https://support.google.com/youtube/answer/15424877?hl=ja">https://support.google.com/youtube/answer/15424877?hl=ja</a></p><p class="src-support">縦長・正方形で3分以内の動画はショートに分類（2024年10月15日以降）</p></div><div class="src" id="src-S7"><div class="src-head"><span class="num">S7</span><span class="kind">①</span></div><p class="src-title">YouTubeヘルプ「視聴者とリンクを共有する」</p><p class="src-url"><a href="https://support.google.com/youtube/answer/13748639?hl=ja">https://support.google.com/youtube/answer/13748639?hl=ja</a></p><p class="src-support">ショートの説明・コメントのURLはクリック不可。プロフィールのリンク、関連動画、終了画面、長尺の説明欄は可（上級者向け機能の有効化が必要）</p></div><div class="src" id="src-S8"><div class="src-head"><span class="num">S8</span><span class="kind">①</span></div><p class="src-title">YouTubeヘルプ「YouTube の視聴者を理解する」</p><p class="src-url"><a href="https://support.google.com/youtube/answer/9314416?hl=ja&amp;co=GENIE.Platform%3DDesktop">https://support.google.com/youtube/answer/9314416?hl=ja&amp;co=GENIE.Platform%3DDesktop</a></p><p class="src-support">アナリティクスの「視聴者が YouTube にアクセスしている時間帯」（過去28日）</p></div><div class="src" id="src-S9"><div class="src-head"><span class="num">S9</span><span class="kind">①</span></div><p class="src-title">YouTubeヘルプ「YouTube のおすすめシステム」</p><p class="src-url"><a href="https://support.google.com/youtube/answer/16533387?hl=ja">https://support.google.com/youtube/answer/16533387?hl=ja</a></p><p class="src-support">視聴履歴・視聴時間・満足度調査などの信号、公開時間を考えすぎない、頻度より一貫した品質</p></div><div class="src" id="src-S10"><div class="src-head"><span class="num">S10</span><span class="kind">①</span></div><p class="src-title">YouTubeヘルプ「ショート動画に関連動画を追加する」</p><p class="src-url"><a href="https://support.google.com/youtube/answer/14075157?hl=en">https://support.google.com/youtube/answer/14075157?hl=en</a></p><p class="src-support">ショートから自チャンネルの動画へクリック可能なリンク（上級者向け機能が必要）</p></div><div class="src" id="src-S11"><div class="src-head"><span class="num">S11</span><span class="kind">①</span></div><p class="src-title">TikTok Newsroom「How TikTok recommends videos #ForYou」（2020年6月18日）</p><p class="src-url"><a href="https://newsroom.tiktok.com/en-us/how-tiktok-recommends-videos-for-you">https://newsroom.tiktok.com/en-us/how-tiktok-recommends-videos-for-you</a></p><p class="src-support">操作・動画情報・端末設定が信号。フォロワー数は直接の要因ではない</p></div><div class="src" id="src-S12"><div class="src-head"><span class="num">S12</span><span class="kind">①</span></div><p class="src-title">TikTok Newsroom Japan「TikTok、日本における経済効果を発表」（2026年6月17日）</p><p class="src-url"><a href="https://newsroom.tiktok.com/tiktok-socio-economic-impact-report-june-2026?lang=ja-JP">https://newsroom.tiktok.com/tiktok-socio-economic-impact-report-june-2026?lang=ja-JP</a></p><p class="src-support">日本の月間アクティブユーザー約4,950万（2026年5月末、自社調べ、TikTok Lite含む）</p></div><div class="src" id="src-S13"><div class="src-head"><span class="num">S13</span><span class="kind">①</span></div><p class="src-title">TikTokヘルプセンター「Link a website or social media account」</p><p class="src-url"><a href="https://support.tiktok.com/en/getting-started/setting-up-your-profile/linking-another-social-media-account">https://support.tiktok.com/en/getting-started/setting-up-your-profile/linking-another-social-media-account</a></p><p class="src-support">プロフィールのリンクは1,000フォロワー以上または登録ビジネスアカウント（本文は動的表示で、筆者の再取得では表示されず。調査補助の取得結果に基づく）</p></div><div class="src" id="src-S14"><div class="src-head"><span class="num">S14</span><span class="kind">①</span></div><p class="src-title">TikTok for Business Blog「Video Scheduler」（2021年）</p><p class="src-url"><a href="https://ads.tiktok.com/business/en-US/blog/introducing-video-scheduler-now-you-can-plan-tiktoks-in-advance">https://ads.tiktok.com/business/en-US/blog/introducing-video-scheduler-now-you-can-plan-tiktoks-in-advance</a></p><p class="src-support">Webで15分〜10日先の予約、ビジネスアカウントが必要（掲載時点の記述）</p></div><div class="src" id="src-S15"><div class="src-head"><span class="num">S15</span><span class="kind">①</span></div><p class="src-title">Instagram for Creators「Frequently Asked Questions」</p><p class="src-url"><a href="https://creators.instagram.com/faq?locale=en_US">https://creators.instagram.com/faq?locale=en_US</a></p><p class="src-support">最適な投稿時間は「視聴者が起きて活動的な時」、成長上位は平均で月10本以上のリール、3分以下をフォロワー外に推薦</p></div><div class="src" id="src-S16"><div class="src-head"><span class="num">S16</span><span class="kind">①</span></div><p class="src-title">Instagram for Creators「Helping Creators Find New Audiences」（2024年4月30日）</p><p class="src-url"><a href="https://creators.instagram.com/blog/recommendations-and-originality">https://creators.instagram.com/blog/recommendations-and-originality</a></p><p class="src-support">適格な投稿は小規模な視聴者にまず表示、同一内容は原作のみ推薦</p></div><div class="src" id="src-S17"><div class="src-head"><span class="num">S17</span><span class="kind">①</span></div><p class="src-title">About Instagram「Instagram Reels」</p><p class="src-url"><a href="https://about.instagram.com/features/reels">https://about.instagram.com/features/reels</a></p><p class="src-support">3分を超えるリールは新しい視聴者に推薦されない</p></div><div class="src" id="src-S18"><div class="src-head"><span class="num">S18</span><span class="kind">①</span></div><p class="src-title">Social Media Today「Instagram Shares Algorithm Insights」（2025年1月22日）※Mosseri氏の投稿 <a href="https://www.instagram.com/p/DFFyRp-pINJ/">https://www.instagram.com/p/DFFyRp-pINJ/</a> の報道</p><p class="src-url"><a href="https://www.socialmediatoday.com/news/instagram-shares-algorithm-insights-2025/738034/">https://www.socialmediatoday.com/news/instagram-shares-algorithm-insights-2025/738034/</a></p><p class="src-support">上位3信号は視聴時間・いいね・送信（責任者の発言の報道）</p></div><div class="src" id="src-S19"><div class="src-head"><span class="num">S19</span><span class="kind">①</span></div><p class="src-title">TechCrunch（2022年11月8日）</p><p class="src-url"><a href="https://techcrunch.com/2022/11/08/instagram-scheduling-tool-all-professional-accounts/">https://techcrunch.com/2022/11/08/instagram-scheduling-tool-all-professional-accounts/</a></p><p class="src-support">プロアカウントはアプリ内で75日先まで予約（報道）</p></div><div class="src" id="src-S20"><div class="src-head"><span class="num">S20</span><span class="kind">①</span></div><p class="src-title">Meta Newsroom「Introducing Threads」（2023年7月5日）</p><p class="src-url"><a href="https://about.fb.com/news/2023/07/introducing-threads-new-app-text-sharing/">https://about.fb.com/news/2023/07/introducing-threads-new-app-text-sharing/</a></p><p class="src-support">投稿は500字、リンク・写真・5分までの動画</p></div><div class="src" id="src-S21"><div class="src-head"><span class="num">S21</span><span class="kind">①</span></div><p class="src-title">Meta Newsroom「Find Your Community With New Threads Educational Insights」（2024年10月21日）</p><p class="src-url"><a href="https://about.fb.com/news/2024/10/find-your-community-with-new-threads-educational-insights/">https://about.fb.com/news/2024/10/find-your-community-with-new-threads-educational-insights/</a></p><p class="src-support">週2〜5回の投稿推奨、返信が閲覧の約半分、週末投稿の効果（算出方法非公開）</p></div><div class="src" id="src-S22"><div class="src-head"><span class="num">S22</span><span class="kind">①</span></div><p class="src-title">Meta Newsroom「Attach Text to Your Threads Posts」（2025年9月4日）</p><p class="src-url"><a href="https://about.fb.com/news/2025/09/attach-text-threads-posts-share-longer-perspectives/">https://about.fb.com/news/2025/09/attach-text-threads-posts-share-longer-perspectives/</a></p><p class="src-support">最大1万字の本文添付</p></div><div class="src" id="src-S23"><div class="src-head"><span class="num">S23</span><span class="kind">①</span></div><p class="src-title">Social Media Today「Meta Says Link Posts on Threads Are Seeing Better Performance」（2025年6月8日）※Mosseri氏の投稿の報道</p><p class="src-url"><a href="https://www.socialmediatoday.com/news/meta-says-link-posts-ranked-properly-threads-reach/750126/">https://www.socialmediatoday.com/news/meta-says-link-posts-ranked-properly-threads-reach/750126/</a></p><p class="src-support">リンクは降格しないがクリック確率を重視しない（2024年）、リンクの表示改善（2025年）</p></div><div class="src" id="src-S24"><div class="src-head"><span class="num">S24</span><span class="kind">①</span></div><p class="src-title">Social Media Today「Threads Rolls Out Post Scheduling」（2025年1月23日）</p><p class="src-url"><a href="https://www.socialmediatoday.com/news/threads-launches-post-scheduling/738155/">https://www.socialmediatoday.com/news/threads-launches-post-scheduling/738155/</a></p><p class="src-support">Threadsアプリ内の予約投稿</p></div><div class="src" id="src-S25"><div class="src-head"><span class="num">S25</span><span class="kind">①</span></div><p class="src-title">Xヘルプセンター「How to post」</p><p class="src-url"><a href="https://help.x.com/en/using-x/how-to-post">https://help.x.com/en/using-x/how-to-post</a></p><p class="src-support">280字、画像4枚まで、カレンダーアイコンで予約投稿</p></div><div class="src" id="src-S26"><div class="src-head"><span class="num">S26</span><span class="kind">①</span></div><p class="src-title">xai-org「x-algorithm」README（2026年1月公開）</p><p class="src-url"><a href="https://github.com/xai-org/x-algorithm">https://github.com/xai-org/x-algorithm</a></p><p class="src-support">For Youの候補源、予測行動の加重和、フォロー外の割引係数。外部リンクの減点項なし</p></div><div class="src" id="src-S27"><div class="src-head"><span class="num">S27</span><span class="kind">①※発言</span></div><p class="src-title">PPC Land「X drops year-old link penalty」（2026年7月30日）</p><p class="src-url"><a href="https://ppc.land/x-drops-year-old-link-penalty-musk-tells-zuckerberg-on-platform/">https://ppc.land/x-drops-year-old-link-penalty-musk-tells-zuckerberg-on-platform/</a></p><p class="src-support">経営陣の「返信にリンクを置く必要はない」「1年以上前から」（発言であり公式文書ではない）</p></div><div class="src" id="src-S28"><div class="src-head"><span class="num">S28</span><span class="kind">①</span></div><p class="src-title">Pinterestヘルプ「予約投稿ピン」</p><p class="src-url"><a href="https://help.pinterest.com/ja/business/article/schedule-pins">https://help.pinterest.com/ja/business/article/schedule-pins</a></p><p class="src-support">ビジネスアカウント、30日先まで、最大10件</p></div><div class="src" id="src-S29"><div class="src-head"><span class="num">S29</span><span class="kind">①</span></div><p class="src-title">Pinterestヘルプ「Pin performance and distribution」</p><p class="src-url"><a href="https://help.pinterest.com/en/business/article/pin-performance-and-distribution">https://help.pinterest.com/en/business/article/pin-performance-and-distribution</a></p><p class="src-support">数時間〜数年後にも反応、週1回の独自コンテンツ推奨（Pinterest自身の主張）</p></div><div class="src" id="src-S30"><div class="src-head"><span class="num">S30</span><span class="kind">②</span></div><p class="src-title">ピンタレスト・ジャパン PR TIMESリリース（2021年10月4日）</p><p class="src-url"><a href="https://prtimes.jp/main/html/rd/p/000000077.000037183.html">https://prtimes.jp/main/html/rd/p/000000077.000037183.html</a></p><p class="src-support">日本の月間ユニークビジター870万人（ニールセン調べ、2021年時点）</p></div><div class="src" id="src-S31"><div class="src-head"><span class="num">S31</span><span class="kind">②</span></div><p class="src-title">DataReportal「Digital 2025: Japan」（2025年初のデータ。2026年版は自動取得不可）</p><p class="src-url"><a href="https://datareportal.com/reports/digital-2025-japan">https://datareportal.com/reports/digital-2025-japan</a></p><p class="src-support">広告リーチ推計：YouTube7,870万、X7,090万、Instagram5,750万、TikTok2,690万（18歳以上）、Pinterest922万、LinkedIn490万。「広告リーチはMAUと同じではない」と明記</p></div><div class="src" id="src-S32"><div class="src-head"><span class="num">S32</span><span class="kind">①</span></div><p class="src-title">リンクトイン・ジャパン PR TIMESリリース（2026年1月26日）</p><p class="src-url"><a href="https://prtimes.jp/main/html/rd/p/000000056.000066809.html">https://prtimes.jp/main/html/rd/p/000000056.000066809.html</a></p><p class="src-support">日本のメンバー数が2025年12月に500万人を突破</p></div><div class="src" id="src-S33"><div class="src-head"><span class="num">S33</span><span class="kind">①</span></div><p class="src-title">noteヘルプ「noteとnote proの機能一覧」（2026年9月15日更新）</p><p class="src-url"><a href="https://www.help-note.com/hc/ja/articles/360000621702">https://www.help-note.com/hc/ja/articles/360000621702</a></p><p class="src-support">予約投稿は通常のnote×、noteプレミアム◯、note pro◯</p></div><div class="src" id="src-S34"><div class="src-head"><span class="num">S34</span><span class="kind">①</span></div><p class="src-title">noteヘルプ「投稿形式の統合について」（2025年10月8日更新）</p><p class="src-url"><a href="https://www.help-note.com/hc/ja/articles/47459837469081">https://www.help-note.com/hc/ja/articles/47459837469081</a></p><p class="src-support">つぶやき・画像・動画・音声の投稿形式は2025年に終了（短文形式は使えない）</p></div><div class="src" id="src-S35"><div class="src-head"><span class="num">S35</span><span class="kind">②</span></div><p class="src-title">note株式会社「約1700万件のnote記事を追跡」（2026年3月10日）。2024年に投稿された全記事約1,700万件</p><p class="src-url"><a href="https://note.jp/n/n7917dc1cdfe9">https://note.jp/n/n7917dc1cdfe9</a></p><p class="src-support">約40%が1年後も読まれる、1年以上前の記事への流入の64%は検索。曜日・時間帯・頻度の言及なし</p></div><div class="src" id="src-S36"><div class="src-head"><span class="num">S36</span><span class="kind">②</span></div><p class="src-title">ビデオリサーチ VR Digest plus「X(旧Twitter)でのポスト投稿時間帯はいつが最適？」（2026年5月7日更新）。ACR/ex、2025年4〜6月、関東、12〜69歳、標本数の記載なし、平日のみ</p><p class="src-url"><a href="https://www.videor.co.jp/digestplus/article/76087.html">https://www.videor.co.jp/digestplus/article/76087.html</a></p><p class="src-support">平日のX利用は7〜8時台、12時台、21〜22時台に山（利用率であり投稿の反応ではない）</p></div><div class="src" id="src-S37"><div class="src-head"><span class="num">S37</span><span class="kind">②</span></div><p class="src-title">Sprout Social「Best times to post on social media in 2026」（2026年3月31日）。約20億エンゲージメント、約30.7万プロフィール、2025年11月27日〜2026年2月27日、現地時間</p><p class="src-url"><a href="https://sproutsocial.com/insights/best-times-to-post-on-social-media/">https://sproutsocial.com/insights/best-times-to-post-on-social-media/</a></p><p class="src-support">全体では火・水の11〜18時（現地時間）。日本の内訳なし。参考にとどめ、時刻の根拠には不使用</p></div><div class="src" id="src-S38"><div class="src-head"><span class="num">S38</span><span class="kind">②</span></div><p class="src-title">Buffer「The Best Time to Post on Social Media in 2026」（2026年3月25日）。約5,200万投稿</p><p class="src-url"><a href="https://buffer.com/resources/best-time-to-post-social-media/">https://buffer.com/resources/best-time-to-post-social-media/</a></p><p class="src-support">「投稿タイミングは複雑なパズルの小さな一片」。日本の内訳なし。参考のみ</p></div><div class="src" id="src-S39"><div class="src-head"><span class="num">S39</span><span class="kind">①</span></div><p class="src-title">Instagram Platform API リファレンス（Meta for Developers）</p><p class="src-url"><a href="https://developers.facebook.com/docs/instagram-platform/api-reference/instagram-user/insights/">https://developers.facebook.com/docs/instagram-platform/api-reference/instagram-user/insights/</a></p><p class="src-support">online_followers（活動時間）はフォロワー100人未満のアカウントで利用不可</p></div><div class="src" id="src-S40"><div class="src-head"><span class="num">S40</span><span class="kind">①</span></div><p class="src-title">YouTubeヘルプ「動画の公開日時を設定する」</p><p class="src-url"><a href="https://support.google.com/youtube/answer/1270709?hl=ja">https://support.google.com/youtube/answer/1270709?hl=ja</a></p><p class="src-support">非公開動画を指定日時に公開する予約公開（アカウント条件の記載なし）</p></div></div>
+<p>区分：①公式仕様など確認できた事実、②外部調査が示す傾向。本文中の「推論」「仮説」はそれぞれ③今回のアカウントへの当てはめ、④運用で検証する必要がある仮説に当たります。</p>
+
+<section class="rev">
+<h2>改訂履歴</h2>
+<ul>
+<li>v1（2026-09-16）：共通の依頼文に対する初回回答。</li>
+<li>v2（同日）：追加指示「作業工程を考えず、読者側の根拠で曜日・時間帯を決める」に基づき、統合表・4章・6章の曜日・時間帯を再設定（時間帯を全媒体21時台に統一）。</li>
+<li>v3（同日）：追加指示に基づき、読者側の曜日・時間帯と作業工程の食い違いを5章に注釈として追記。</li>
+</ul>
+</section>
+
+</div>
+</body>
+</html>
