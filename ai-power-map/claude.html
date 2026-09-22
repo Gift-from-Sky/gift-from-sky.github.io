@@ -1,0 +1,1902 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>生成AIサービスの勢力図（利用者数を中心とした整理）— Claude側の分析</title><meta name="description" content="生成AI横並び検証室｜生成AI勢力図（Claude側の回答全文）"><style>
+:root{--ink:#1f2933;--muted:#5b6b7a;--line:#dfe5ea;--accent:#1f5f8b;--accent-bg:#eef4f9;--zebra:#f7f9fb;--note-bg:#fff8e6;--note-line:#f0d58c}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;font-size:16px;line-height:1.9;font-feature-settings:"palt"}
+.wrap{max-width:960px;margin:0 auto;padding:24px 16px 64px}
+header.top{border-bottom:2px solid var(--accent);padding:8px 0 16px;margin-bottom:24px}
+header.top .kicker{color:var(--accent);font-size:13px;letter-spacing:.08em;font-weight:700;margin:0 0 4px}
+header.top h1{font-size:22px;line-height:1.5;margin:0 0 8px}
+header.top .meta{color:var(--muted);font-size:13px;margin:0}
+nav.toc{background:var(--accent-bg);border-radius:10px;padding:12px 16px;margin:0 0 28px;font-size:14px}
+nav.toc p{margin:0 0 4px;font-weight:700;color:var(--accent)}
+nav.toc ul{margin:0;padding-left:0;list-style:none;columns:2;column-gap:24px}
+nav.toc li{break-inside:avoid;margin:2px 0}
+nav.toc a{color:var(--ink);text-decoration:none;display:block;padding:2px 0 2px 12px;border-left:3px solid var(--line)}
+h2{font-size:20px;line-height:1.5;margin:44px 0 14px;padding-left:12px;border-left:5px solid var(--accent)}
+h3{font-size:17px;line-height:1.6;margin:30px 0 10px;color:var(--accent)}
+p{margin:0 0 16px}a{color:var(--accent)}
+hr{border:0;border-top:1px solid var(--line);margin:32px 0}
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 20px;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.6}
+th,td{border-bottom:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--accent-bg);color:var(--accent);font-weight:700;white-space:nowrap}
+tbody tr:nth-child(even) td{background:var(--zebra)}td{min-width:5em}
+blockquote.note{background:var(--note-bg);border:1px solid var(--note-line);border-radius:8px;padding:12px 14px;margin:0 0 20px;font-size:15px}
+blockquote.note p{margin:0}
+ul,ol{padding-left:22px}li{margin:2px 0}
+.rev{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+.rev h2{font-size:15px;border:0;padding:0;margin:0 0 6px;color:var(--muted)}.rev ul{margin:0;padding-left:20px}
+@media (max-width:600px){body{font-size:15px}.wrap{padding:16px 14px 48px}header.top h1{font-size:19px}nav.toc ul{columns:1}h2{font-size:18px}table{font-size:12.5px}th,td{padding:6px 8px}}
+</style></head>
+<body><div class="wrap">
+<header class="top"><p class="kicker">生成AI横並び検証室｜最上位プラン検証 #07　Claude側の回答全文</p><h1>生成AIサービスの勢力図（利用者数を中心とした整理）— Claude側の分析</h1><p class="meta">Claude Max（20x）／Cowork／Fable 5.1・エフォート最大　調査基準日：2026年9月21日</p></header>
+<nav class="toc"><p>目次</p><ul><li><a href="#sec-A分析の前提">A．分析の前提</a></li><li><a href="#sec-B30候補の基本情報">B．30候補の基本情報</a></li><li><a href="#sec-C主要20の選定結果">C．主要20の選定結果</a></li><li><a href="#sec-D世界の利用規模勢力図">D．世界の利用規模・勢力図</a></li><li><a href="#sec-E企業個人の課金状況">E．企業・個人の課金状況</a></li><li><a href="#sec-F日本の利用規模課金状況">F．日本の利用規模・課金状況</a></li><li><a href="#sec-H機能の対応範囲">H．機能の対応範囲</a></li><li><a href="#sec-I分析本文">I．分析本文</a></li><li><a href="#sec-J出典と計算の対応">J．出典と計算の対応</a></li><li><a href="#sec-K自己点検作業記録">K．自己点検・作業記録</a></li></ul></nav>
+<p>調査基準日：2026年9月21日（JST）／作業開始 16:05 JST／制限時間 60分</p>
+<hr />
+<h2 id="sec-A分析の前提">A．分析の前提</h2>
+<ul>
+<li><strong>調査基準日</strong>：2026年9月21日。Web検索と公開ページの閲覧のみで調査し、ログイン・登録・課金・ペイウォール回避は行っていない。</li>
+<li><strong>対象範囲</strong>：指定の30候補。モデル（GPT、Qwen3、DeepSeek-V3など）ではなく、一般利用者が使う「サービス（アプリ・Web）」の利用規模を扱う。モデルのダウンロード数やAPI経由の利用は、サービスの利用者数に含めない。</li>
+<li><strong>主要20の意味</strong>：30候補から、確認できた利用規模を最重視して選んだ20サービス。世界のすべてのサービスの上位20ではない。</li>
+<li><strong>順位づけの条件</strong>：主軸はMAU（無料・有料を含む月間アクティブユーザー）。MAUがない場合はWAU・DAU・訪問数などを補助に使い、〈A〉直接比較／〈B〉異なる指標からの推定／〈C〉間接情報からの推定を付ける。根拠が足りないものは順位保留。独自の倍率によるMAU換算は行わない。</li>
+<li><strong>調査の進め方</strong>：利用規模・課金・日本・会社情報・機能の5系統を並列で調査し、可能な範囲で原典を開いた。原典を開けず報道・二次サイト経由で確認した数値は、出典欄に「報道経由」「二次サイト経由」と明記した。</li>
+<li><strong>既知値の扱い</strong>：Meta AIの「MAU10億超（2025年5月）」とMicrosoft Copilotの「Copilotアプリ群MAU1億超（2025年10月）」は、過去の公式発表として広く引用される値だが、今回の60分内では原典を再確認できていない。時点を付けて掲載し、J表で「原典再確認なし」と記した。</li>
+<li><strong>情報源区分</strong>：［公］公式発表・公的資料／［調］外部調査・推計／［報］報道などの二次情報／［計］公開情報から今回算出した数値。</li>
+</ul>
+<hr />
+<h2 id="sec-B30候補の基本情報">B．30候補の基本情報</h2>
+<p>代表者は2026年9月21日時点。「既知」は今回の60分内で個別の再検索をしておらず、2026年前半までの一般に知られた情報に基づく（「2026年 CEO交代」の横断検索1回では交代報道を検出せず）。親会社の代表者を書いた場合は〈親〉と記した。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>番号</th>
+<th>サービス</th>
+<th>主な用途</th>
+<th>開発・運営会社〈親会社〉</th>
+<th>発祥の国・地域</th>
+<th>本社所在の国・地域</th>
+<th>代表者・役職〈確認時点〉</th>
+<th>出典</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ChatGPT</td>
+<td>対話・汎用</td>
+<td>OpenAI（OpenAI Group PBC）〈非営利OpenAI Foundationが支配〉</td>
+<td>米国</td>
+<td>米国（サンフランシスコ）</td>
+<td>Sam Altman・CEO〈既知〉</td>
+<td>既知</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Gemini</td>
+<td>対話・汎用</td>
+<td>Google LLC〈Alphabet Inc.〉</td>
+<td>米国</td>
+<td>米国（マウンテンビュー）</td>
+<td>Sundar Pichai・Alphabet／Google CEO〈親・既知〉</td>
+<td>既知</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Claude</td>
+<td>対話・汎用</td>
+<td>Anthropic PBC</td>
+<td>米国</td>
+<td>米国（サンフランシスコ）</td>
+<td>Dario Amodei・共同創業者兼CEO〈既知〉</td>
+<td>既知</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Microsoft Copilot</td>
+<td>対話・業務支援</td>
+<td>Microsoft Corporation</td>
+<td>米国</td>
+<td>米国（レドモンド）</td>
+<td>Satya Nadella・会長兼CEO〈既知〉</td>
+<td>既知</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Grok</td>
+<td>対話・汎用</td>
+<td>SpaceXAI LLC〈SpaceX〉（旧xAI。2026年2月にSpaceXが買収、7月に改称）</td>
+<td>米国</td>
+<td>米国（SpaceXAIはパロアルト、SpaceX本社はテキサス州）</td>
+<td>Elon Musk・SpaceX CEO〈親〉、Michael Nicolls・SpaceXAI President〈2026-04就任、Wikipedia経由〉</td>
+<td>[45][46]</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Perplexity</td>
+<td>検索・調査</td>
+<td>Perplexity AI, Inc.</td>
+<td>米国</td>
+<td>米国（サンフランシスコ）</td>
+<td>Aravind Srinivas・共同創業者兼CEO〈既知〉</td>
+<td>既知</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Meta AI</td>
+<td>対話（SNS組み込み）</td>
+<td>Meta Platforms, Inc.</td>
+<td>米国</td>
+<td>米国（メンローパーク）</td>
+<td>Mark Zuckerberg・会長兼CEO〈既知〉</td>
+<td>既知</td>
+</tr>
+<tr>
+<td>8</td>
+<td>DeepSeek</td>
+<td>対話・汎用</td>
+<td>杭州深度求索人工智能基础技术研究有限公司〈幻方量化系〉</td>
+<td>中国（杭州）</td>
+<td>中国</td>
+<td>梁文鋒・創業者兼CEO〈既知。登記上の法定代表者は未確認〉</td>
+<td>既知</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Doubao〈豆包〉</td>
+<td>対話・汎用</td>
+<td>字節跳動（ByteDance）</td>
+<td>中国（北京）</td>
+<td>中国（北京。持株会社はケイマン諸島登記）</td>
+<td>梁汝波・ByteDance CEO〈親・既知〉</td>
+<td>既知</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Qwen〈千問〉アプリ</td>
+<td>対話・汎用</td>
+<td>阿里巴巴集団（Alibaba Group／Alibaba Cloud）</td>
+<td>中国（杭州）</td>
+<td>中国（杭州。ケイマン諸島登記）</td>
+<td>呉泳銘（Eddie Wu）・Alibaba Group CEO〈親・2026-09確認〉</td>
+<td>[50]</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Kimi</td>
+<td>対話・汎用</td>
+<td>月之暗面（Moonshot AI）</td>
+<td>中国（北京）</td>
+<td>中国</td>
+<td>楊植麟・創業者兼CEO〈報道で確認〉</td>
+<td>[20]</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Mistral Le Chat</td>
+<td>対話・汎用</td>
+<td>Mistral AI SAS</td>
+<td>フランス（パリ）</td>
+<td>フランス</td>
+<td>Arthur Mensch・共同創業者兼CEO〈Wikipedia経由〉</td>
+<td>[41]</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Character.AI</td>
+<td>キャラクター対話</td>
+<td>Character Technologies, Inc.（Google傘下ではない。2024年にライセンス契約）</td>
+<td>米国</td>
+<td>米国（メンローパーク）</td>
+<td>Karandeep Anand・CEOが2026-09-18にDisney CTOへ転出と発表。後任は未確認</td>
+<td>[47]</td>
+</tr>
+<tr>
+<td>14</td>
+<td>NotebookLM</td>
+<td>資料要約・調査</td>
+<td>Google LLC〈Alphabet Inc.〉。2026年7月に「Gemini Notebook」へ改称</td>
+<td>米国</td>
+<td>米国</td>
+<td>Sundar Pichai・CEO〈親・既知〉</td>
+<td>[12]</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Midjourney</td>
+<td>画像生成</td>
+<td>Midjourney, Inc.</td>
+<td>米国</td>
+<td>米国（サンフランシスコ）</td>
+<td>David Holz・創業者兼CEO〈Wikipedia経由〉</td>
+<td>[24]</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Adobe Firefly</td>
+<td>画像・動画生成</td>
+<td>Adobe Inc.</td>
+<td>米国</td>
+<td>米国（サンノゼ）</td>
+<td>Shantanu Narayen・会長兼CEO（2026-12-01付でAnil ChakravarthyがCEOに就任予定）</td>
+<td>[48]</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Leonardo.Ai</td>
+<td>画像生成</td>
+<td>Leonardo.Ai〈Canva〉（2024年7月買収）</td>
+<td>オーストラリア（シドニー）</td>
+<td>オーストラリア</td>
+<td>JJ Fiasson・共同創業者兼CEO〈Wikipedia・Crunchbase経由〉／親会社CEO Melanie Perkins</td>
+<td>[38][52]</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Ideogram</td>
+<td>画像生成</td>
+<td>Ideogram AI Inc.</td>
+<td>カナダ（トロント）</td>
+<td>カナダ</td>
+<td>Mohammad Norouzi・共同創業者兼CEO〈既知〉</td>
+<td>既知</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Runway</td>
+<td>動画生成</td>
+<td>Runway AI, Inc.</td>
+<td>米国（ニューヨーク）</td>
+<td>米国</td>
+<td>Cristóbal Valenzuela・共同創業者兼CEO〈Wikipedia経由。「Co-CEO」表記も見られ要確認〉</td>
+<td>既知</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Kling AI</td>
+<td>動画生成</td>
+<td>快手科技（Kuaishou Technology）</td>
+<td>中国（北京）</td>
+<td>中国（北京。ケイマン諸島登記、香港上場）</td>
+<td>程一笑・共同創業者・会長兼CEO〈親・2026-08決算発表で確認〉</td>
+<td>[22]</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Hailuo AI</td>
+<td>動画生成</td>
+<td>MiniMax（上海稀宇科技。2026年1月に香港上場）</td>
+<td>中国（上海）</td>
+<td>中国</td>
+<td>閆俊傑（Yan Junjie）・創業者兼CEO〈Wikipedia経由〉</td>
+<td>[51]</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Pika</td>
+<td>動画生成</td>
+<td>Pika（Pika Labs）</td>
+<td>米国（パロアルト）</td>
+<td>米国</td>
+<td>Demi Guo・共同創業者兼CEO〈Crunchbase経由〉</td>
+<td>[40][53]</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Suno</td>
+<td>音楽生成</td>
+<td>Suno, Inc.</td>
+<td>米国（ケンブリッジ、MA）</td>
+<td>米国</td>
+<td>Mikey Shulman・共同創業者兼CEO〈報道で確認〉</td>
+<td>[25]</td>
+</tr>
+<tr>
+<td>24</td>
+<td>ElevenLabs</td>
+<td>音声生成</td>
+<td>ElevenLabs Inc.</td>
+<td>創業者はポーランド出身、英米で創業</td>
+<td>米国（ニューヨーク。ロンドン拠点あり。登記地は未確認）</td>
+<td>Mati Staniszewski・共同創業者兼CEO〈既知〉</td>
+<td>既知</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Canvaの生成AI機能</td>
+<td>デザイン制作</td>
+<td>Canva Pty Ltd</td>
+<td>オーストラリア（シドニー）</td>
+<td>オーストラリア</td>
+<td>Melanie Perkins・共同創業者兼CEO〈既知〉</td>
+<td>既知</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Notion AI</td>
+<td>文書・業務管理</td>
+<td>Notion Labs, Inc.</td>
+<td>米国（サンフランシスコ）</td>
+<td>米国</td>
+<td>Ivan Zhao・共同創業者兼CEO〈既知。二次サイトにKothariをCEOとする誤記あり〉</td>
+<td>既知</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Gamma</td>
+<td>資料・スライド生成</td>
+<td>Gamma Tech, Inc.</td>
+<td>米国（サンフランシスコ）</td>
+<td>米国</td>
+<td>Grant Lee・共同創業者兼CEO〈プレスリリースで確認〉</td>
+<td>[26]</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Cursor</td>
+<td>コード生成（IDE）</td>
+<td>Anysphere Inc.</td>
+<td>米国（サンフランシスコ）</td>
+<td>米国</td>
+<td>Michael Truell・共同創業者兼CEO〈調査サイト経由〉</td>
+<td>[27]</td>
+</tr>
+<tr>
+<td>29</td>
+<td>GitHub Copilot</td>
+<td>コード生成</td>
+<td>GitHub, Inc.〈Microsoft〉</td>
+<td>米国（サンフランシスコ）</td>
+<td>米国</td>
+<td>CEO不在（2025年8月にThomas Dohmke退任、Microsoft CoreAI配下）。公式ページ最上位はKyle Daigle・COO〈2026-09確認〉</td>
+<td>[49]</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Replitの生成AI・エージェント機能</td>
+<td>コード・アプリ生成</td>
+<td>Replit, Inc.</td>
+<td>米国（フォスターシティ）</td>
+<td>米国</td>
+<td>Amjad Masad・共同創業者兼CEO〈報道で確認〉</td>
+<td>[44]</td>
+</tr>
+</tbody>
+</table></div>
+<p>注：発祥の国・地域は創業地を基準にした。ByteDance・Alibaba・Kuaishouは登記地（ケイマン諸島）と実質本社（中国）が異なるため、本社所在は実質本社で記載した。ElevenLabsは創業者の出身国・創業拠点・現本社が一致しないため、そのまま記載した。</p>
+<hr />
+<h2 id="sec-C主要20の選定結果">C．主要20の選定結果</h2>
+<p>選定基準は「確認できた利用規模」。利用者数が未公表であることは利用者が少ないことと同一視していないが、規模を判断する材料がないものは選定できなかった（その旨を理由に記載）。</p>
+<h3 id="sec-選定した20サービス候補番号順">選定した20サービス（候補番号順）</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>番号</th>
+<th>サービス</th>
+<th>選定理由（確認できた規模の材料）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ChatGPT</td>
+<td>公式WAU9億超（2026-02）[1]。最大規模</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Gemini</td>
+<td>公式MAU9.5億（2026年Q2）[3]</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Claude</td>
+<td>公式MAUはないが、アプリMAU約5,600万（Sensor Tower・2026年Q2）[58]、Web訪問9.5億/月（Similarweb・2026年8月）[57]、生成AIサイト訪問シェア3位[56]、a16zのWeb順位3位[55]から主要サービスと判断</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Microsoft Copilot</td>
+<td>Copilotアプリ群MAU1億超（2025-10）[9]、M365 Copilot有料席3,000万超（2026-07）[8]</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Grok</td>
+<td>MAU1.17億（2026-03、SpaceX S-1記載・報道経由）[10]</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Perplexity</td>
+<td>MAU推計4,500万（Similarweb・2025）[11]</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Meta AI</td>
+<td>MAU10億超（2025-05、アプリ群組み込み）[5]</td>
+</tr>
+<tr>
+<td>8</td>
+<td>DeepSeek</td>
+<td>中国アプリMAU1.30億（QuestMobile・2026-06）[14]、Web訪問4.84億/月（2026-06）[16]</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Doubao</td>
+<td>中国アプリMAU3.82億（QuestMobile・2026-06）[14]</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Qwenアプリ</td>
+<td>中国アプリMAU1.67億（QuestMobile・2026-06）[14]</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Kimi</td>
+<td>中国アプリMAU約2,269万（aicpb・2026-06）[16]</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Character.AI</td>
+<td>MAU推計2,000万（2024年初・Sacra）[13]。古いが規模の材料あり</td>
+</tr>
+<tr>
+<td>14</td>
+<td>NotebookLM（Gemini Notebook）</td>
+<td>利用者3,000万超（2026-07、指標定義は未確認）[12]</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Midjourney</td>
+<td>Discord登録約1,983万（2026-01）[24]、a16zのWebユニーク訪問者順位10位（2026-01）[55]、Web訪問940万/月（2026-08）[60]</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Kling AI</td>
+<td>MAU1,200万（2026年、報道）[21]、四半期売上8.5億元超[22]</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Hailuo AI</td>
+<td>MAU約560万（2025年1〜9月、目論見書・報道経由）[23]</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Suno</td>
+<td>有料契約200万（2026-02）[25]、Web訪問7,270万/月（2026-08）[60]、a16zのWeb順位15位[55]</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Gamma</td>
+<td>累計7,000万ユーザー（2025-11）[26]、Web訪問1,980万/月（2026-08）[60]、a16zのWeb順位16位[55]</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Cursor</td>
+<td>DAU100万超（2025-12、調査サイト）[27]</td>
+</tr>
+<tr>
+<td>29</td>
+<td>GitHub Copilot</td>
+<td>有料契約470万（2025-12）[59]、累計5,000万ユーザー（2026-07、Microsoft決算）[8]</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="sec-選定しなかった10サービス">選定しなかった10サービス</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>番号</th>
+<th>サービス</th>
+<th>非選定の理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12</td>
+<td>Mistral Le Chat（2026年5月に「Vibe」へ改称・再定義）[41]</td>
+<td>利用者数の公式値・主要推計を確認できず（2025-02のアプリ100万DLのみ）。調査不足の可能性あり</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Adobe Firefly</td>
+<td>Firefly単体の利用者数が未確認（決算はARR成長率と累計生成回数のみ）[39]。Adobe全体のMAUで代用しない</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Leonardo.Ai</td>
+<td>2024-07の累計1,900万人[38]以降の更新値なし。累計値のみ</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Ideogram</td>
+<td>利用規模の公式値・推計とも確認できず</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Runway</td>
+<td>利用者数を確認できず（資金調達・ARR推計のみ）</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Pika</td>
+<td>「50万人超」（2024年頃）[40]のみで古く、規模の材料が不足</td>
+</tr>
+<tr>
+<td>24</td>
+<td>ElevenLabs</td>
+<td>ARR5億ドル超（2026-05）[42]は確認できたが、利用者数・MAUを確認できず。規模は大きい可能性が高く、調査不足による非選定</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Canvaの生成AI機能</td>
+<td>AI機能の利用者数が未確認。Canva全体の人数で代用しない</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Notion AI</td>
+<td>Notion AIの利用者数・契約数が未確認（AI有効化顧客のARR比率のみ）[43]。全体の1億人で代用しない</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Replit</td>
+<td>Agent機能の利用者数が未確認（全体5,000万はスニペットのみ）[44]</td>
+</tr>
+</tbody>
+</table></div>
+<p>不確実性：ElevenLabs・Mistral・Runway・Adobe Fireflyは、利用規模が主要20の下位陣（Hailuo AI・Cursor）を上回る可能性がある。今回は根拠となる利用者数を確認できなかったための非選定であり、利用者が少ないという判断ではない。</p>
+<hr />
+<h2 id="sec-D世界の利用規模勢力図">D．世界の利用規模・勢力図</h2>
+<p>順位はMAUを主軸にした「おおよその利用規模の順〈目安〉」。数値の［ ］は情報源区分、[ ]は出典番号。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>順位〈根拠区分〉</th>
+<th>サービス〈運営会社・国〉</th>
+<th>利用規模の数値</th>
+<th>指標・範囲</th>
+<th>時点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1位〈B〉</td>
+<td>ChatGPT〈OpenAI・米国〉</td>
+<td>9億超［公］[1]／10億超［調］[2]</td>
+<td>WAU（全世界、範囲の明示なし）／モバイルアプリMAU（Sensor Tower推計）</td>
+<td>2026-02-27発表／2026年5月</td>
+</tr>
+<tr>
+<td>同率2位〈推定・B〉</td>
+<td>Gemini〈Google・米国〉</td>
+<td>9.5億［公→報］[3]</td>
+<td>MAU（Geminiアプリ。決算コール原文は未確認）</td>
+<td>2026年Q2（2026-07-22発表）</td>
+</tr>
+<tr>
+<td>同率2位〈推定・B〉</td>
+<td>Meta AI〈Meta・米国〉</td>
+<td>10億超［公］[5]（原典再確認なし）</td>
+<td>MAU（WhatsApp・Instagram・Facebook・Messengerへの組み込み＋単体アプリの合算）</td>
+<td>2025年5月。2026年の決算では数値更新なし[4]</td>
+</tr>
+<tr>
+<td>4位〈B〉</td>
+<td>Doubao〈ByteDance・中国〉</td>
+<td>3億8,230万［調］[14]／DAU約1.4億［調］[15]／DAU1億超［報］[17]</td>
+<td>MAU（中国国内・スマホアプリのみ、QuestMobile推計）／DAU</td>
+<td>2026年6月／2026年3月以降／2025年12月</td>
+</tr>
+<tr>
+<td>5位〈B〉</td>
+<td>Qwenアプリ〈Alibaba・中国〉</td>
+<td>1億6,718万［調］[14]／2億5,113万［調］[16]</td>
+<td>MAU（中国国内アプリ。QuestMobileとaicpbで乖離大）</td>
+<td>2026年6月</td>
+</tr>
+<tr>
+<td>同率6位〈推定・C〉</td>
+<td>Claude〈Anthropic・米国〉</td>
+<td>アプリMAU約5,600万［調］[58]／Web訪問9億5,020万/月［調］[57]／世界の生成AIサイト訪問シェア8.9%（3位）［調］[56]／Web月間ユニーク訪問者で世界3位［調］[55]</td>
+<td>公式MAU：未確認[28]。モバイルアプリMAU（Sensor Tower推計・世界）／claude.aiの月間訪問数（Similarweb、セッション数）／Similarweb Global AI Tracker／a16z（Similarwebのユニーク訪問者順位）</td>
+<td>2026年Q2／2026年8月／2026-05-26／2026年1月</td>
+</tr>
+<tr>
+<td>同率6位〈推定・C〉</td>
+<td>DeepSeek〈DeepSeek・中国〉</td>
+<td>1億2,982万［調］[14]／Web訪問4億8,380万/月［調］[16]／Web訪問シェア4.0%（4位）［調］[56]／Web月間ユニーク訪問者で世界5位［調］[55]</td>
+<td>MAU（中国国内アプリ、QuestMobile推計）／Web訪問数（世界、セッション数）／Similarweb／a16z</td>
+<td>2026年6月／2026年6月／2026-05-26／2026年1月</td>
+</tr>
+<tr>
+<td>8位〈B〉</td>
+<td>Grok〈SpaceXAI・米国〉</td>
+<td>1億1,700万［公→報］[10]／アプリMAU約5,000万［調］[58]／Web訪問シェア2.8%［調］[56]</td>
+<td>MAU（XおよびGrokアプリ、SpaceX S-1記載を報道経由で確認）／モバイルアプリMAU（Sensor Tower推計）／Similarweb</td>
+<td>2026年3月／2026年Q2／2026-05-26</td>
+</tr>
+<tr>
+<td>9位〈B〉</td>
+<td>Microsoft Copilot〈Microsoft・米国〉</td>
+<td>1億超［公］[9]（原典再確認なし）／有料席3,000万超［公→報］[8]</td>
+<td>MAU（Copilotアプリ群）／M365 Copilot有料席（法人）</td>
+<td>2025年10月／2026-07-29</td>
+</tr>
+<tr>
+<td>10位〈C〉</td>
+<td>Perplexity〈Perplexity・米国〉</td>
+<td>4,500万［調］[11]／7.8億クエリ/月［公→調］[11]</td>
+<td>MAU（Similarweb推計、Web）／月間クエリ数</td>
+<td>2025年／2025年5月</td>
+</tr>
+<tr>
+<td>11位〈C〉</td>
+<td>Gemini Notebook（NotebookLM）〈Google・米国〉</td>
+<td>3,000万超［公→報］[12]</td>
+<td>「利用者数」（MAUか累計かは未確認）＋60万超の組織</td>
+<td>2026-07-16</td>
+</tr>
+<tr>
+<td>12位〈C〉</td>
+<td>Kimi〈Moonshot AI・中国〉</td>
+<td>2,269万［調］[16]／2,000万未満［調］[14]</td>
+<td>MAU（中国国内アプリ、推計）。Web訪問4,016万/月[16]</td>
+<td>2026年6月</td>
+</tr>
+<tr>
+<td>13位〈C〉</td>
+<td>Character.AI〈Character Technologies・米国〉</td>
+<td>2,000万［調］[13]</td>
+<td>MAU（Sacra推計、世界）</td>
+<td>2024年初（以後の更新値未確認）</td>
+</tr>
+<tr>
+<td>14位〈C〉</td>
+<td>Kling AI〈Kuaishou・中国〉</td>
+<td>1,200万［報］[21]</td>
+<td>MAU（時点の詳細はスニペットのみ）</td>
+<td>2026年（Q2決算前後）</td>
+</tr>
+<tr>
+<td>15位〈C〉</td>
+<td>GitHub Copilot〈GitHub／Microsoft・米国〉</td>
+<td>有料契約470万［公→報］[59]／累計5,000万［公→報］[8]（2025年7月の2,000万から12か月で+3,000万）</td>
+<td>有料サブスクライバー数（企業・個人合算。MAUではない）／累計ユーザー数（MAUではない）。月間利用者は未公表</td>
+<td>2025年12月末（2026-01決算）／2026-07-29</td>
+</tr>
+<tr>
+<td>16位〈C〉</td>
+<td>Hailuo AI〈MiniMax・中国〉</td>
+<td>約560万［公→報］[23]</td>
+<td>MAU（動画生成サービス、上場目論見書を報道経由で確認）</td>
+<td>2025年1〜9月</td>
+</tr>
+<tr>
+<td>同率17位〈推定・C〉</td>
+<td>Midjourney〈Midjourney・米国〉</td>
+<td>Discord登録約1,983万［調］[24]／Web訪問940万/月［調］[60]／Web月間ユニーク訪問者で10位［調］[55]</td>
+<td>累計登録（MAUではない）／midjourney.comの訪問数（Similarweb、セッション数。Discord経由の利用は含まず）／a16z</td>
+<td>2026年1月／2026年8月／2026年1月</td>
+</tr>
+<tr>
+<td>同率17位〈推定・C〉</td>
+<td>Suno〈Suno・米国〉</td>
+<td>有料契約200万［公→報］[25]／Web訪問7,270万/月［調］[60]／Web月間ユニーク訪問者で15位［調］[55]</td>
+<td>有料契約数（MAUではない）／suno.comの訪問数（Similarweb、セッション数。アプリ利用は含まず）／a16z</td>
+<td>2026-02-27／2026年8月／2026年1月</td>
+</tr>
+<tr>
+<td>19位〈C〉</td>
+<td>Gamma〈Gamma Tech・米国〉</td>
+<td>累計7,000万［公］[26]／Web訪問1,980万/月［調］[60]／Web月間ユニーク訪問者で16位［調］[55]</td>
+<td>累計ユーザー数（MAUではない）／gamma.appの訪問数（Similarweb）／a16z</td>
+<td>2025-11-10／2026年8月／2026年1月</td>
+</tr>
+<tr>
+<td>20位〈C〉</td>
+<td>Cursor〈Anysphere・米国〉</td>
+<td>100万超［調］[27]／Web月間ユニーク訪問者で20位［調］[55]</td>
+<td>DAU（調査サイト集約）／a16z（IDE内の利用はWeb訪問に表れない）</td>
+<td>2025年12月／2026年1月</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>D表の注記</strong>：ChatGPTはWAU、GeminiとMeta AIはMAUで、同じ指標ではない（WAUはMAU以下になるため、ChatGPTのMAUは9億以上と読める）。Doubao・Qwen・DeepSeek・Kimiは中国国内のアプリのみの外部推計で、海外やWebの利用を含まない。Meta AIは他アプリへの組み込みを含む合算値で、しかも2025年の値。Claudeは公式のMAU・WAUがなく、順位はSensor Towerのアプリ推計とSimilarweb・a16zのWeb指標からの推定〈C〉。Web（訪問数・シェア・ユニーク訪問者）では世界3位、アプリではGrokと同程度でDeepSeekの中国アプリより小さい。総利用者数は不明のため、DeepSeekと同率にした。15位以下の6サービスはMAUがなく、有料契約数・累計・訪問数・DAUなど別指標の上限と下限から順序を推定した〈C〉で、確度は上位より低い。順位は「同じ時点・同じ定義」の比較ではなく、目安として読んでほしい。</p>
+<hr />
+<h2 id="sec-E企業個人の課金状況">E．企業・個人の課金状況</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>サービス</th>
+<th>企業の有料〈社数・席数〉</th>
+<th>企業の導入割合〈母集団〉</th>
+<th>個人の有料〈契約数・課金率〉</th>
+<th>有料合計・課金率〈定義を明記〉</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td>有料ビジネスユーザー900万超（人ベース。社数は未確認）［公］[1]、2026-02</td>
+<td>未確認</td>
+<td>消費者向け有料契約5,000万超（Plus/Pro/Goの合算。プラン別内訳は未確認）［公］[1]、2026-02</td>
+<td>延べ契約・席数 5,900万超（2026-02、同一発表）。課金率：約5〜6%［計］（消費者有料5,000万÷WAU9億。分母はWAU、分子には非アクティブ契約を含み得る）。延べ5,900万÷9億は約6〜7%［計］</td>
+</tr>
+<tr>
+<td>Gemini</td>
+<td>未確認（WorkspaceのGemini席数は未公表とみられる）</td>
+<td>未確認</td>
+<td>未確認（Google AI Pro/Ultraの契約数は未確認）</td>
+<td>算出不可</td>
+</tr>
+<tr>
+<td>Meta AI</td>
+<td>該当なし（法人向け席契約の形態を確認できず）</td>
+<td>未確認</td>
+<td>未確認（2026年に「Meta One」サブスク開始、契約数は語られず[4]）</td>
+<td>算出不可</td>
+</tr>
+<tr>
+<td>Doubao</td>
+<td>未確認</td>
+<td>未確認</td>
+<td>有料会員（68元／200元／500元の3段階）を2026年5〜6月に導入［報］[18]。契約数は未確認</td>
+<td>算出不可</td>
+</tr>
+<tr>
+<td>Qwenアプリ</td>
+<td>未確認</td>
+<td>未確認</td>
+<td>未確認</td>
+<td>算出不可</td>
+</tr>
+<tr>
+<td>Claude</td>
+<td>ビジネス顧客30万社超（2026-02。API顧客を含む可能性、「有料」の明示は原典未確認）［報］[30]。年100万ドル超の顧客1,000社超（2026-04、二次サイト）[29]</td>
+<td>未確認</td>
+<td>契約数は未確認（Pro/Max）。有料契約の伸びは前年比200%超、規模はChatGPTの約1/8（a16z、2026年1月データ。件数か収益かは記事で未明示）［調］[55]</td>
+<td>算出不可</td>
+</tr>
+<tr>
+<td>DeepSeek</td>
+<td>未確認（APIは有料。消費者向け有料プランは未確認）</td>
+<td>未確認</td>
+<td>未確認</td>
+<td>算出不可</td>
+</tr>
+<tr>
+<td>Grok</td>
+<td>未確認（席契約の形態は未確認）</td>
+<td>未確認</td>
+<td>有料契約630万＝X Premium/Premium+ 440万＋SuperGrok系190万［公→報］[10]、2026-03</td>
+<td>SuperGrok系190万÷MAU1.17億≒約1.6%［計］。X Premium込み630万÷1.17億≒約5%［計］（X Premiumは Grok単独の課金ではない。分子・分母は同じ2026年3月）</td>
+</tr>
+<tr>
+<td>Microsoft Copilot</td>
+<td>M365 Copilot有料席3,000万超（2026-07）［公→報］[8]、2,000万超（2026-04）［公→報］[6]。社数は未確認</td>
+<td>未確認（5万席超の顧客数が前年比4倍[6]）</td>
+<td>未確認（Copilot Proの契約数は未公表とみられる）</td>
+<td>企業3,000万席のみ確認。Copilotアプリ群MAU（1億超・2025-10）とは時点・範囲が異なり課金率は算出不可</td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td>未確認</td>
+<td>未確認</td>
+<td>未確認</td>
+<td>算出不可</td>
+</tr>
+<tr>
+<td>Gemini Notebook</td>
+<td>60万超の組織（有料か否かは未確認）［公→報］[12]</td>
+<td>未確認</td>
+<td>未確認</td>
+<td>算出不可</td>
+</tr>
+<tr>
+<td>Kimi</td>
+<td>未確認</td>
+<td>未確認</td>
+<td>契約数は未確認。有料ユーザー数の伸び率（2025年Q3→Q4に前月比170%超）のみ［報］[20]</td>
+<td>算出不可</td>
+</tr>
+<tr>
+<td>Character.AI</td>
+<td>該当なし</td>
+<td>該当なし</td>
+<td>未確認（c.ai+の契約数）</td>
+<td>算出不可</td>
+</tr>
+<tr>
+<td>Kling AI</td>
+<td>未確認（四半期売上8.5億元超・2026年Q2［公］[22]のみ）</td>
+<td>未確認</td>
+<td>未確認</td>
+<td>算出不可</td>
+</tr>
+<tr>
+<td>GitHub Copilot</td>
+<td>有料サブスクライバー470万（企業・個人の合算、前年比約75%増、2025年12月末）［公→報］[59]。席数の内訳は未確認</td>
+<td>未確認（GitHub全体でFortune 500の90%超が利用[8]。Copilot有料とは別）</td>
+<td>未確認（合算470万に含まれる）</td>
+<td>470万（合算、2025年12月末）。月間利用者が未公表のため課金率は算出不可（累計5,000万は分母に使えない）</td>
+</tr>
+<tr>
+<td>Hailuo AI</td>
+<td>未確認</td>
+<td>未確認</td>
+<td>未確認（利用者1人あたり平均支出約5ドルのみ［公→報］[23]）</td>
+<td>算出不可</td>
+</tr>
+<tr>
+<td>Midjourney</td>
+<td>未確認</td>
+<td>未確認</td>
+<td>未確認</td>
+<td>算出不可</td>
+</tr>
+<tr>
+<td>Suno</td>
+<td>未確認</td>
+<td>未確認</td>
+<td>有料契約200万（企業・個人の区別なし）［公→報］[25]、2026-02</td>
+<td>200万（合算値）。総利用者数が未確認のため課金率は算出不可</td>
+</tr>
+<tr>
+<td>Gamma</td>
+<td>未確認</td>
+<td>未確認</td>
+<td>未確認（ARR1億ドル超[26]のみ）</td>
+<td>算出不可</td>
+</tr>
+<tr>
+<td>Cursor</td>
+<td>企業顧客5万事業者（2025-12）、有料か否か明示なし［調］[27]</td>
+<td>未確認（Fortune 500の半数が顧客との記述[27]）</td>
+<td>有料サブスクライバー36万超（2025-03。企業・個人の区別なし）［調］[27]</td>
+<td>36万超（2025-03、合算値）。DAU100万超（2025-12）と時点が9か月ずれるため課金率は算出不可</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>E表の注記</strong>：「人」「社」「席」「契約」は別の単位。ChatGPTの900万は「有料ビジネスユーザー」（人）で、社数ではない。課金率［計］は分母にWAUやMAUを使った概算で、有料契約には使っていない人の契約も含まれ得る。「未確認」はゼロではなく、今回の調査で確認できなかったという意味。</p>
+<h3 id="sec-プラン別区分別の補足表">プラン別・区分別の補足表</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>サービス</th>
+<th>プラン名</th>
+<th>契約数</th>
+<th>割合〈分母を明記〉</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td>消費者向け（Plus/Pro/Go合算）</td>
+<td>5,000万超（2026-02）[1]</td>
+<td>延べ5,900万超のうち約85%［計］</td>
+</tr>
+<tr>
+<td>ChatGPT</td>
+<td>ビジネス向け（Enterprise/Business/Edu等）</td>
+<td>有料ビジネスユーザー900万超（2026-02）[1]</td>
+<td>延べ5,900万超のうち約15%［計］</td>
+</tr>
+<tr>
+<td>Grok</td>
+<td>X Premium／Premium+</td>
+<td>440万（2026-03）[10]</td>
+<td>有料630万のうち約70%［計］</td>
+</tr>
+<tr>
+<td>Grok</td>
+<td>SuperGrok系（ティア内訳は非公開）</td>
+<td>190万（2026-03）[10]</td>
+<td>有料630万のうち約30%［計］</td>
+</tr>
+<tr>
+<td>Microsoft Copilot</td>
+<td>Microsoft 365 Copilot（法人席）</td>
+<td>3,000万超（2026-07）[8]</td>
+<td>算出不可（消費者向け契約数が未確認）</td>
+</tr>
+<tr>
+<td>GitHub Copilot</td>
+<td>有料（Pro／Business／Enterpriseの合算）</td>
+<td>470万（2025-12）[59]</td>
+<td>算出不可（プラン別・企業個人別の内訳が未確認）</td>
+</tr>
+</tbody>
+</table></div>
+<p>プラン別の数値が未確認のサービス：Gemini、Meta AI、Doubao、Qwenアプリ、DeepSeek、Perplexity、Gemini Notebook、Kimi、Character.AI、Kling AI、Hailuo AI、Cursor、Claude、Midjourney、Gamma、Suno（Sunoは合算200万のみ、GitHub Copilotは合算470万のみ）。ChatGPTのPlus/Pro/Go個別の内訳も未確認。</p>
+<hr />
+<h2 id="sec-F日本の利用規模課金状況">F．日本の利用規模・課金状況</h2>
+<p>利用率は分母をそろえるため、1つの調査（ICT総研、2026年2月）に統一した。分母は「直近1年以内に生成AIサービスを利用した人」（Webアンケート回答者2,024人のうち54.7%＝約1,107人）で、全サービス共通。同調査は8サービスと「その他」の合計が90.7%であることから、主に利用するサービスの単一回答とみられる（設問文は未確認）[32]。Web訪問はSimilarwebの同一時点（2026年8月）の値で、「日本からの月間訪問回数＝サイトの月間訪問数×日本の国別シェア」として算出した［計］。日本が国別上位5に入らないサイトは、5位の国のシェアを上限にした「未満」で示す[76]。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>順位〈根拠区分〉</th>
+<th>サービス</th>
+<th>日本の利用率〈分母：生成AI利用者、ICT総研2026年2月〉</th>
+<th>日本からのWeb訪問〈Similarweb、2026年8月、月間回数〉</th>
+<th>日本の有料利用〈企業→個人〉</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1位〈B〉</td>
+<td>ChatGPT</td>
+<td>36.2%[32]</td>
+<td>非表示（訪問数は登録者限定）</td>
+<td>未確認</td>
+</tr>
+<tr>
+<td>2位〈B〉</td>
+<td>Gemini</td>
+<td>25.0%[32]</td>
+<td>非表示</td>
+<td>未確認</td>
+</tr>
+<tr>
+<td>3位〈B〉</td>
+<td>Microsoft Copilot</td>
+<td>13.3%[32]</td>
+<td>非表示</td>
+<td>未確認</td>
+</tr>
+<tr>
+<td>4位〈C〉</td>
+<td>Grok</td>
+<td>項目なし（参考表：利用経験者の11.1%で4位[33]。MM総研でも9.5%で4位[34]）</td>
+<td>640万回未満（209.6M×上限3.05%）[76]</td>
+<td>未確認</td>
+</tr>
+<tr>
+<td>同率5位〈推定・C〉</td>
+<td>Claude</td>
+<td>4.3%[32]</td>
+<td>約3,390万回（950.2M×3.57%、日本は国別4位）[57][76]</td>
+<td>未確認</td>
+</tr>
+<tr>
+<td>同率5位〈推定・C〉</td>
+<td>Perplexity</td>
+<td>4.0%[32]</td>
+<td>378万回未満（95.2M×上限3.97%）[76]</td>
+<td>未確認</td>
+</tr>
+<tr>
+<td>7位〈C〉</td>
+<td>Suno</td>
+<td>項目なし</td>
+<td>約334万回（72.7M×4.59%、日本は国別3位）[60][76]</td>
+<td>未確認</td>
+</tr>
+<tr>
+<td>8位以下〈相互の順序は判定不可・C〉</td>
+<td>DeepSeek／Character.AI／Cursor／Midjourney</td>
+<td>項目なし</td>
+<td>上限のみ：DeepSeek 1,010万回未満、Character.AI 513万回未満、Cursor 56万回未満、Midjourney 35万回未満[76]</td>
+<td>未確認</td>
+</tr>
+<tr>
+<td>8位以下〈判定不可〉</td>
+<td>Meta AI／Doubao／Qwenアプリ／Kimi／Gemini Notebook／Kling AI／Hailuo AI／GitHub Copilot／Gamma</td>
+<td>項目なし</td>
+<td>未確認（訪問数が非表示、または日本の比率を確認できず）</td>
+<td>未確認</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>参考表（分母：対話型生成AIの利用経験者 n=111、複数回答、MMD研究所 2025年11月）</strong>[33]：ChatGPT 80.6%／Gemini 50.8%／Microsoft Copilot 39.1%／Grok 11.1%／Perplexity 4.9%／Claude 3.9%。分母が小さく誤差が大きいため、Grokの順位の補助と、上位3つの順序の確認にのみ使った。</p>
+<p><strong>参考（人数）</strong>：ニールセンの月間利用者数（PC＋スマホ、2025年3月）はChatGPT 931万人、Gemini 261万人、Microsoft Copilot 190万人[35]。1年半前の値で、Claude・Perplexityの人数は公表されていない。</p>
+<p><strong>日本全体の利用率（サービス横断）</strong>
+- 生成AIの利用経験率58.8%（総務省 令和8年版情報通信白書。10〜60代の回答者n=1,236、インターネットアンケート、2026年1〜2月調査、2026年7月公表。15〜19歳を新規追加。20歳以上に限ると52.2%、前年26.7%、前々年9.1%）［公］[31]。米国75.6%、ドイツ75.6%、中国93.6%。
+- 直近1年以内の利用経験54.7%（ICT総研、インターネット利用者のWebアンケートn=2,024、2026年2月）［調］[32]。同社の利用者数推計は2026年末3,553万人（ICT総研の推計であり、今回の算出ではない）。
+- 「月に数回以上」利用約35%（NRI、インターネット調査、2025年9月調査・2026年4月公表。分母の明記なし）［調］[36]。
+- 利用経験21.8%、現在の利用者数約1,597万人（MM総研の推計、15〜69歳、2025年8月）［調］[34]。
+- 人数の算出：ICT総研・MMD・MM総研はいずれもインターネット調査で、日本の人口全体への補正の妥当性を確認できなかったため、サービス別の人数は「算出不可」。確認できた利用率のみ掲載した。</p>
+<p><strong>日本の企業導入</strong>
+- 生成AIの活用方針あり68.9%（総務省 令和8年版白書。従業員10名以上でデジタル化に着手した企業の管理職以上n=515、2026年1〜2月。前年49.7%。米82.8%、独82.2%、中95.4%）［公］[31]。全企業の導入率ではない。
+- 生成AIを「活用している」34.5%（帝国データバンク、有効回答10,312社、2026年3月調査。大企業46.5%、中小32.4%、小規模28.0%）［調］[37]。
+- 企業の有料契約（ChatGPT Enterprise／Copilot／Geminiの日本での導入社数）：未確認。</p>
+<p><strong>日本の個人の有料利用</strong>
+- 有料プラン利用率15%（NRI、2025年9月。分母は原典に明記なし。米39%、独32%、中65%）［調］[36]。
+- ICT総研・MMD・MM総研の有料率：未確認（取得した範囲に記載なし）。</p>
+<p><strong>F表の注記</strong>：利用率の列はICT総研の1調査に統一し、分母は全サービスで同じ（生成AI利用者）。上位3つは他の2調査[33][34]とニールセン[35]でも同じ順序で〈B〉、Grokは統一した調査に項目がなく参考表の順位から〈C〉、ClaudeとPerplexityは統一した調査で4.3%対4.0%と差が誤差の範囲で、参考表では順序が逆転するため同率とした。Web訪問の列は同一時点のSimilarwebの値だが、訪問回数は人数ではなく、アプリ利用を含まない。Sunoと8位以下はWeb訪問だけが根拠で、確度は低い。</p>
+<blockquote class="note">
+<p>この資料は、30候補から選んだ主要20サービスの比較で、世界のすべてのサービスを網羅した上位20ではありません。順位はMAUを主軸とした、おおよその利用規模の目安です。〈A〉は比較可能な数値による直接比較、〈B〉は異なる指標からの推定、〈C〉は間接情報からの推定を示します。同率は根拠から同程度と判断したもの、順位保留は比較する根拠が不足したものです。［計］は、明記した前提と計算式に基づく算出値です。登録数・ダウンロード数・契約数は、実際に使っている人数と同じ意味ではありません。</p>
+</blockquote>
+<hr />
+<h2 id="sec-H機能の対応範囲">H．機能の対応範囲</h2>
+<p>判定は2026年9月21日時点で一般利用者が使える公式機能。出典番号[61]〜[75]はJ表の機能出典。注記番号は表下。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>サービス</th>
+<th>文章・対話</th>
+<th>Web検索・調査</th>
+<th>画像</th>
+<th>動画</th>
+<th>音声</th>
+<th>音楽</th>
+<th>コード・アプリ</th>
+<th>資料・スライド・表</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td>○[62]注1</td>
+<td>◎[62]</td>
+<td>◎[62]</td>
+<td>△[62]注2</td>
+<td>○[63]注3</td>
+<td>？＊</td>
+<td>◎[62]</td>
+<td>◎[62]注4</td>
+</tr>
+<tr>
+<td>Gemini</td>
+<td>◎[61]</td>
+<td>◎[61]</td>
+<td>○[61]注5</td>
+<td>○[61]注6</td>
+<td>○[61]</td>
+<td>？＊注7</td>
+<td>○[61]</td>
+<td>○[61]注8</td>
+</tr>
+<tr>
+<td>Meta AI</td>
+<td>○[67]</td>
+<td>○注9</td>
+<td>○注9</td>
+<td>○[67]</td>
+<td>○注9</td>
+<td>？＊</td>
+<td>○注9</td>
+<td>？＊</td>
+</tr>
+<tr>
+<td>Doubao</td>
+<td>○注10</td>
+<td>○注10</td>
+<td>？注10</td>
+<td>？注10</td>
+<td>？注10</td>
+<td>？</td>
+<td>○注10</td>
+<td>？</td>
+</tr>
+<tr>
+<td>Qwenアプリ</td>
+<td>○注10</td>
+<td>○注10</td>
+<td>？注10</td>
+<td>？注10</td>
+<td>？</td>
+<td>？</td>
+<td>○注10</td>
+<td>？</td>
+</tr>
+<tr>
+<td>Claude</td>
+<td>◎[64]</td>
+<td>◎[64]</td>
+<td>？＊注21</td>
+<td>？＊注21</td>
+<td>○[64]</td>
+<td>？＊注21</td>
+<td>◎[64]</td>
+<td>◎[64]</td>
+</tr>
+<tr>
+<td>DeepSeek</td>
+<td>○注10</td>
+<td>○注10</td>
+<td>？＊</td>
+<td>？＊</td>
+<td>？</td>
+<td>？＊</td>
+<td>○注10</td>
+<td>？＊</td>
+</tr>
+<tr>
+<td>Grok</td>
+<td>○[66]</td>
+<td>◎[66]</td>
+<td>○[66]</td>
+<td>○[66]</td>
+<td>○[66]</td>
+<td>？＊</td>
+<td>○[66]</td>
+<td>？</td>
+</tr>
+<tr>
+<td>Microsoft Copilot</td>
+<td>○[65]</td>
+<td>◎[65]注11</td>
+<td>○[65]注11</td>
+<td>△[65]注12</td>
+<td>○注11</td>
+<td>？注13</td>
+<td>○注11</td>
+<td>◎[65]注14</td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td>○[68]</td>
+<td>◎[68]</td>
+<td>○[68]注15</td>
+<td>△[68]注15</td>
+<td>？[68]</td>
+<td>？＊</td>
+<td>○[68]注16</td>
+<td>◎[68]注15</td>
+</tr>
+<tr>
+<td>Gemini Notebook</td>
+<td>○[70]</td>
+<td>○[70]</td>
+<td>△[70]注17</td>
+<td>△[70]注17</td>
+<td>○[70]注17</td>
+<td>？＊</td>
+<td>？＊</td>
+<td>○[70]注17</td>
+</tr>
+<tr>
+<td>Kimi</td>
+<td>○注10</td>
+<td>○注10</td>
+<td>？</td>
+<td>？＊</td>
+<td>？</td>
+<td>？＊</td>
+<td>○注10</td>
+<td>？</td>
+</tr>
+<tr>
+<td>Character.AI</td>
+<td>○[71]</td>
+<td>？＊</td>
+<td>？</td>
+<td>？</td>
+<td>○[71]注18</td>
+<td>？＊</td>
+<td>？＊</td>
+<td>？＊</td>
+</tr>
+<tr>
+<td>Kling AI</td>
+<td>？＊</td>
+<td>？＊</td>
+<td>？注19</td>
+<td>○[22]注19</td>
+<td>？注19</td>
+<td>？＊</td>
+<td>？＊</td>
+<td>？＊</td>
+</tr>
+<tr>
+<td>GitHub Copilot</td>
+<td>△[74]注20</td>
+<td>？</td>
+<td>？＊</td>
+<td>？＊</td>
+<td>？＊</td>
+<td>？＊</td>
+<td>◎[74]</td>
+<td>？＊</td>
+</tr>
+<tr>
+<td>Hailuo AI</td>
+<td>？＊</td>
+<td>？＊</td>
+<td>？</td>
+<td>○[23]注19</td>
+<td>？注19</td>
+<td>？＊</td>
+<td>？＊</td>
+<td>？＊</td>
+</tr>
+<tr>
+<td>Midjourney</td>
+<td>？＊</td>
+<td>？＊</td>
+<td>◎[73]注22</td>
+<td>△[73]注22</td>
+<td>？＊</td>
+<td>？＊</td>
+<td>？＊</td>
+<td>？＊</td>
+</tr>
+<tr>
+<td>Suno</td>
+<td>？＊</td>
+<td>？＊</td>
+<td>？＊</td>
+<td>？＊</td>
+<td>？＊</td>
+<td>◎[75]注24</td>
+<td>？＊</td>
+<td>？＊</td>
+</tr>
+<tr>
+<td>Gamma</td>
+<td>△[69]注23</td>
+<td>？</td>
+<td>○[69]</td>
+<td>？</td>
+<td>？</td>
+<td>？＊</td>
+<td>？注23</td>
+<td>○[69]注23</td>
+</tr>
+<tr>
+<td>Cursor</td>
+<td>△[72]注20</td>
+<td>？</td>
+<td>？＊</td>
+<td>？＊</td>
+<td>？＊</td>
+<td>？＊</td>
+<td>◎[72]</td>
+<td>？＊</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>凡例</strong>：◎＝基本機能と指定した2つの拡張機能をすべて確認／○＝基本機能を確認（◎の条件は満たさない、または拡張機能が未確認）／△＝基本機能への対応が一部に限られる／×＝非対応を確認できた／？＝公開情報では判定できない／<strong>？＊＝公式の機能一覧・ヘルプに該当機能の記載がなく提供を確認できない（非対応の可能性が高いが、「記載がないだけでは×にしない」条件により？とした）</strong>。</p>
+<p><strong>判定条件（第7章の要約）</strong>：文章＝自由な指示への文章生成と文脈を引き継ぐ対話（拡張：ファイル参照／指定箇所の編集専用機能）。Web検索＝参照元付きの回答（拡張：多段階の自動調査／出典付きレポート）。画像＝文章からの画像生成（拡張：入力画像の変換・編集／範囲指定の部分編集）。動画＝文章からの動画生成（拡張：画像からの動画／既存動画の生成的編集・延長）。音声＝指定文章の読み上げ音声の生成（拡張：声質・話し方の指定／独自音声の作成）。音楽＝楽曲・伴奏の生成（拡張：歌詞と歌声／区間編集・延長）。コード＝コード生成（拡張：環境内での実行・プレビュー／複数ファイルにまたがるエージェント）。資料＝文書・スライド・表計算のいずれかを編集可能な成果物として生成（拡張：2種以上／3種すべて）。</p>
+<p><strong>注記</strong>
+- 注1：ChatGPTのCanvasは2026年5月以降、新モデルでは提供されず、編集機能はチャット内に統合された[62]。指定箇所編集の専用機能としては判定を保留し○とした。
+- 注2：動画生成は同一アカウントで使える別アプリ「Sora」での提供。ChatGPT本体内での動画生成は今回のリリースノート確認では検出できず、△（別アプリで提供）とした[62]。
+- 注3：音声モードは全プランで提供、無料は上限あり（Free「制限付き」、Plus 3時間など）[63]。読み上げ単独の機能は未確認だが、音声モードでの音声応答を基本機能として判定。
+- 注4：Excel／PowerPoint／Wordへの公式アドインが全プラン向けに提供（2026年5〜9月）[62]。ChatGPT本体からのpptx/xlsxファイル出力の現状は未確認。
+- 注5：Geminiの画像編集は「背景変更・物体差し替え・要素追加」のプロンプト型で、範囲指定の部分編集UIは公式ページで確認できず○[61]。
+- 注6：動画生成（Veo）はGoogle AI Pro／Ultra限定、18歳以上[61]。画像からの動画生成の可否・既存動画の延長は未確認。
+- 注7：Geminiアプリ内の音楽生成は公式プラン比較表に記載がなく未確認[61]。
+- 注8：Canvas・Deep Researchは無料プランでも提供[61]。スライド・表計算の生成可否は公式ページで確認できず○。
+- 注9：Meta AIの画像生成・音声・Web検索・コードは公式ヘルプ本文を取得できず（メタデータのみ）、一般に知られた機能として○としたが原典確認は未了。信頼度は他の○より低い。
+- 注10：Doubao・Qwen・DeepSeek・Kimiは時間制約で公式ヘルプを開けなかった。対話型サービスとしての文章・Web検索・コード生成の基本機能は、QuestMobile・aicpb・報道が「AIチャットアプリ」として扱っていることをもとに○としたが、画像・動画・音声・資料は？とした（既知情報ではDoubao・Qwenは画像・動画生成に対応するとされるが未確認）。
+- 注11：Microsoft Copilotの画像生成・音声・コード実行は今回原典を開けず、一般に知られた機能として○。Deep Researchは提供済みとして◎としたが原典未確認。
+- 注12：動画作成は「組織でClipchampが有効化されていること」が条件（M365 Copilotアプリ）[65]。消費者向け無料アプリでの可否は未確認。
+- 注13：Suno連携による音楽生成の現状は未確認。
+- 注14：Word／Excel／PowerPointのファイル作成はMicrosoft 365 Copilotライセンス（法人）または対象の有料プランが必要[65]。
+- 注15：Perplexityの画像生成・動画生成（制限付き）・資料作成（DOCX/XLSX/PPTX）はProなど有料プラン限定。無料プランでは資料作成不可[68]。
+- 注16：Createで生成したHTMLアプリのプレビューを拡張1として確認。複数ファイルのエージェントは未確認。
+- 注17：Gemini Notebookは取り込んだソースからの生成が前提で、自由な指示による画像・動画生成ではないため△。音声概要（Audio Overview）は指定文章の読み上げそのものではないが、音声生成として○[70]。スライド・レポートの2種を確認したため○。
+- 注18：Character.AIのキャラクター音声・音声通話を音声の基本機能として○[71]。原典は今回未確認で、既知情報による。
+- 注19：Kling AI・Hailuo AIは動画生成が本業で、決算・目論見書で「動画生成サービス」として記載[22][23]。画像からの動画・延長・画像生成は公式ヘルプを開けず未確認。
+- 注20：Cursor・GitHub Copilotの対話はコード編集の文脈に限られるため△。
+- 注21：Claudeの公式ヘルプに画像・動画・音楽の生成機能の記載はなく、ファイル作成記事もPNGのグラフ生成のみ言及[64]。
+- 注22：Midjourneyの画像編集（範囲指定）と、画像からのみの動画生成（V1 Video）は公式ドキュメントに基づく既知情報。今回原典未確認[73]。
+- 注23：Gammaはスライド・ドキュメント・Webサイトの生成に対応し、表計算は非対応のため資料は○（2種）。文章生成は資料内の生成に限られ△。Webサイト生成をコード生成とみなすかは判定できず？[69]。
+- 注24：Sunoの歌詞・歌声を含む楽曲生成と、区間の差し替え・延長は既知情報。今回原典未確認[75]。</p>
+<blockquote class="note">
+<p>◎・○・△は、共通の判定条件に基づく機能の対応範囲を示します。成果物の品質・精度・使いやすさや、課金価値の評価ではありません。×は非対応を確認できたもの、？は公開情報では判定できなかったものです。有料プラン限定などの条件は別途注記しています。</p>
+</blockquote>
+<p><strong>H表の限界</strong>：機能調査は優先順位5位のため、22回の取得枠で確認できたのはGemini・ChatGPT・Claude・Copilot・Grok・Meta AI・Perplexity・Notion・Gammaの一部に限られる。？が多いのは非対応の意味ではなく、今回確認できなかった意味。</p>
+<hr />
+<h2 id="sec-I分析本文">I．分析本文</h2>
+<h3 id="sec-1世界の勢力図として何が分かるか">1．世界の勢力図として、何が分かるか</h3>
+<p>最上位は3つに絞られる。ChatGPTは2026年2月時点で週間アクティブユーザーが9億人を超え[1]、Sensor Towerの推計ではモバイルアプリだけで2026年5月に月間10億人に達したとされる[2]。Geminiアプリは2026年第2四半期の決算で月間9.5億人[3]、Meta AIは2025年5月時点で月間10億人超[5]と公表されている。「10億人前後の対話型サービスが3つ」が2026年9月時点の骨格だが、3つの数字は指標も範囲も違う。ChatGPTは週次、Geminiは月次、Meta AIはWhatsAppやInstagramなど既存アプリへの組み込みを合算した月次で、しかも2025年の値のまま更新されていない[4]。</p>
+<p>その下に、中国国内で大きな利用者を持つサービスが続く。QuestMobileの2026年6月の推計では、Doubaoが3.82億人、Qwenアプリが1.67億人、DeepSeekが1.30億人の月間利用者を持つ[14]。いずれも中国のスマホアプリのみを対象にした外部推計で、海外やWeb版の利用は含まれない。DeepSeekはWeb訪問数が月4.8億回と世界のAIサイトの中でも大きく[16]、アプリの数字だけでは実態を過小評価する可能性がある。</p>
+<p>Claudeは公式の利用者数を出していないが、外部指標では米国勢の3番手に位置する。Similarwebの世界の生成AIサイト訪問シェアは2026年5月でChatGPT 52.7%、Gemini 27.3%に次ぐ8.9%の3位[56]、a16zのWeb月間ユニーク訪問者ランキング（2026年1月）でも3位[55]で、claude.aiの月間訪問数は2026年8月に9.5億回[57]に達する。モバイルアプリは月間約5,600万人（Sensor Tower推計、2026年第2四半期）で、Webに比べてアプリの比重が小さい[58]。</p>
+<p>米国勢の第2グループとして、GrokがSpaceXの上場申請書類に基づく報道で月間1.17億人[10]、Microsoft Copilotがアプリ群で月間1億人超（2025年10月）[9]。Perplexityは外部推計で月間4,500万人[11]、NotebookLMから改称したGemini Notebookは3,000万人超の利用者[12]と、いずれも「億」には届かない規模にある。</p>
+<p>画像・動画・音楽・コードといった専門分野は、対話型に比べて桁が1〜2つ小さい。動画生成のKling AIが月間1,200万人[21]、Hailuo AIが約560万人[23]、コード生成のCursorが日次100万人超[27]である。GitHub Copilotの累計5,000万人[8]やGammaの累計7,000万人[26]は「使ったことがある人」の積み上げで、今月使っている人数ではない。</p>
+<p>利用者が多いことは、性能が高いことや課金する価値が高いことを意味しない。Meta AIの10億人は既存のSNSの中でAIに触れた人の数であり、能動的にAIサービスを選んで使った人の数とは性質が違う。</p>
+<h3 id="sec-2日本ではどのような違いが確認できるか">2．日本では、どのような違いが確認できるか</h3>
+<p>日本の生成AI利用率は急速に上がっている。総務省の令和8年版情報通信白書では、20歳以上の利用経験率が9.1%（2023年度）→26.7%（2024年度）→52.2%（2025年度）と2年で5倍以上になった[31]。ただし米国75.6%、ドイツ75.6%、中国93.6%に対して日本は58.8%（10〜60代）で、国際比較では依然として低い[31]。企業側も、デジタル化に着手した企業に限れば活用方針ありが68.9%[31]だが、全国1万社超の帝国データバンク調査では「活用している」は34.5%[37]で、母集団の違いで数字が倍近く変わる。</p>
+<p>サービス別に見ると、世界との最大の違いは「Meta AIと中国系サービスが見えない」ことである。利用率の分母は調査ごとに違い、ICT総研は生成AI利用者に占める主利用サービスの構成比、MMD研究所とMM総研は利用経験者の複数回答なので、F表の利用率はICT総研に統一した。3調査はいずれもChatGPT、Gemini、Microsoft Copilotの順で一致しており[32][33][34]、ニールセンの月間利用者数（2025年3月）も同じ順で931万人、261万人、190万人だった[35]。世界で10億人規模のMeta AIも、Doubao・Qwen・DeepSeekも、日本の調査には項目として現れず、日本の勢力図は事実上「米国製の3サービスに、Grok・Claude・Perplexityが続く」形になっている。</p>
+<p>4位以下は調査ごとに順序が揺れる。GrokはMMD研究所で11.1%[33]、MM総研で9.5%[34]とClaude・Perplexityより高いが、ICT総研の一覧には項目がない[32]。ClaudeとPerplexityはICT総研で4.3%と4.0%[32]、MMD研究所で3.9%と4.9%[33]と順序が入れ替わり、差は誤差の範囲と考えられる。Web訪問で見るとclaude.aiは日本からの訪問が月約3,390万回で日本が国別4位にあり[57][76]、Perplexityの上限378万回を大きく上回るが、訪問回数は人数ではないため、同率の判断は変えていない。</p>
+<p>課金については、NRIの国際比較調査で日本の有料プラン利用率は15%、米国39%、ドイツ32%、中国65%と、利用率以上に開きが大きい[36]。分母の定義が原典に明記されていないため、傾向の参考にとどめたい。</p>
+<h3 id="sec-3順位の根拠と同率順位保留にした理由">3．順位の根拠と、同率・順位保留にした理由</h3>
+<p>ChatGPTを1位〈B〉にしたのは、週間9億人[1]は月間で数えれば同じかそれ以上になり、Sensor Towerのアプリ月間10億人の推計[2]とも矛盾しないためである。</p>
+<p>GeminiとMeta AIを同率2位〈推定・B〉にしたのは、両者がともに10億人前後で、細かな優劣をつける根拠がないためである。数字だけならMeta AIの10億超が上回るが、その値は16か月前で組み込みを含む合算であり、Geminiは1年で6.5億→9.5億と伸びている[3]。どちらが多いかは判断できないが、同水準にあることは公式値から言えるため同率とした。</p>
+<p>4位から9位までは、中国系3サービスとClaude、Grok、Copilotの並びである。Doubaoは3.82億人で他を大きく引き離すため4位〈B〉。QwenとDeepSeekは同じ調査主体（QuestMobile）の同じ月の値で1.67億対1.30億とQwenが上回るため5位・6位とした[14]。ただしaicpbの推計ではQwenが2.51億[16]と乖離が大きく、この順序の確度は高くない。Grok（1.17億、2026年3月）[10]とCopilot（1億超、2025年10月）[9]は、Copilotの値が11か月古く現在は上回っている可能性があるが、確認できた数値の範囲で8位・9位とした。</p>
+<p>10位以下は外部推計・定義不明の値・DAUなどに依存するため、すべて〈C〉である。Character.AIの2,000万人は2024年初の推計で[13]、現在の規模は分からない。Kimiは2つの推計が2,269万と2,000万未満で概ね一致する[14][16]。</p>
+<p>ClaudeとDeepSeekを同率6位〈推定・C〉にしたのは、両者とも総利用者数が不明で、比較できる指標の勝ち負けが分かれるためである。Webでは、Similarwebの訪問シェア（Claude 8.9%対DeepSeek 4.0%）[56]、a16zのユニーク訪問者順位（3位対5位）[55]、月間訪問数（9.5億対4.8億）[57][16]のいずれもClaudeが上回る。アプリでは、DeepSeekの中国国内アプリだけで月間1.30億人[14]と、Claudeの世界のアプリ利用者約5,600万人[58]の2倍以上になる。Web中心のClaudeとアプリ中心のDeepSeekという構造の違いで、どちらが多いかは決められないが、規模の桁は同じと判断した。Qwenを上に置いたのは、確認できたMAU1.67億[14]がClaudeのアプリMAUの3倍で、Web側の人数が不明な以上、上回る根拠がないためである。Grok（8位）は公式値1.17億[10]がXへの組み込みを含む数字で、単体のアプリ（約5,000万[58]）とWebシェア（2.8%[56]）ではClaude・DeepSeekを下回るため、両者の下に置いた。</p>
+<p>15位以下の6つは、MAUに代わる指標の上限・下限から順序を推定した〈C〉である。GitHub Copilotは有料契約だけで470万（2025年12月末）[59]あり、無料枠の利用者が加わるため、月間利用者はHailuo AIの560万[23]を上回る可能性が高いと判断して15位に置いた。上限は累計5,000万[8]で、Kling AIの1,200万[21]を上回るかは確認できないためKlingの下とした。MidjourneyとSunoは同率17位〈推定・C〉とした。a16zのWebユニーク訪問者順位（2026年1月）ではMidjourney10位・Suno15位[55]だが、Similarwebの訪問数（2026年8月）ではSunoが月7,270万回とMidjourneyの940万回を大きく上回り[60]、指標で優劣が分かれる。MidjourneyはDiscord経由の利用[24]、Sunoはアプリ利用と有料契約200万[25]がWeb訪問に表れない点も同じで、同程度と判断した。GammaとCursorはa16zの16位・20位[55]に従ったが、CursorのIDE内利用はWeb訪問に表れず、確度は低い。</p>
+<p>日本の順位は、上位3つは4つの調査で順序が一致するため〈B〉、GrokはICT総研に項目がないため〈C〉、ClaudeとPerplexityは調査間で順序が逆転するため同率5位〈推定・C〉とした。</p>
+<h3 id="sec-4企業と個人の課金状況から何が分かるか">4．企業と個人の課金状況から、何が分かるか</h3>
+<p>課金の実数を公表しているのは、ChatGPT、Grok、Microsoft 365 Copilot、GitHub Copilot、Suno、Cursorなど一部に限られる。</p>
+<p>ChatGPTは2026年2月時点で消費者向け有料契約5,000万超、有料ビジネスユーザー900万超[1]。延べ5,900万超の約85%が個人で、個人課金が主体である。Grokは有料630万のうちX Premium系が440万、SuperGrok系が190万で[10]、Grok単独の課金はMAUの2%弱にとどまる。</p>
+<p>企業向けでは、Microsoft 365 Copilotの有料席が2026年4月の2,000万超から7月には3,000万超へと1四半期で1,000万席増えた[6][8]。これは法人の席数であり、ChatGPTの有料ビジネスユーザー900万（人）と比べると、企業の席の獲得ではMicrosoftが先行している。ただし、席が配られていることと使われていることは別で、実際に利用している人数はどちらも未確認である。Claudeのビジネス顧客30万社超[30]は、API顧客を含む可能性があり「有料席」の数ではない。</p>
+<p>個人の課金率は公表値がなく概算に頼る。ChatGPTの消費者有料5,000万÷週間9億で約5〜6%［計］となり、日本のNRI調査の有料率15%[36]とは分母も定義も違うが、「使っている人の大半は無料で使っている」という構図は共通する。</p>
+<h3 id="sec-5有料合計課金率プラン別の数値をどこまで確認算出">5．有料合計・課金率・プラン別の数値を、どこまで確認・算出できたか</h3>
+<p>課金率を算出できたのはChatGPTとGrokの2つだけである。ChatGPTは分子（有料契約）と分母（WAU）が同じ発表[1]の値で時点が一致しており、約5〜6%（消費者のみ）と約6〜7%（ビジネス込み延べ）を［計］として示した。Grokは分子・分母ともSpaceX S-1に基づく2026年3月の値[10]で、SuperGrok系のみで約1.6%、X Premium込みで約5%とした。</p>
+<p>Microsoft Copilotは席数3,000万（2026年7月）と利用者1億超（2025年10月）で時点が9か月ずれ、法人席と消費者アプリで範囲も対応しないため算出不可。Cursorは有料36万（2025年3月）とDAU100万（2025年12月）で時点が合わず[27]、SunoとGitHub Copilotは有料契約[25][59]に対する利用者数が未確認で算出不可である。</p>
+<p>プラン別の内訳は、ChatGPTの消費者／ビジネス[1]、GrokのX Premium／SuperGrok系[10]、M365 Copilotの席数[8]、GitHub Copilotの合算[59]しか確認できず、Plus／Pro／Go、Google AI Pro／Ultra、Claude Pro／Max、Perplexity Proの数値は公式・報道とも確認できなかった。</p>
+<h3 id="sec-6機能の対応範囲にどのような違いがあるか">6．機能の対応範囲に、どのような違いがあるか</h3>
+<p>対応範囲が最も広いのは、ChatGPT・Gemini・Claude・Microsoft Copilot・Grok・Perplexityの汎用対話型で、文章・検索・コード・資料の4項目は基本機能を確認できた[61]〜[68]。違いが出るのは画像・動画・音楽である。画像生成はChatGPT・Gemini・Grok・Copilot・Perplexity（有料）が対応するが、Claudeの公式ヘルプには画像生成の記載がない[64]。動画生成はGemini（Pro／Ultra限定）[61]とGrok[66]がアプリ内で提供し、ChatGPTは別アプリSora[62]、Perplexityは有料の制限付き[68]、Copilotは組織のClipchamp有効化が条件[65]である。音楽生成は汎用対話型のいずれも公式に確認できず、この分野はSunoなどの専門サービスの領域として残っている[75]。</p>
+<p>資料作成では、Claude[64]・ChatGPT（Officeアドイン）[62]・Perplexity（有料）[68]・M365 Copilot（法人ライセンス）[65]が文書・スライド・表計算の3種に対応する。これに対してGammaは表計算に対応せず[69]、Gemini Notebookはソースから生成する形に限られる[70]。</p>
+<p>専門サービス（Midjourney・Kling AI・Hailuo AI・Suno・Cursor・GitHub Copilot）は自分の分野で拡張機能まで備える代わりに、他の項目は「該当機能の記載なし」が並ぶ。対応範囲の広さは品質や課金価値を意味せず、中国系サービスは公式ヘルプを確認できなかったため、「？」の多さを非対応と読まないでほしい。</p>
+<h3 id="sec-7今回の資料の限界と未確認の重要事項">7．今回の資料の限界と、未確認の重要事項</h3>
+<p>第一に、比較可能な同一指標がほとんどない。〈A〉をつけられた順位は一つもなく、勢力図全体が〈B〉〈C〉の推定である。第二に、Meta AIとCopilotの利用者数は2025年の公式値のままで、今回原典を再確認できていない。第三に、Claudeの規模を示す公式値がなく、順位はWeb訪問とアプリの外部推計からの〈C〉にとどまる。第四に、日本のサービス別データは2025年3月（ニールセン）と2025〜2026年のインターネット調査に依存し、人口全体への推計はできなかった。第五に、機能判定は取得枠の制約で原典確認が9サービスの一部にとどまり、中国系4サービスと専門サービスの多くは既知情報か「？」である。第六に、15位以下の順位はMAUのない中で別指標の上限・下限から推定したもので、GitHub CopilotがKling AIを、SunoがHailuo AIを上回る可能性は残る。</p>
+<hr />
+<h2 id="sec-J出典と計算の対応">J．出典と計算の対応</h2>
+<h3 id="sec-利用者数課金順位に関わる主要な数値">利用者数・課金・順位に関わる主要な数値</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>出典番号</th>
+<th>主張・数値</th>
+<th>指標・地域・範囲・時点</th>
+<th>出典名</th>
+<th>URL</th>
+<th>情報源区分</th>
+<th>裏づけとなる記述の要約</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[1]</td>
+<td>ChatGPT WAU9億超／有料ビジネスユーザー900万超／消費者有料契約5,000万超</td>
+<td>WAU・世界・範囲明示なし／2026-02-27</td>
+<td>OpenAI「Scaling AI for everyone」</td>
+<td><a href="https://openai.com/index/scaling-ai-for-everyone/">https://openai.com/index/scaling-ai-for-everyone/</a></td>
+<td>［公］原典を開いた</td>
+<td>本文に「more than 900M weekly active users」「More than 9 million paying business users」「more than 50 million consumer subscribers」と明記</td>
+</tr>
+<tr>
+<td>[2]</td>
+<td>ChatGPTモバイルアプリMAU10億超（2026年5月）／Claudeの利用時間・シェア急伸</td>
+<td>アプリMAU推計・世界／2026年5月</td>
+<td>Sensor Tower「State of AI 2026」</td>
+<td><a href="https://sensortower.com/blog/state-of-ai-2026">https://sensortower.com/blog/state-of-ai-2026</a></td>
+<td>［調］原典を開いた</td>
+<td>「fastest mobile app ever to reach one billion MAU in May 2026」。Claudeは前年比+452%、米国シェア約14%と記載。Claudeの絶対値は掲載なし</td>
+</tr>
+<tr>
+<td>[3]</td>
+<td>GeminiアプリMAU9.5億（7.5億から増加）</td>
+<td>MAU・世界／2026年Q2（2026-07-22発表）</td>
+<td>Forbes（Alphabet Q2 2026決算のPichai声明を引用）</td>
+<td><a href="https://www.forbes.com/sites/tylerroush/2026/07/22/950-million-people-now-use-gemini-each-month-as-alphabet-posts-earnings-beat/">https://www.forbes.com/sites/tylerroush/2026/07/22/950-million-people-now-use-gemini-each-month-as-alphabet-posts-earnings-beat/</a></td>
+<td>［公→報］報道経由</td>
+<td>「Gemini has 950 million monthly active users, up from the 750 million it reported for Q4 2025」。決算コール原文は未確認</td>
+</tr>
+<tr>
+<td>[4]</td>
+<td>Meta AIのMAUは2026年の決算で数値更新なし。「Meta One」サブスク開始</td>
+<td>2026年Q1・Q2決算コール</td>
+<td>Meta Q1 2026 Earnings Call Transcript</td>
+<td><a href="https://s21.q4cdn.com/399680738/files/doc_financials/2026/q1/META-Q1-2026-Earnings-Call-Transcript.pdf">https://s21.q4cdn.com/399680738/files/doc_financials/2026/q1/META-Q1-2026-Earnings-Call-Transcript.pdf</a></td>
+<td>［公］原典を開いた</td>
+<td>MAUの具体数値なし。「Meta AI sessions per user」の増加、Muse Spark統合後に日次で対話する人が60%増（Q2）と記述</td>
+</tr>
+<tr>
+<td>[5]</td>
+<td>Meta AI MAU10億超</td>
+<td>MAU・世界・アプリ群組み込み合算／2025年5月</td>
+<td>Meta 2025年Q1決算コール（2025-04-30）およびLlamaCon発言</td>
+<td><a href="https://investor.atmeta.com/">https://investor.atmeta.com/</a></td>
+<td>［公］<strong>今回原典再確認なし</strong></td>
+<td>2025年4〜5月に「Meta AIの月間利用者がほぼ10億」と公表されたとして広く引用される値。今回の60分内では再確認していない</td>
+</tr>
+<tr>
+<td>[6]</td>
+<td>M365 Copilot有料席2,000万超／5万席超顧客が前年比4倍</td>
+<td>有料席・世界・法人／2026-04-30</td>
+<td>CIO Dive（FY26 Q3決算コールのNadella発言を引用）</td>
+<td><a href="https://www.ciodive.com/news/microsoft-earnings-Q3-2026/819009/">https://www.ciodive.com/news/microsoft-earnings-Q3-2026/819009/</a></td>
+<td>［公→報］報道経由</td>
+<td>「now have over 20 million Microsoft 365 Copilot paid seats」「customers with over 50,000 seats quadrupled year over year」</td>
+</tr>
+<tr>
+<td>[7]</td>
+<td>M365 Copilot有料席3,000万超（1四半期で1,000万席増）</td>
+<td>有料席・法人／2026-07-29</td>
+<td>2-data（Futurum Groupのコール要約を引用）</td>
+<td><a href="https://2-data.com/knowledge-hub/microsoft-365-copilot-passed-30-million-seats-what-the-fy26-numbers-actually-tell-enterprise-buyers/">https://2-data.com/knowledge-hub/microsoft-365-copilot-passed-30-million-seats-what-the-fy26-numbers-actually-tell-enterprise-buyers/</a></td>
+<td>［報］</td>
+<td>約2,000万から3,000万超へ。コール原文は未確認</td>
+</tr>
+<tr>
+<td>[8]</td>
+<td>GitHub Copilot累計5,000万ユーザー／M365 Copilot有料席3,000万超／GitHub全体2.25億</td>
+<td>累計・世界／2026-07-29</td>
+<td>Investing.com Microsoft FY26 Q4決算コール記録</td>
+<td><a href="https://www.investing.com/news/transcripts/earnings-call-transcript-microsoft-q4-2026-beats-forecasts-stock-jumps-8-93CH-4822020">https://www.investing.com/news/transcripts/earnings-call-transcript-microsoft-q4-2026-beats-forecasts-stock-jumps-8-93CH-4822020</a></td>
+<td>［公→報］記録記事を開いた</td>
+<td>「GitHub Copilot now has 50 million users」「business and enterprise seat growth」。有料契約者数の数値なし</td>
+</tr>
+<tr>
+<td>[9]</td>
+<td>Copilotアプリ群MAU1億超</td>
+<td>MAU・世界／2025-10-29（FY26 Q1決算）</td>
+<td>Microsoft FY26 Q1決算</td>
+<td><a href="https://www.microsoft.com/en-us/investor/earnings/fy-2026-q1/press-release-webcast">https://www.microsoft.com/en-us/investor/earnings/fy-2026-q1/press-release-webcast</a></td>
+<td>［公］<strong>今回原典再確認なし</strong></td>
+<td>Copilotファミリーのアプリ群で月間1億超と公表されたとして引用される値。2026年の更新値は未確認</td>
+</tr>
+<tr>
+<td>[10]</td>
+<td>Grok MAU1.17億／有料630万（X Premium440万＋SuperGrok系190万）／X MAU5.5億／SpaceXがxAIを買収</td>
+<td>MAU・世界・X＋Grokアプリ／2026年3月（S-1、2026-05-20提出）</td>
+<td>Digital Applied（SpaceX S-1の引用）</td>
+<td><a href="https://www.digitalapplied.com/blog/spacex-s1-first-audited-x-grok-data-2026">https://www.digitalapplied.com/blog/spacex-s1-first-audited-x-grok-data-2026</a></td>
+<td>［公→報］ブログを開いた、S-1原本は未確認</td>
+<td>「In February 2026, SpaceX acquired xAI」、Grok MAUはXエコシステムの21.3%、SuperGrokのティア内訳は非開示</td>
+</tr>
+<tr>
+<td>[11]</td>
+<td>Perplexity MAU4,500万（Similarweb）／月間クエリ7.8億</td>
+<td>MAU推計・Web・世界／2025年</td>
+<td>DemandSage</td>
+<td><a href="https://www.demandsage.com/perplexity-ai-statistics/">https://www.demandsage.com/perplexity-ai-statistics/</a></td>
+<td>［調］集計サイトのみ</td>
+<td>「Similarweb data: 45 million MAU」「780 million queries (May 2025)」。一次出典は未確認</td>
+</tr>
+<tr>
+<td>[12]</td>
+<td>NotebookLM→Gemini Notebookへ改称／3,000万超の人・60万超の組織</td>
+<td>「利用者数」定義不明・世界／2026-07-16</td>
+<td>9to5Google</td>
+<td><a href="https://9to5google.com/2026/07/16/notebooklm-gemini-notebook/">https://9to5google.com/2026/07/16/notebooklm-gemini-notebook/</a></td>
+<td>［公→報］記事を開いた</td>
+<td>「used by over 30 million people and 600,000+ organizations」。Google公式ブログは未開封</td>
+</tr>
+<tr>
+<td>[13]</td>
+<td>Character.AI MAU2,000万</td>
+<td>MAU推計・世界／2024年初</td>
+<td>SQ Magazine（Sacra推計を引用）</td>
+<td><a href="https://sqmagazine.co.uk/character-ai-statistics/">https://sqmagazine.co.uk/character-ai-statistics/</a></td>
+<td>［調］集計サイトのみ</td>
+<td>公式開示ではなくSacraの推計と明記</td>
+</tr>
+<tr>
+<td>[14]</td>
+<td>Doubao 3億8,230万／Qwen 1億6,718万／DeepSeek 1億2,982万／Kimi 2,000万未満</td>
+<td>MAU・中国国内スマホアプリのみ／2026年6月</td>
+<td>QuestMobile「2026年AI応用市場発展半年報」（199IT転載）</td>
+<td><a href="http://www.199it.com/archives/1839769.html">http://www.199it.com/archives/1839769.html</a></td>
+<td>［調］転載ページを開いた</td>
+<td>AI原生App月活榜の上位。YoY：豆包+172.1%、千問+5,792.9%、DeepSeek−20.3%</td>
+</tr>
+<tr>
+<td>[15]</td>
+<td>2026年3月MAU：Doubao 3.45億／Qwen 1.66億／DeepSeek 1.27億／Doubao DAU約1.4億</td>
+<td>MAU・DAU・中国国内アプリ／2026年3月</td>
+<td>QuestMobile「2026年一季度AI応用洞察」</td>
+<td><a href="https://www.questmobile.com.cn/research/report/2046482337382842370/">https://www.questmobile.com.cn/research/report/2046482337382842370/</a></td>
+<td>［調］原典を開いた</td>
+<td>「豆包、千问、DeepSeek位居前三位，月活用户规模分别为3.45亿、1.66亿和1.27亿」「豆包DAU维持在1.4亿左右」</td>
+</tr>
+<tr>
+<td>[16]</td>
+<td>aicpb 2026年6月：Doubao 3億2,431万／Qwen 2億5,113万／DeepSeek 1億3,908万／Kimi 2,269万（アプリMAU）。Web訪問：DeepSeek 4億8,380万／Doubao 1億5,287万／Kimi 4,016万</td>
+<td>アプリMAU推計・中国国内／Web訪問数・世界／2026年6月</td>
+<td>aicpb.com「AI产品榜」</td>
+<td><a href="https://www.aicpb.com/zh/ai-rankings/products/china-ai-rankings">https://www.aicpb.com/zh/ai-rankings/products/china-ai-rankings</a></td>
+<td>［調］原典を開いた</td>
+<td>月次ランキングの表示値。訪問数はセッション数でユニークユーザーではない</td>
+</tr>
+<tr>
+<td>[17]</td>
+<td>Doubao DAU1億超</td>
+<td>DAU・中国／2025年12月</td>
+<td>IT之家（36氪の独自報道を転載）</td>
+<td><a href="https://www.ithome.com/0/907/726.htm">https://www.ithome.com/0/907/726.htm</a></td>
+<td>［報］記事を開いた</td>
+<td>「豆包的日均活跃用户数已突破1亿大关」。公式発表ではない</td>
+</tr>
+<tr>
+<td>[18]</td>
+<td>Doubaoの有料会員3段階（68元／200元／500元）導入</td>
+<td>2026年5月</td>
+<td>澎湃新聞</td>
+<td><a href="https://m.thepaper.cn/newsDetail_forward_33105478">https://m.thepaper.cn/newsDetail_forward_33105478</a></td>
+<td>［報］記事を開いた</td>
+<td>App Storeページの更新から有料プランを報道。契約数の記載なし</td>
+</tr>
+<tr>
+<td>[19]</td>
+<td>Qwenアプリで累計2.5億人がAIショッピング体験</td>
+<td>累計・主に中国／2026-08-20</td>
+<td>Alibaba「June Quarter 2026 Results」（SEC提出）</td>
+<td><a href="https://www.sec.gov/Archives/edgar/data/1577552/000110465926099220/tm2623667d1_ex99-1.htm">https://www.sec.gov/Archives/edgar/data/1577552/000110465926099220/tm2623667d1_ex99-1.htm</a></td>
+<td>［公］原典を開いた</td>
+<td>「250 million users have had their first AI-driven shopping experience through Qwen app's agentic features」。MAUではない</td>
+</tr>
+<tr>
+<td>[20]</td>
+<td>Kimi MAUの推移（2024年Q4の3,600万→2025年Q3の967万）／有料ユーザーの伸び率／CEO楊植麟</td>
+<td>MAU・中国アプリ／2025年</td>
+<td>鈦媒体</td>
+<td><a href="https://www.tmtpost.com/8000654.html">https://www.tmtpost.com/8000654.html</a></td>
+<td>［報］記事を開いた</td>
+<td>「全球付费用户月度环比增速突破170%」。有料契約者数の実数なし</td>
+</tr>
+<tr>
+<td>[21]</td>
+<td>Kling AI MAU1,200万</td>
+<td>MAU／2026年（Q2決算前後）</td>
+<td>Pandaily</td>
+<td><a href="https://pandaily.com/kuaishou-s-kling-ai-reaches-12-million-mau-revenue-far-exceeds-expectations">https://pandaily.com/kuaishou-s-kling-ai-reaches-12-million-mau-revenue-far-exceeds-expectations</a></td>
+<td>［報］スニペットのみ</td>
+<td>見出し「Kling AI Reaches 12 Million MAU」。時点の詳細未確認</td>
+</tr>
+<tr>
+<td>[22]</td>
+<td>Kling AI四半期売上8.5億元超（前年比200%超）／快手CEO程一笑</td>
+<td>売上・世界／2026年Q2（2026-08-21発表）</td>
+<td>Kuaishou Q2 2026決算（PR Newswire）／KrASIA</td>
+<td><a href="https://www.prnewswire.com/news-releases/kuaishou-technology-announces-second-quarter-and-interim-2026-unaudited-financial-results-302855081.html">https://www.prnewswire.com/news-releases/kuaishou-technology-announces-second-quarter-and-interim-2026-unaudited-financial-results-302855081.html</a> ／ <a href="https://kr-asia.com/pulses/163696">https://kr-asia.com/pulses/163696</a></td>
+<td>［公］［公→報］</td>
+<td>「Revenue from Kling AI exceeded RMB 850 million」。有料会員数の記載なし</td>
+</tr>
+<tr>
+<td>[23]</td>
+<td>Hailuo AI MAU約560万／Talkie MAU2,000万／累計2.12億／ARPU約5ドル／MiniMax香港上場</td>
+<td>MAU／2025年1〜9月（目論見書）</td>
+<td>ChinaTalk「Zhipu and MiniMax IPO」</td>
+<td><a href="https://www.chinatalk.media/p/zhipu-and-minimax-ipo">https://www.chinatalk.media/p/zhipu-and-minimax-ipo</a></td>
+<td>［公→報］記事を開いた、目論見書原本は未開封</td>
+<td>「Hailuo AI: around 5.6 million monthly active users」</td>
+</tr>
+<tr>
+<td>[24]</td>
+<td>Midjourney Discord登録約1,983万／Web訪問1,622万/月／CEO David Holz</td>
+<td>累計登録／2026年1月</td>
+<td>DemandSage</td>
+<td><a href="https://www.demandsage.com/midjourney-statistics/">https://www.demandsage.com/midjourney-statistics/</a></td>
+<td>［調］集計サイト</td>
+<td>「19.83M registered users on Discord (Jan 2026)」。MAUではない</td>
+</tr>
+<tr>
+<td>[25]</td>
+<td>Suno有料契約200万／ARR3億ドル／CEO Mikey Shulman</td>
+<td>有料契約・世界／2026-02-27</td>
+<td>TechCrunch</td>
+<td><a href="https://techcrunch.com/2026/02/27/ai-music-generator-suno-hits-2-million-paid-subscribers-and-300m-in-annual-recurring-revenue/">https://techcrunch.com/2026/02/27/ai-music-generator-suno-hits-2-million-paid-subscribers-and-300m-in-annual-recurring-revenue/</a></td>
+<td>［公→報］記事を開いた</td>
+<td>CEOのLinkedIn投稿を引用。総利用者数の記載なし</td>
+</tr>
+<tr>
+<td>[26]</td>
+<td>Gamma累計7,000万ユーザー／ARR1億ドル超／CEO Grant Lee</td>
+<td>累計・世界／2025-11-10</td>
+<td>Business Wire（Gammaプレスリリース）</td>
+<td><a href="https://www.businesswire.com/news/home/20251110805751/en/">https://www.businesswire.com/news/home/20251110805751/en/</a></td>
+<td>［公］原典を開いた</td>
+<td>「70 million users」。有料契約数の記載なし</td>
+</tr>
+<tr>
+<td>[27]</td>
+<td>Cursor DAU100万超（2025-12）／有料36万超（2025-03）／企業顧客5万（2025-12）／CEO Michael Truell</td>
+<td>DAU・有料契約・世界</td>
+<td>Contrary Research</td>
+<td><a href="https://research.contrary.com/company/cursor">https://research.contrary.com/company/cursor</a></td>
+<td>［調］ページを開いた</td>
+<td>報道を集約した調査ページ。一次資料は未開封</td>
+</tr>
+<tr>
+<td>[28]</td>
+<td>Anthropicのランレート収益470億ドル超。利用者数・契約数の記載なし</td>
+<td>全社／2026-05-28</td>
+<td>Anthropic「Series H」</td>
+<td><a href="https://www.anthropic.com/news/series-h">https://www.anthropic.com/news/series-h</a></td>
+<td>［公］原典を開いた</td>
+<td>利用者数・顧客数の数値なし</td>
+</tr>
+<tr>
+<td>[29]</td>
+<td>Claudeのモバイルアプリ MAU約1,248万（2026-02、aicpb経由）／Web訪問約9.53億/月（2026-05、Similarweb経由）／「2.45億MAU」</td>
+<td>推計・世界</td>
+<td>aibusinessweekly（二次サイト）</td>
+<td><a href="https://aibusinessweekly.net/p/claude-ai-statistics">https://aibusinessweekly.net/p/claude-ai-statistics</a></td>
+<td>［調］二次引用・信頼度低</td>
+<td>Similarweb・Sensor Towerの原典で確認できず。「2.45億MAU」は不採用、他は参考値</td>
+</tr>
+<tr>
+<td>[30]</td>
+<td>Claudeのビジネス顧客30万社超</td>
+<td>顧客数・世界／2026年2月（Series G）</td>
+<td>Sacra</td>
+<td><a href="https://sacra.com/c/anthropic/">https://sacra.com/c/anthropic/</a></td>
+<td>［報］二次サイト</td>
+<td>Anthropic公式ページ（Series G）は404で未確認。API顧客を含む可能性</td>
+</tr>
+<tr>
+<td>[31]</td>
+<td>日本の生成AI利用経験58.8%（20歳以上52.2%、前年26.7%）／企業の活用方針あり68.9%</td>
+<td>回答者ベース・日本／2026年1〜2月調査</td>
+<td>総務省「令和8年版 情報通信白書（概要）」</td>
+<td><a href="https://www.soumu.go.jp/main_content/001082851.pdf">https://www.soumu.go.jp/main_content/001082851.pdf</a></td>
+<td>［公］原典を開いた</td>
+<td>10〜60代n=1,236、企業n=515（デジタル化着手企業）。国際比較：米75.6%、独75.6%、中93.6%</td>
+</tr>
+<tr>
+<td>[32]</td>
+<td>直近1年の利用54.7%（回答者2,024人）／生成AI利用者のうちChatGPT 36.2%、Gemini 25.0%、Copilot 13.3%、Claude 4.3%、Perplexity 4.0%、Genspark 2.6%、Sora 2.3%、Canva AI 2.2%、その他0.8%</td>
+<td>利用率・日本／2026年2月</td>
+<td>ICT総研「2026年2月 生成AIサービス利用動向に関する調査」（PR TIMES版も参照）</td>
+<td><a href="https://ictr.co.jp/report/20260220.html/">https://ictr.co.jp/report/20260220.html/</a> ／ <a href="https://prtimes.jp/main/html/rd/p/000000027.000019182.html">https://prtimes.jp/main/html/rd/p/000000027.000019182.html</a></td>
+<td>［調］原典を開いた</td>
+<td>原文「サービス利用経験者の中で最も利用率が高かったのはChatGPT（OpenAI）であり、全体の36.2％を占めた」。分母は生成AI利用者（約1,107人）と読める。合計90.7%のため主利用の単一回答とみられる（設問文は未確認）</td>
+</tr>
+<tr>
+<td>[33]</td>
+<td>対話型生成AI利用経験者のうちChatGPT 80.6%、Gemini 50.8%、Copilot 39.1%、Grok 11.1%、Perplexity 4.9%、Claude 3.9%</td>
+<td>利用経験者n=111・日本／2025年11月</td>
+<td>MMD研究所（PDF）／Impress Watch</td>
+<td><a href="https://mmdlabo.co.jp/PRESS_RELEASE/20251210-MMD.pdf">https://mmdlabo.co.jp/PRESS_RELEASE/20251210-MMD.pdf</a> ／ <a href="https://www.watch.impress.co.jp/docs/news/2070053.html">https://www.watch.impress.co.jp/docs/news/2070053.html</a></td>
+<td>［調］上位3つは原典、Grok以下は報道</td>
+<td>18〜69歳n=1,000、ウエイトバックあり。標本が小さく誤差大</td>
+</tr>
+<tr>
+<td>[34]</td>
+<td>利用経験21.8%／利用者のうちChatGPT 65.7%、Gemini 40.0%、Copilot 26.2%、Grok 9.5%、Canva 4.9%</td>
+<td>日本・15〜69歳／2025年8月</td>
+<td>MM総研</td>
+<td><a href="https://www.m2ri.jp/release/detail.html?id=691">https://www.m2ri.jp/release/detail.html?id=691</a></td>
+<td>［調］原典を開いた</td>
+<td>分母（プレ調査20,234人／本調査3,013人）は未確認</td>
+</tr>
+<tr>
+<td>[35]</td>
+<td>日本の月間利用者：ChatGPT 931万人、Gemini 261万人、Copilot 190万人／Claude利用時間54分39秒</td>
+<td>月間利用者・日本・PC＋スマホ／2025年3月</td>
+<td>MarkeZine（ニールセン デジタル発表を引用）</td>
+<td><a href="https://markezine.jp/article/detail/49204">https://markezine.jp/article/detail/49204</a></td>
+<td>［調］記事を開いた、ニールセン原典は未開封</td>
+<td>Nielsen Digital Content Ratings。2026年版は未確認</td>
+</tr>
+<tr>
+<td>[36]</td>
+<td>「月に数回以上」利用約35%／有料プラン利用率15%（米39%、独32%、中65%）</td>
+<td>日本・分母の明記なし／2025年9月調査</td>
+<td>NRI「AI利用に関する国際比較調査」</td>
+<td><a href="https://www.nri.com/jp/media/column/extending_society_with_ai/20260410.html">https://www.nri.com/jp/media/column/extending_society_with_ai/20260410.html</a></td>
+<td>［調］原典を開いた</td>
+<td>標本数は本文に記載なし</td>
+</tr>
+<tr>
+<td>[37]</td>
+<td>生成AIを活用している企業34.5%</td>
+<td>有効回答10,312社・日本／2026年3月</td>
+<td>帝国データバンク</td>
+<td><a href="https://www.tdb.co.jp/report/economic/20260514-genai/">https://www.tdb.co.jp/report/economic/20260514-genai/</a></td>
+<td>［調］原典を開いた</td>
+<td>大企業46.5%、中小32.4%、小規模28.0%</td>
+</tr>
+<tr>
+<td>[38]</td>
+<td>Leonardo.Ai累計1,900万人超（2024-07）</td>
+<td>累計・世界</td>
+<td>Canvaニュースルーム</td>
+<td><a href="https://www.canva.com/newsroom/news/leonardo-ai/">https://www.canva.com/newsroom/news/leonardo-ai/</a></td>
+<td>［公］原典を開いた</td>
+<td>「more than 19 million people use their products」</td>
+</tr>
+<tr>
+<td>[39]</td>
+<td>Adobe Firefly ARR前四半期比+40%。Adobe全体MAU10億超はFireflyの値ではない</td>
+<td>FY2026 Q3</td>
+<td>Adobe Q3 FY2026決算（Yahoo Finance転載）</td>
+<td><a href="https://ca.finance.yahoo.com/news/adobe-inc-adbe-q3-2026-090037567.html">https://ca.finance.yahoo.com/news/adobe-inc-adbe-q3-2026-090037567.html</a></td>
+<td>［公→報］</td>
+<td>Firefly単体の利用者数・契約数の記載なし</td>
+</tr>
+<tr>
+<td>[40]</td>
+<td>Pika利用者50万人超（2024年頃）／CEO Demi Guo</td>
+<td>累計</td>
+<td>Sacra</td>
+<td><a href="https://sacra.com/c/pika/">https://sacra.com/c/pika/</a></td>
+<td>［調］</td>
+<td>時点不明の古い値</td>
+</tr>
+<tr>
+<td>[41]</td>
+<td>Mistral Le Chatが2026年5月に「Vibe」へ改称／アプリ100万DL（2025年2月）／CEO Arthur Mensch</td>
+<td>—</td>
+<td>Wikipedia「Mistral AI」／eWeek</td>
+<td><a href="https://en.wikipedia.org/wiki/Mistral_AI">https://en.wikipedia.org/wiki/Mistral_AI</a> ／ <a href="https://www.eweek.com/news/mistral-ai-le-chat-app-downloads/">https://www.eweek.com/news/mistral-ai-le-chat-app-downloads/</a></td>
+<td>［報］</td>
+<td>公式発表原文は未取得</td>
+</tr>
+<tr>
+<td>[42]</td>
+<td>ElevenLabs ARR5億ドル超（2026年4月）</td>
+<td>—</td>
+<td>TechAfrica News</td>
+<td><a href="https://techafricanews.com/2026/05/06/elevenlabs-hits-500m-arr-as-global-investors-back-conversational-ai-expansion/">https://techafricanews.com/2026/05/06/elevenlabs-hits-500m-arr-as-global-investors-back-conversational-ai-expansion/</a></td>
+<td>［公→報］</td>
+<td>利用者数の記載なし</td>
+</tr>
+<tr>
+<td>[43]</td>
+<td>Notion 1億人（2024-08）、AI有効化顧客がARRの50%超（2025年末）</td>
+<td>Notion全体</td>
+<td>SQ Magazine（Notion公式ブログを引用）</td>
+<td><a href="https://sqmagazine.co.uk/notion-statistics/">https://sqmagazine.co.uk/notion-statistics/</a></td>
+<td>［二次］</td>
+<td>Notion AI単体の利用者・契約数なし</td>
+</tr>
+<tr>
+<td>[55]</td>
+<td>a16z「Top 100 Gen AI Consumer Apps」第6版：Web（Similarwebの月間ユニーク訪問者）順位 ChatGPT1位・Gemini2位・Claude3位・Perplexity4位・DeepSeek5位・Character.AI6位・Midjourney10位・Suno15位・Gamma16位・Meta AI17位・Cursor20位・Kimi27位・NotebookLM33位・Qwen43位／モバイル（Sensor TowerのMAU）順位 ChatGPT1位・Character.AI4位・Gemini5位・Perplexity7位・DeepSeek10位・Grok11位・Meta AI12位・Copilot13位（Claudeはモバイル20位圏外）／Claudeの有料契約は前年比200%超の伸び、ChatGPTの約1/8</td>
+<td>順位・世界／2026年1月データ、2026-03-09公表</td>
+<td>Andreessen Horowitz</td>
+<td><a href="https://a16z.com/100-gen-ai-apps-6/">https://a16z.com/100-gen-ai-apps-6/</a></td>
+<td>［調］原典を開いた</td>
+<td>Web・モバイルの上位20が本文に掲載。絶対数は非掲載</td>
+</tr>
+<tr>
+<td>[56]</td>
+<td>世界の生成AIサイト訪問シェア：ChatGPT 52.7%、Gemini 27.3%、Claude 8.9%、DeepSeek 4.0%、Grok 2.8%、Copilot 2.0%、Perplexity 1.3%</td>
+<td>Web訪問シェア・世界／2026-05-26時点</td>
+<td>ppc.land（Similarweb Global AI Trackerを引用）</td>
+<td><a href="https://ppc.land/chatgpt-drops-to-52-7-as-claude-triples-its-ai-traffic-share/">https://ppc.land/chatgpt-drops-to-52-7-as-claude-triples-its-ai-traffic-share/</a></td>
+<td>［調→報］記事を開いた</td>
+<td>Similarwebの公開トラッカーの値を報道。1年前のChatGPTは76.4%</td>
+</tr>
+<tr>
+<td>[57]</td>
+<td>claude.aiの月間訪問数9億5,020万、世界ランク42位、AIチャット分野3位</td>
+<td>Web訪問数（セッション数）・世界／2026年8月</td>
+<td>Similarweb「claude.ai Traffic Analytics」</td>
+<td><a href="https://www.similarweb.com/website/claude.ai/">https://www.similarweb.com/website/claude.ai/</a></td>
+<td>［調］原典を開いた</td>
+<td>競合サイトの訪問数は登録者限定で非表示</td>
+</tr>
+<tr>
+<td>[58]</td>
+<td>Claudeのモバイルアプリ月間利用者約5,600万（ChatGPTの約5.6%、前年比+640%）／Grok約5,000万／ChatGPTアプリ10億（2026年5月）</td>
+<td>アプリMAU推計・世界／2026年Q2</td>
+<td>TechTimes（Sensor Tower「State of AI 2026」を引用）</td>
+<td><a href="https://www.techtimes.com/articles/317841/20260605/chatgpt-reaches-1-billion-app-users-claudes-640-growth-splits-session-time.htm">https://www.techtimes.com/articles/317841/20260605/chatgpt-reaches-1-billion-app-users-claudes-640-growth-splits-session-time.htm</a></td>
+<td>［調→報］記事を開いた</td>
+<td>Sensor Towerの原典[2]ではClaudeの絶対値を取得できなかったため、報道経由で補った</td>
+</tr>
+<tr>
+<td>[59]</td>
+<td>GitHub Copilot有料サブスクライバー470万（前年比約75%増）／M365 Copilot有料席1,500万</td>
+<td>有料契約・世界／2025年12月末（FY26 Q2決算、2026-01発表）</td>
+<td>Windows Forum（Microsoft FY26 Q2決算コールの要約）</td>
+<td><a href="https://windowsforum.com/threads/microsoft-copilot-hits-15-million-paid-seats-and-4-7-million-github-subscribers.400630/">https://windowsforum.com/threads/microsoft-copilot-hits-15-million-paid-seats-and-4-7-million-github-subscribers.400630/</a></td>
+<td>［公→報］記事を開いた</td>
+<td>「4.7 million paid subscribers, up ~75% YoY」。Microsoft IR原文は未確認</td>
+</tr>
+<tr>
+<td>[60]</td>
+<td>Similarweb公開ページの月間訪問数：suno.com 7,270万、gamma.app 1,980万、midjourney.com 940万</td>
+<td>Web訪問数（セッション数）・世界／2026年8月表示値</td>
+<td>Similarweb「Traffic Analytics」各ページ</td>
+<td><a href="https://www.similarweb.com/website/suno.com/">https://www.similarweb.com/website/suno.com/</a> ／ <a href="https://www.similarweb.com/website/gamma.app/">https://www.similarweb.com/website/gamma.app/</a> ／ <a href="https://www.similarweb.com/website/midjourney.com/">https://www.similarweb.com/website/midjourney.com/</a></td>
+<td>［調］原典を開いた</td>
+<td>公開ページの「Total Visits」表示。ユニークユーザーではなく、アプリ・Discord経由の利用は含まない</td>
+</tr>
+<tr>
+<td>[76]</td>
+<td>Similarweb公開ページの国別シェア（2026年8月）：claude.ai 日本3.57%（4位）、suno.com 日本4.59%（3位）。日本が上位5に入らないサイトの5位シェア：deepseek.com ブラジル2.85%（訪問353.8M）、grok.com ドイツ3.05%（209.6M）、perplexity.ai フランス3.97%（95.2M）、character.ai フィリピン3.21%（159.7M）、cursor.com 英国2.47%（22.5M）、midjourney.com 中国3.68%（9.4M）</td>
+<td>Web訪問の国別シェア・2026年8月表示値</td>
+<td>Similarweb「Traffic Analytics」各ページ</td>
+<td><a href="https://www.similarweb.com/website/deepseek.com/">https://www.similarweb.com/website/deepseek.com/</a> ／ <a href="https://www.similarweb.com/website/grok.com/">https://www.similarweb.com/website/grok.com/</a> ／ <a href="https://www.similarweb.com/website/perplexity.ai/">https://www.similarweb.com/website/perplexity.ai/</a> ／ <a href="https://www.similarweb.com/website/character.ai/">https://www.similarweb.com/website/character.ai/</a> ／ <a href="https://www.similarweb.com/website/cursor.com/">https://www.similarweb.com/website/cursor.com/</a></td>
+<td>［調］原典を開いた</td>
+<td>日本からの月間訪問回数［計］＝訪問数×日本シェア。上位5に日本がない場合は5位のシェアを上限にした</td>
+</tr>
+<tr>
+<td>[44]</td>
+<td>Replit評価額90億ドル（2026-03）／全体5,000万ユーザー（スニペットのみ）／CEO Amjad Masad</td>
+<td>—</td>
+<td>FWDStart</td>
+<td><a href="https://www.fwdstart.me/p/jordanian-born-founder-amjad-masad-replit-triples-valuation-to-9-billion-as-it-targets-1b-in-arr-b">https://www.fwdstart.me/p/jordanian-born-founder-amjad-masad-replit-triples-valuation-to-9-billion-as-it-targets-1b-in-arr-b</a></td>
+<td>［報］</td>
+<td>Agent利用者数なし</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="sec-計の計算">［計］の計算</h3>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>算出値</th>
+<th>材料（出典）</th>
+<th>計算式</th>
+<th>成立条件・不確実性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT課金率 約5〜6%</td>
+<td>消費者有料5,000万超、WAU9億超（ともに[1]、2026-02-27）</td>
+<td>5,000万÷9億＝5.6%</td>
+<td>分子は「超」、分母も「超」のため幅がある。分母がWAU（MAUなら率は下がる）。有料契約に非アクティブ契約を含み得る</td>
+</tr>
+<tr>
+<td>ChatGPT延べ課金率 約6〜7%</td>
+<td>上記＋有料ビジネスユーザー900万超[1]</td>
+<td>5,900万÷9億＝6.6%</td>
+<td>ビジネスユーザーは個人契約と重複し得るため「延べ」</td>
+</tr>
+<tr>
+<td>ChatGPT延べ内訳 約85%／15%</td>
+<td>5,000万、900万[1]</td>
+<td>5,000万÷5,900万＝84.7%</td>
+<td>丸め</td>
+</tr>
+<tr>
+<td>Grok課金率 約1.6%／約5%</td>
+<td>SuperGrok系190万、有料合計630万、MAU1.17億（すべて[10]、2026年3月）</td>
+<td>190万÷1.17億＝1.6%、630万÷1.17億＝5.4%</td>
+<td>X PremiumはGrok単独の課金ではない。S-1原本未確認</td>
+</tr>
+<tr>
+<td>Grok有料内訳 約70%／30%</td>
+<td>440万、190万[10]</td>
+<td>440万÷630万＝69.8%</td>
+<td>丸め</td>
+</tr>
+<tr>
+<td>日本からのWeb訪問（Claude 約3,390万回／Suno 約334万回）</td>
+<td>Similarwebの月間訪問数と日本シェア[57][60][76]</td>
+<td>950.2M×3.57%＝3,392万、72.7M×4.59%＝334万</td>
+<td>訪問回数はセッション数で人数ではない。アプリ利用を含まない。表示値の月の取り違えがあり得る</td>
+</tr>
+<tr>
+<td>日本からのWeb訪問の上限（DeepSeek・Grok・Perplexity・Character.AI・Cursor・Midjourney）</td>
+<td>同上[76]</td>
+<td>訪問数×国別5位のシェア（例：353.8M×2.85%＝1,008万）</td>
+<td>日本が上位5に入らないことから、5位のシェアを上限とした。実際の日本シェアはこれより小さい</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="sec-会社国代表者の出典">会社・国・代表者の出典</h3>
+<p>[45] Wikipedia「SpaceXAI」 <a href="https://en.wikipedia.org/wiki/SpaceXAI（Grokの運営法人・President">https://en.wikipedia.org/wiki/SpaceXAI（Grokの運営法人・President</a>）／[46] CNBC 2026-02-03 <a href="https://www.cnbc.com/2026/02/03/musk-xai-spacex-biggest-merger-ever.html（SpaceXによるxAI買収">https://www.cnbc.com/2026/02/03/musk-xai-spacex-biggest-merger-ever.html（SpaceXによるxAI買収</a>）／[47] Variety 2026-09-18 <a href="https://variety.com/2026/biz/news/disney-cto-karandeep-anand-character-ai-1236866528/（Character.AI">https://variety.com/2026/biz/news/disney-cto-karandeep-anand-character-ai-1236866528/（Character.AI</a> CEOの転出）／[48] Adobe 2026-09-03 <a href="https://news.adobe.com/news/2026/09/adobe-announces-anil-chakravarthy-to-become-president-and-ceo（Adobe">https://news.adobe.com/news/2026/09/adobe-announces-anil-chakravarthy-to-become-president-and-ceo（Adobe</a> CEO交代予定）／[49] GitHub Leadership <a href="https://github.com/about/leadership">https://github.com/about/leadership</a>、CNBC 2025-08-11 <a href="https://www.cnbc.com/2025/08/11/microsofts-github-chief-is-leaving-competition-ramps-up-in-ai-coding.html（GitHubの体制">https://www.cnbc.com/2025/08/11/microsofts-github-chief-is-leaving-competition-ramps-up-in-ai-coding.html（GitHubの体制</a>）／[50] Alibaba Group <a href="https://www.alibabagroup.com/en-US/document-1607836456397570048（CEO呉泳銘">https://www.alibabagroup.com/en-US/document-1607836456397570048（CEO呉泳銘</a>）／[51] Wikipedia「MiniMax Group」 <a href="https://en.wikipedia.org/wiki/MiniMax_Group">https://en.wikipedia.org/wiki/MiniMax_Group</a>、HKEX開示 <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0519/2026051901507.pdf（MiniMax上場・CEO">https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0519/2026051901507.pdf（MiniMax上場・CEO</a>）／[52] Wikipedia「Leonardo.ai」 <a href="https://en.wikipedia.org/wiki/Leonardo.ai">https://en.wikipedia.org/wiki/Leonardo.ai</a>、Crunchbase <a href="https://www.crunchbase.com/person/jj-fiasson-af1b／[53]">https://www.crunchbase.com/person/jj-fiasson-af1b／[53]</a> Crunchbase「Demi Guo」 <a href="https://www.crunchbase.com/person/demi-guo／その他「既知">https://www.crunchbase.com/person/demi-guo／その他「既知</a>」はB表の注のとおり。</p>
+<h3 id="sec-機能の出典">機能の出典</h3>
+<p>[61] Gemini公式：Subscriptions <a href="https://gemini.google/subscriptions/">https://gemini.google/subscriptions/</a> ／Video generation <a href="https://gemini.google/overview/video-generation/">https://gemini.google/overview/video-generation/</a> ／Image generation <a href="https://gemini.google/overview/image-generation/（プラン別機能">https://gemini.google/overview/image-generation/（プラン別機能</a>、Veoの有料限定、画像編集の範囲）／[62] OpenAI ChatGPT Release Notes <a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes（Canvasの扱い">https://help.openai.com/en/articles/6825453-chatgpt-release-notes（Canvasの扱い</a>、Excel／PowerPoint／Wordアドイン、画像・検索・コード）／[63] OpenAI Voice mode FAQ <a href="https://help.openai.com/en/articles/8400625-voice-mode-faq（プラン別の音声上限">https://help.openai.com/en/articles/8400625-voice-mode-faq（プラン別の音声上限</a>）／[64] Anthropic「Create and edit files with Claude」 <a href="https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude">https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude</a>、「Use voice mode」 <a href="https://support.claude.com/en/articles/11101966-use-voice-mode">https://support.claude.com/en/articles/11101966-use-voice-mode</a>、「Enable and use web search」 <a href="https://support.claude.com/en/articles/10684626-enable-and-use-web-search">https://support.claude.com/en/articles/10684626-enable-and-use-web-search</a>、「Use research on Claude」 <a href="https://support.claude.com/en/articles/11088861-use-research-on-claude／[65]">https://support.claude.com/en/articles/11088861-use-research-on-claude／[65]</a> Microsoft Support「Create a video with the Microsoft 365 Copilot app」 <a href="https://support.microsoft.com/en-us/microsoft-365-copilot/create-a-video-with-the-microsoft-365-copilot-app">https://support.microsoft.com/en-us/microsoft-365-copilot/create-a-video-with-the-microsoft-365-copilot-app</a>、「Get started with Word, Excel, and PowerPoint agents」 <a href="https://support.microsoft.com/en-us/topic/get-started-with-word-excel-and-powerpoint-agents-in-microsoft-365-copilot-76691f5e-bb19-4029-a34d-33a00e0a0c4f／[66]">https://support.microsoft.com/en-us/topic/get-started-with-word-excel-and-powerpoint-agents-in-microsoft-365-copilot-76691f5e-bb19-4029-a34d-33a00e0a0c4f／[66]</a> xAI Grok製品ページ <a href="https://x.ai/grok（Grok">https://x.ai/grok（Grok</a> Imagineの画像・動画、音声、Web・X検索）／[67] Meta「Vibes」 <a href="https://ai.meta.com/meta-ai/vibes/（無料のAI動画作成">https://ai.meta.com/meta-ai/vibes/（無料のAI動画作成</a>）／[68] Perplexity「What is Perplexity Pro」 <a href="https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro">https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro</a>、「Creating assets with Perplexity」 <a href="https://www.perplexity.ai/help-center/en/articles/12528830-creating-assets-with-perplexity-overview／[69]">https://www.perplexity.ai/help-center/en/articles/12528830-creating-assets-with-perplexity-overview／[69]</a> Gamma <a href="https://gamma.app/（生成物の種類">https://gamma.app/（生成物の種類</a>、エクスポート形式）／[70] Google NotebookLM／Gemini Notebook（Audio Overview・Video Overview・スライド・レポート）：今回原典未確認、既知情報／[71] Character.AI：今回原典未確認、既知情報／[72] Cursor <a href="https://cursor.com（既知情報">https://cursor.com（既知情報</a>）／[73] Midjourney Docs <a href="https://docs.midjourney.com/（既知情報">https://docs.midjourney.com/（既知情報</a>）／[74] GitHub Copilot Docs <a href="https://docs.github.com/copilot（既知情報">https://docs.github.com/copilot（既知情報</a>）／[75] Suno <a href="https://suno.com（既知情報">https://suno.com（既知情報</a>）。</p>
+<hr />
+<h2 id="sec-K自己点検作業記録">K．自己点検・作業記録</h2>
+<h3 id="sec-点検結果">点検結果</h3>
+<ul>
+<li>サービス・モデル・運営会社・親会社の混同：B表で区別した。Qwenの「累計2.5億」[19]はショッピング機能の累計で、MAUと区別した。Adobe全体のMAUはFireflyに使っていない。</li>
+<li>数値の単位・地域・時点・対象範囲：D・E・F表の各セルに付記した。Meta AI[5]とCopilot[9]は原典再確認なしと明記。</li>
+<li>親サービス全体の人数のAI機能への置き換え：Canva・Notion・Replitは非選定とし、全体の人数を使っていない。</li>
+<li>各順位の根拠区分と判断理由：I-3に記載。〈A〉は該当なし。</li>
+<li>情報不足の同率扱い：同率はGemini／Meta AI（世界2位）、Claude／DeepSeek（世界6位）、Midjourney／Suno（世界17位）、Claude／Perplexity（日本5位）の4組で、いずれも複数の指標で優劣が分かれる、または差が誤差の範囲であることを理由に記した。世界の15位以下と日本の7位以下は〈C〉で確度が低い旨を表と本文に明記した。</li>
+<li>課金率の分子・分母：ChatGPTとGrokのみ算出。いずれも同一発表・同一時点の値。</li>
+<li>算出値の式・前提・出典：J表の［計］欄に記載。</li>
+<li>機能の共通判定条件：H表の凡例に沿って判定。ただし原典確認は9サービスの一部にとどまり、「既知情報」と「？」が多い。</li>
+<li>機能を性能に置き換えていないか：I-6に明記。</li>
+<li>出典が主張を裏づけているか：原典を開いたもの・報道経由・二次サイト経由をJ表で区別した。<strong>未解決</strong>：Meta AI[5]・Copilot[9]・機能出典[70]〜[75]は今回セッション内で原典を確認していない。Claudeの二次サイト経由の推計[29]は信頼度が低く、順位には[55]〜[58]を使った。</li>
+<li>未確認のゼロ・非公開・非対応への置き換え：「未確認」で統一し、×は使っていない。</li>
+</ul>
+<h3 id="sec-作業記録">作業記録</h3>
+<ul>
+<li>開始時刻：2026-09-21 16:05 JST（プロンプト受領）</li>
+<li>提出時刻：2026-09-21 17:29 JST（最終保存時）</li>
+<li>作業時間：約50分（調査・執筆・点検・修正の合計。時刻はシステムの時刻取得ツールで記録した）</li>
+<li>本文Iは表・出典番号を除いて約6,200字で、目安（4,000〜6,000字）をやや超える</li>
+</ul>
+<h3 id="sec-時間制約で調査しきれなかった項目">時間制約で調査しきれなかった項目</h3>
+<ol>
+<li>Meta AI・Microsoft Copilot（消費者アプリ）の2026年公式MAUと、2025年公式値の原典再確認</li>
+<li>Claudeの公式利用者数（公表なし）、Pro/Max契約数、Series G発表原文（30万社の定義）</li>
+<li>ChatGPTのPlus/Pro/Go内訳、Enterprise顧客社数、2026年3月以降のWAU更新値（「10億に迫る」報道の本文）</li>
+<li>Google AI Pro/Ultra、Perplexity Pro、Copilot Pro、Midjourney、Kimi、Doubaoの有料契約数</li>
+<li>総務省「令和7年通信利用動向調査」（2026年5月公表）の生成AI利用率（PDFは特定したが数値抽出できず）、ニールセンの2026年版MAU、日本の企業向け有料導入社数、ICT総研の設問文（単一回答か複数回答か）、Similarwebで訪問数が非表示のサイト（chatgpt.com・gemini・copilot等）の日本シェア</li>
+<li>機能判定：Doubao・Qwen・DeepSeek・Kimi・Character.AI・Kling・Hailuo・Midjourney・Suno・Gemini Notebook・Cursor・GitHub Copilotの公式ヘルプ確認、Geminiの音楽生成、ChatGPT本体からのファイル出力、Meta AIの画像・音声</li>
+<li>非選定10サービス（特にElevenLabs・Mistral・Runway・Firefly）の利用者数</li>
+</ol>
+<h3 id="sec-その他の重要な未解決事項">その他の重要な未解決事項</h3>
+<ul>
+<li>QwenアプリのMAUは調査主体で1.67億[14]と2.51億[16]の乖離があり、DeepSeekとの順序が入れ替わる可能性がある。</li>
+<li>日本の順位は利用率を1調査（ICT総研）に統一したため、Grokなど同調査に項目のないサービスは別調査やWeb訪問からの〈C〉になっている。8位以下の相互の順序は判定できていない。</li>
+<li>15位以下（GitHub Copilot・Hailuo AI・Midjourney・Suno・Gamma・Cursor）はMAUがなく、有料契約数・累計・訪問数・DAUの上限と下限からの推定。GitHub CopilotがKling AIを、SunoがHailuo AIを上回る可能性、Cursor（IDE内利用）がGammaを上回る可能性がある。</li>
+<li>Character.AIの2,000万MAUは2024年の値で、2025年11月の18歳未満のチャット制限以降の規模は不明。</li>
+<li>Runwayの「Co-CEO」表記、Character.AIの後任CEO、Adobeの12月のCEO交代は、公開時点で再確認が必要。</li>
+</ul>
+<h3 id="sec-追加候補最大5件">追加候補（最大5件）</h3>
+<ol>
+<li><strong>Genspark</strong>：ICT総研の日本調査で2.6%[32]と、Perplexity（4.0%）に迫る。日本で伸びている調査系エージェント。</li>
+<li><strong>Sora（OpenAI）</strong>：ICT総研で2.3%[32]。ChatGPTと別アプリの動画生成サービスとして、動画分野の候補に値する。</li>
+<li><strong>腾讯元宝（Tencent Yuanbao）</strong>：QuestMobileで中国4位・約5,000万MAU[14]、aicpbで1億392万[16]。Kimiより大きい。</li>
+<li><strong>夸克（Quark／Alibaba）</strong>：aicpbで中国3位・1億5,924万MAU[16]。AI検索・ブラウザだが、規模はDeepSeekと同等。</li>
+<li><strong>Talkie（MiniMax）</strong>：MAU2,000万[23]で、Character.AIと同分野・同規模。</li>
+</ol>
+<p>自己点検を行ったが、誤りがないことを保証するものではない。特に「既知情報」と記した箇所、および報道・二次サイト経由の数値は、公開前に原典での再確認を勧める。</p>
+<section class="rev"><h2>改訂履歴</h2><ul><li>v1（2026-09-21）：共通の依頼文に対する初回回答。Claude自身は「順位保留」として表に入れなかった。</li><li>v2（同日）：追加指示「自分のAIだからではなく、客観的におおよその順位で入れてほしい」に基づき、ClaudeをDeepSeekと同率6位〈推定・C〉に変更。あわせて日本の表と本文を整理。</li></ul></section>
+</div></body></html>
