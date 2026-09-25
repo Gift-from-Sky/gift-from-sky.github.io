@@ -1,0 +1,2338 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>課金価値分析対決008：最上位プランの課金価値（ChatGPT側・改訂版）｜生成AI横並び検証室</title>
+<meta name="description" content="生成AI横並び検証室｜#08 生成AI おすすめベスト10（ChatGPT側の分析全文）">
+<style>
+:root{--ink:#1f2933;--muted:#5b6b7a;--line:#dfe5ea;--accent:#1f5f8b;--accent-bg:#eef4f9;--zebra:#f7f9fb;--note-bg:#fff8e6;--note-line:#f0d58c}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;font-size:16px;line-height:1.9;font-feature-settings:"palt"}
+.wrap{max-width:920px;margin:0 auto;padding:24px 16px 64px}
+header.top{border-bottom:2px solid var(--accent);padding:8px 0 16px;margin-bottom:24px}
+header.top .kicker{color:var(--accent);font-size:13px;letter-spacing:.08em;font-weight:700;margin:0 0 4px}
+header.top h1{font-size:22px;line-height:1.5;margin:0 0 8px}
+header.top .meta{color:var(--muted);font-size:13px;margin:0}
+.back{font-size:13px;margin:0 0 12px}
+nav.toc{background:var(--accent-bg);border-radius:10px;padding:12px 16px;margin:0 0 28px;font-size:14px}
+nav.toc p{margin:0 0 4px;font-weight:700;color:var(--accent)}
+nav.toc ul{margin:0;padding-left:0;list-style:none;columns:2;column-gap:24px}
+nav.toc li{break-inside:avoid;margin:2px 0}
+nav.toc a{color:var(--ink);text-decoration:none;display:block;padding:2px 0 2px 12px;border-left:3px solid var(--line)}
+nav.toc a:hover{text-decoration:underline}
+h2{font-size:20px;line-height:1.5;margin:44px 0 14px;padding-left:12px;border-left:5px solid var(--accent)}
+h2.deliv{background:var(--accent-bg);border-left-color:var(--accent);padding:8px 12px;border-radius:0 8px 8px 0}
+h3{font-size:17px;line-height:1.6;margin:30px 0 10px;color:var(--accent)}
+p{margin:0 0 16px}
+a{color:var(--accent)}
+a.cite{text-decoration:none;font-size:.85em;color:var(--muted);white-space:nowrap}
+a.cite:hover{text-decoration:underline}
+hr{border:0;border-top:1px solid var(--line);margin:32px 0}
+ul,ol{padding-left:22px}
+li{margin:4px 0}
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 20px;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.6}
+th,td{border-bottom:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--accent-bg);color:var(--accent);font-weight:700;white-space:nowrap}
+tbody tr:nth-child(even) td{background:var(--zebra)}
+td{min-width:4em}
+tr:target td{background:#fff3cd !important}
+.note{background:var(--note-bg);border:1px solid var(--note-line);border-radius:8px;padding:12px 14px;margin:0 0 20px;font-size:15px}
+.foot{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+@media (max-width:600px){
+  body{font-size:15px}
+  .wrap{padding:16px 14px 48px}
+  header.top h1{font-size:19px}
+  nav.toc ul{columns:1}
+  h2{font-size:18px}
+  table{font-size:13px}
+  th,td{padding:6px 8px}
+}
+@media print{
+  .wrap{max-width:none;padding:0}
+  nav.toc{display:none}
+  .tbl{border:0;overflow:visible}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<p class="kicker">生成AI横並び検証室｜最上位プラン検証 #08｜ChatGPT側</p>
+<h1>課金価値分析対決008：最上位プランの課金価値（ChatGPT側・改訂版）</h1>
+<p class="meta">ChatGPT Pro（20x）／ChatGPT Work／GPT-6 Astra・ウルトラ　調査基準日 2026年9月24日　改訂版</p>
+</header>
+<p class="back">同じ依頼文への <a href="claude.html">Claude側の全文</a>　｜　<a href="https://note.com/yokonarabi_lab" target="_blank" rel="noopener">検証室のnote</a></p>
+<nav class="toc"><p>目次</p><ul><li><a href="#sec-A分析の前提">A．分析の前提</a></li><li><a href="#sec-B料金プランの一覧">B．料金プランの一覧</a></li><li><a href="#sec-C用途プラン">C．用途×プラン</a></li><li><a href="#sec-D課金価値ベスト10">D．課金価値ベスト10</a></li><li><a href="#sec-E用途別のおすすめ">E．用途別のおすすめ</a></li><li><a href="#sec-F表に添える注記">F．表に添える注記</a></li><li><a href="#sec-G分析本文">G．分析本文</a></li><li><a href="#sec-H出典の対応">H．出典の対応</a></li><li><a href="#sec-I自己点検作業記録">I．自己点検・作業記録</a></li></ul></nav>
+<h2 id="sec-A分析の前提">A．分析の前提</h2>
+<p>調査基準日は<strong>2026年9月24日、日本</strong>。対象は依頼指定の20サービスで、B・C-1は管理番号順に掲載した。毎日何度も調査・制作・作業を任せ、長い処理や並行作業で利用上限が支障になる個人が、<strong>最上位プランを1つだけ契約して使う</strong>場合を考える。企業契約、APIだけの契約、追加購入額を積み上げた架空の最上位は対象外。</p>
+<p>点数化はしない。順位を作る前に、<strong>①月額全体と反復する仕事の釣合い、②直下から増える量・モデル・機能、③8用途の広さ、④日本語での使いやすさ</strong>の順に重視すると定めた。日本の個人向け正規契約経路は入口条件として確認する。ただし、<strong>ChatGPT Pro 20xは契約可能と仮定して評価</strong>し、新規受付停止を順位から外す理由にしない。停止の確認事実は料金表・注記に残す。<a class="cite" href="#src-101">[101]</a> 未確認を機能ゼロと数えず、契約経路を裏づけられない場合と、機能の一部だけが不明な場合を分ける。同率は比較根拠が拮抗する最大2サービスまで、次順位を飛ばす。料金は通常の月払いを基本とし、通貨を推測換算しない。順位は今回の判断であり、出典側の推奨順位ではない。</p>
+<p>指定の第1部2資料は両方参照できた。サービスの対応関係と運営会社の出発点を引き継ぎ、H表の相違を照合した。料金は引き継がず、主要機能・プラン条件は今回公式情報で再確認した。再確認できなかった相違は「？」に戻した。両資料で同じ「？」の用途も非対応とは扱わない。MidjourneyはChatGPT側H表に行がないが、指定対象なので今回追加調査した。<a class="cite" href="https://gift-from-sky.github.io/ai-power-map/chatgpt.html" target="_blank" rel="noopener">[R1]</a><a class="cite" href="https://gift-from-sky.github.io/ai-power-map/claude.html" target="_blank" rel="noopener">[R2]</a></p>
+<p>同じ契約の別アプリは明記する。GeminiとGemini Notebookは同じGoogle AI Ultra契約なので、ランキングでは1行に統合する。20サービスの料金・機能表を残しつつ、ランキングは同一契約をまとめた19の比較枠から10契約を選ぶ。今回の同率はなく、契約価値を二重に加算しない。公式ページは通常の公開閲覧のみ。ログイン・登録・課金・アカウント設定変更・投稿・生成テストは行っていない。</p>
+<h2 id="sec-B料金プランの一覧">B．料金プランの一覧</h2>
+<p>金額は月払い。特記のない税区分・年払い・購入経路は直後の注記を参照。「未確認」は調査で確認できず、「非公開」は公表しないと明記、「該当なし」は制度上該当しないと確認したもの。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>サービス</th>
+<th>無料</th>
+<th>すぐ下のプラン〈名称・月額〉</th>
+<th>最上位プラン〈名称・月額〉</th>
+<th>使える量の目安</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td>Free $0</td>
+<td>ChatGPT Pro $100〈5x〉/月、税別</td>
+<td>ChatGPT Pro $200〈20x〉/月、税別。ただし新規申込停止</td>
+<td>$100はPlusの5倍、$200は20倍。両Proの中核機能は同じ。機能・モデル別制限あり、無制限表記にも不正利用防止措置。<a class="cite" href="#src-101">[101]</a><a class="cite" href="#src-102">[102]</a></td>
+</tr>
+<tr>
+<td>Gemini</td>
+<td>無料あり</td>
+<td>Google AI Ultra 5x ¥14,500</td>
+<td>Google AI Ultra 20x ¥32,000</td>
+<td>直下／最上位：Gemini利用枠はPro比5x／20x。別アプリFlow月10,000／25,000credits。機能別の上限あり。<a class="cite" href="#src-201">[201]</a><a class="cite" href="#src-202">[202]</a></td>
+</tr>
+<tr>
+<td>Claude</td>
+<td>Free $0</td>
+<td>Max 5x $100/月、税別</td>
+<td>Max 20x $200/月、税別</td>
+<td>Proの5時間枠基準5倍／20倍。ClaudeとClaude Codeで使用量共有。セッション・週上限あり。具体的回数は作業・モデル依存。<a class="cite" href="#src-112">[112]</a><a class="cite" href="#src-113">[113]</a><a class="cite" href="#src-119">[119]</a></td>
+</tr>
+<tr>
+<td>Microsoft Copilot</td>
+<td>無料Copilot</td>
+<td>Microsoft 365 Premium ¥3,200/月、税込</td>
+<td>Microsoft 365 Pro ¥16,000/月、税込</td>
+<td>Sept 2026公式上限表では、Chat・深い推論・Pages・画像・Audio Overview・Researcher・Analystは両方Extensive use。Voice／VisionがPremium More→Pro Highest。数値回数は今回の現行表では未確認。<a class="cite" href="#src-121">[121]</a>–<a class="cite" href="#src-123">[123]</a></td>
+</tr>
+<tr>
+<td>Grok</td>
+<td>Free $0</td>
+<td>SuperGrok Plus $100</td>
+<td>SuperGrok Heavy $300</td>
+<td>直下：拡大枠・1080p動画。最上位：最大枠・難問向け複数Agent。Chat/Imagine/Voice/Buildで週の利用枠を共有。具体量・倍率未確認。<a class="cite" href="#src-221">[221]</a>–<a class="cite" href="#src-223">[223]</a></td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td>Standard $0</td>
+<td>Perplexity Pro $20</td>
+<td>Perplexity Max $200</td>
+<td>Computer月次credits：Pro定期付与なし／Max10,000。無料Research1/月。動画は両有料8秒まで、Maxの回数はProより多いが非公開。<a class="cite" href="#src-231">[231]</a>–<a class="cite" href="#src-234">[234]</a><a class="cite" href="#src-239">[239]</a><a class="cite" href="#src-240">[240]</a></td>
+</tr>
+<tr>
+<td>Meta AI</td>
+<td>基本機能無料</td>
+<td>Meta One Core ¥949、税込</td>
+<td>Meta One Premium ¥2,900、税込</td>
+<td>無料：対話・画像・アニメ化。Core：画像/動画生成量増。Premium：最大容量。回数・倍率は未確認。<a class="cite" href="#src-301">[301]</a><a class="cite" href="#src-302">[302]</a></td>
+</tr>
+<tr>
+<td>DeepSeek</td>
+<td>公式個人アプリ無料</td>
+<td>該当なし</td>
+<td>該当なし〈個人アプリ無料〉</td>
+<td>無料：検索・DeepThink・ファイル読取・コード。定量上限未確認。API従量契約は別。<a class="cite" href="#src-306">[306]</a>–<a class="cite" href="#src-309">[309]</a></td>
+</tr>
+<tr>
+<td>Doubao〈豆包〉</td>
+<td>基本無料、高度機能に日次試用枠</td>
+<td>加强版〈加强套餐〉CNY200</td>
+<td>专业版〈高级套餐〉CNY500</td>
+<td>直下4倍／最上位10倍の共有枠とのCDN資料記載。5時間・7日・月の周期。ただし<a class="cite" href="#src-311">[311]</a>の公式リンク連鎖未確認、数値は留保。<a class="cite" href="#src-311">[311]</a>–<a class="cite" href="#src-313">[313]</a></td>
+</tr>
+<tr>
+<td>Qwen〈一般向けアプリ〉</td>
+<td>無料案内あり</td>
+<td>未確認</td>
+<td>未確認〈IAP表示あり〉</td>
+<td>無料案内の機能あり。個人定額のプラン階層・利用量は未確認。<a class="cite" href="#src-314">[314]</a>–<a class="cite" href="#src-316">[316]</a></td>
+</tr>
+<tr>
+<td>Kimi</td>
+<td>無料$0</td>
+<td>Max $99</td>
+<td>Ultra $199</td>
+<td>Agent creditsは基準比5倍／10倍、同時実行2／4。両方100万token・100projects・50GB。無料は同時1、2projects、500MB。<a class="cite" href="#src-317">[317]</a><a class="cite" href="#src-325">[325]</a></td>
+</tr>
+<tr>
+<td>Character.AI</td>
+<td>Free、メッセージ無制限</td>
+<td>(c.ai) lite $4.99</td>
+<td>c.ai+ $9.99</td>
+<td>lite：上位モデル日次体験、記憶Better。plus：top models無制限、記憶Best・広告/Slowmodeなし。画像等を全面無制限としない。<a class="cite" href="#src-326">[326]</a><a class="cite" href="#src-327">[327]</a></td>
+</tr>
+<tr>
+<td>Gemini Notebook〈旧NotebookLM〉</td>
+<td>無料あり</td>
+<td>Google AI Ultra 5x ¥14,500</td>
+<td>Google AI Ultra 20x ¥32,000</td>
+<td>無料基準／Plus2倍／Pro4倍、UltraはPro比5x／20x。5時間単位＋週上限の計算量枠。Geminiと同じ1契約。<a class="cite" href="#src-201">[201]</a><a class="cite" href="#src-208">[208]</a><a class="cite" href="#src-209">[209]</a></td>
+</tr>
+<tr>
+<td>Midjourney</td>
+<td>Web/Discord無料試用なし。同契約対応の別アプリnijiに限定試用</td>
+<td>Pro Plan $60（日本iOS niji経由はPro月¥9,000）</td>
+<td>Mega Plan $120</td>
+<td>Pro Fast GPU 30時間/月、Mega 60時間/月。両方画像・SD動画Relax無制限。動画同時Fast 6→12。画像同時Fastは両方12 <a class="cite" href="#src-401">[401]</a><a class="cite" href="#src-402">[402]</a><a class="cite" href="#src-409">[409]</a></td>
+</tr>
+<tr>
+<td>Kling AI</td>
+<td>Basic $0。通常付与量未確認、無料機能の公式ページ間に条件差</td>
+<td>Premier 通常$92（継続割引表示$80.96）／日本iOS月¥15,000</td>
+<td>Ultra 通常$180（継続割引表示$159.99）、Ultra円額未確認</td>
+<td>月8,000→26,000credits。Element作成上限150→500。両方1生成最大4動画。<a class="cite" href="#src-410">[410]</a><a class="cite" href="#src-412">[412]</a></td>
+</tr>
+<tr>
+<td>Hailuo AI</td>
+<td>Free $0、月次0credits＋1回限りの試用credits（量未確認）</td>
+<td>Master 通常$119.99（割引表示$89）</td>
+<td>Max $216</td>
+<td>月10,500→27,000credits。H3 2K生成目安約875→2,250秒/月。両方同時2／待ち12タスク。Max旧Hailuo 2.0/2.3無制限表記あり（条件注記）。<a class="cite" href="#src-413">[413]</a></td>
+</tr>
+<tr>
+<td>Suno</td>
+<td>Free $0、50credits/日</td>
+<td>Pro Web $10（日本iOS表示¥1,500、請求周期は未確認）</td>
+<td>Premier Web $30（日本iOS表示¥5,000、請求周期は未確認）</td>
+<td>Pro 2,500→Premier10,000credits/月、通常DL20→60曲/月、両方優先キュー最大10曲同時。Premier Studio付帯。<a class="cite" href="#src-418">[418]</a><a class="cite" href="#src-419">[419]</a><a class="cite" href="#src-420">[420]</a><a class="cite" href="#src-425">[425]</a></td>
+</tr>
+<tr>
+<td>Gamma</td>
+<td>Free ¥0、初回400credits</td>
+<td>Pro ¥3,500</td>
+<td>Ultra ¥14,750</td>
+<td>直下4,000／最上位20,000credits/月。有料は両方100枚/指示、無料10枚/指示。生成・編集で消費、繰越上限2か月分。<a class="cite" href="#src-241">[241]</a><a class="cite" href="#src-242">[242]</a></td>
+</tr>
+<tr>
+<td>Cursor</td>
+<td>Hobby 無料</td>
+<td>Pro+ $60/月、税別</td>
+<td>Ultra $200/月、税別</td>
+<td>Pro+はProのAgent利用上限3倍、Ultraは20倍。BotはPro+が拡大枠、Ultra最大週枠。Cursorモデル／他社モデルの2利用枠、モデルと処理量で消費が変わる。<a class="cite" href="#src-132">[132]</a><a class="cite" href="#src-133">[133]</a><a class="cite" href="#src-135">[135]</a></td>
+</tr>
+<tr>
+<td>GitHub Copilot</td>
+<td>Copilot Free $0</td>
+<td>Copilot Pro+ $39/月、税の扱い未確認</td>
+<td>Copilot Max $100/月、税の扱い未確認</td>
+<td>Pro+基礎3,900＋Flex3,100＝7,000 AI credits/月。Max基礎10,000＋Flex10,000＝20,000。Flexは変動しうる。Freeコード補完2,000/月、チャット・Agent制限あり。有料補完無制限にもレート制限。<a class="cite" href="#src-138">[138]</a>–<a class="cite" href="#src-140">[140]</a></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>ChatGPT</strong>：下位にGo $8、Plus $20（月額、公式USD）。Go／Plus／Proに年払いなし。日本語価格ページは本文・実ブラウザの両方で価格数字が空欄だったため、<strong>公式円額未確認</strong>、USDを採用。日本の消費税10%が直接購入に課される。<a class="cite" href="#src-101">[101]</a>–<a class="cite" href="#src-104">[104]</a> したがって税加算の参考計算はPro5x $110、Pro20x $220/月（為替換算ではない）。<a class="cite" href="#src-148">[148]</a> 日本は利用対象国。日本語公式サービス案内を確認。<a class="cite" href="#src-102">[102]</a><a class="cite" href="#src-105">[105]</a> $200停止は世界共通告知で、日本限定不提供とは違う。停止前利用者の復帰等の例外は<a class="cite" href="#src-101">[101]</a>参照。</li>
+<li><strong>Claude</strong>：下位Pro $20/月または$200/年（月換算$16.67、年払い）。Maxは5x／20xとも月払いのみ。記載はWeb通常価格でアプリ購入は異なりうる。日本在住顧客は2026-04-01から10%JCT加算。Max5x $110、Max20x $220/月が税加算の参考計算。<a class="cite" href="#src-112">[112]</a>–<a class="cite" href="#src-115">[115]</a><a class="cite" href="#src-148">[148]</a> 日本を対応国に列挙、日本語UI設定あり。<a class="cite" href="#src-114">[114]</a><a class="cite" href="#src-116">[116]</a></li>
+<li><strong>Microsoft</strong>：Proは月払いのみ。Premiumは¥32,000/年、月換算約¥2,667（計算値）、年払いを月払いと混同しない。下位Personal ¥2,130/月、Family ¥2,740/月。家族1–6人で使える契約でもAIの特典は契約所有者のみ。日本の公式販売ページで円・税込表示を確認。<a class="cite" href="#src-121">[121]</a><a class="cite" href="#src-122">[122]</a><a class="cite" href="#src-148">[148]</a> 日本語テキスト・音声対応。ただし新機能は市場・言語で段階提供。<a class="cite" href="#src-124">[124]</a></li>
+<li><strong>Cursor</strong>：下位Pro $20/月。公式日本語UIでUltra $200/月／年額選択時$160/月、Pro+ $60/月／年額選択時$48/月を実見。年総額はそれぞれ$1,920／$576の計算値。税込ではない。日本の税率・実請求総額は未確認。個人有料はカード／デビットで公式直接契約、第三者販売は公式認定でない旨を確認。<a class="cite" href="#src-132">[132]</a><a class="cite" href="#src-148">[148]</a> 日本語料金・申込導線あり、国別提供制限はモデル提供元に依存。<a class="cite" href="#src-137">[137]</a> 日本が明記された契約国一覧、完全な日本語UI対応、Botの日本語品質は今回未確認。日本から購入できないと確認したわけではない。</li>
+<li>
+<p><strong>GitHub</strong>：下位Pro $10/月。現在の月額プランと既存年額プランの移行扱いを区別。旧Pro／Pro+年払い利用者は期限までは旧リクエスト課金、終了時Freeへ移行、月払い再契約等の選択肢。旧年額の割引を現在の新規契約価格として用いない。<a class="cite" href="#src-141">[141]</a> 日本語公式販売・個人申込導線、世界提供の貿易制限ポリシーを確認、日本は制限地域に挙がらない。ただし個別決済は未実施。<a class="cite" href="#src-139">[139]</a><a class="cite" href="#src-144">[144]</a> 日本語入力は英語以外の入力として扱え、品質差がありうると公式明記。日本語で英語と同品質という保証はない。<a class="cite" href="#src-139">[139]</a><a class="cite" href="#src-143">[143]</a></p>
+</li>
+<li>
+<p><strong>Google 2サービス</strong>：日本向け公式表示、税の扱い未確認。両者は同じGoogle AI Ultra契約なので合計¥64,000ではなく<strong>¥32,000/月で両方</strong>。直下も同じ契約。下位Plus ¥725、Pro ¥2,900/月。Ultra年払いの提供・年額は未確認。20TB→30TB、Flow Musicは両Ultra月30,000creditsで追加差なし。別アプリFlow・Jules・Antigravity等は契約特典であり、Gemini Notebook単体の動画・コード記号へ移さない。米国限定のAgent等は日本での評価に含めない。<a class="cite" href="#src-201">[201]</a><a class="cite" href="#src-202">[202]</a> 日本がUltra対象国であること、日本語の生成・利用案内を確認。名称変更は7月16日公式発表による。<a class="cite" href="#src-208">[208]</a><a class="cite" href="#src-214">[214]</a></p>
+</li>
+<li><strong>Grok</strong>：Web USD月払い、税の扱い未確認。下位SuperGrokは$30/月、LiteのWeb月額は未確認。日本App Store公式円表示はHeavy ¥50,000、Plus ¥15,000、SuperGrok ¥5,000、Lite ¥1,500だが、公開欄に課金期間がないため月額欄への転記を避けた。日本提供・日本語・有料購入経路は確認。年払いの存在は公式FAQで確認、現在の年額は未確認。追加creditsは月額外。HeavyにはX Premium+特典。Botは同梱別アプリで、CursorとSuperGrokを契約してもBot枠は合算されない。<a class="cite" href="#src-135">[135]</a><a class="cite" href="#src-221">[221]</a>–<a class="cite" href="#src-227">[227]</a></li>
+<li><strong>Perplexity</strong>：Web USD月払い、税の扱い未確認。Pro年$200、Max年$2,000（月換算約$16.67／$166.67［計：年額÷12］）。日本App StoreはPro ¥3,000・¥30,000、Max ¥30,000と表示するが課金期間未確認。Web円価格は決済画面依存で今回は未確認。日本語・日本有料配信を確認。<a class="cite" href="#src-231">[231]</a><a class="cite" href="#src-232">[232]</a><a class="cite" href="#src-236">[236]</a><a class="cite" href="#src-237">[237]</a> Computerの初回Pro4,000／Max35,000creditsは30日限りの特典で通常月枠に足さない。追加Computer creditsは別購入、現行100credits＝$1。Maxの10,000creditsだけなら$100相当で、Proとの差$180を全て説明するものではない。動画枠の追加購入は不可。<a class="cite" href="#src-233">[233]</a><a class="cite" href="#src-239">[239]</a> 個人プランの生成画像は非商用用途に限定されると公式ヘルプに明記。<a class="cite" href="#src-238">[238]</a></li>
+<li>
+<p><strong>Gamma</strong>：日本地域の公式円表示、税の扱い未確認。下位Plus ¥1,800/月。年払いはPro ¥30,000/年（月¥2,500）、Ultra ¥159,291/年（月換算¥13,274.25［計：年額÷12］。画面の月表示は¥13,274）。「Ultraは月払いのみ」というヘルプ内FAQと相違するため、現行料金画面を採用。追加creditsは別料金。世界各国の主要カード受付、多言語での生成を確認、日本語品質の実測はしていない。<a class="cite" href="#src-241">[241]</a>–<a class="cite" href="#src-243">[243]</a><a class="cite" href="#src-247">[247]</a></p>
+</li>
+<li>
+<p><strong>Meta AI</strong>：国内公式発表で日本提供と税込価格を確認。年払い未確認。SNSの各Plus同梱を別のAI制作機能として加算しない。Instagram Restyleは日本非対応。日本語国内案内と、Meta AI自体の国内提供を確認。<a class="cite" href="#src-301">[301]</a><a class="cite" href="#src-302">[302]</a></p>
+</li>
+<li><strong>DeepSeek</strong>：日本の公式App Storeで無料・日本語を確認。API価格は消費者アプリの最上位料金に代用しない。<a class="cite" href="#src-306">[306]</a><a class="cite" href="#src-307">[307]</a></li>
+<li><strong>Doubao</strong>：中国向けの継続月払い価格。下位标准套餐CNY68/月。1か月買切りの上位599元・直下240元とは別。CDN資料の年継続上位CNY5,088・直下CNY2,048は公式サイトからのリンク連鎖未確認として留保、税の扱い未確認。Webで中国系決済の案内はあるが日本の正規利用・支払、日本語対応は未確認。日本環境の未ログイン閲覧で地域制限画面に転送された。ログイン後も不可能とまでは断定しない。<a class="cite" href="#src-311">[311]</a>–<a class="cite" href="#src-313">[313]</a><a class="cite" href="#src-334">[334]</a></li>
+<li><strong>Qwen</strong>：無料という公式LPと、アプリ内購入ありという公式ストアを併記。有料なしと断定しない。日本語対応の記載はあるが、日本の有料配布・個人最上位・税・年払いは未確認。<a class="cite" href="#src-314">[314]</a>–<a class="cite" href="#src-316">[316]</a></li>
+<li><strong>Kimi</strong>：Webは日本語の現行月払いUIを確認、税の扱い未確認。下位Plus $19／Pro $39も存在。Ultra年$1,908（月相当$159）、Max年$948（月相当$79）。日本App Storeには旧Vivace ¥30,000、Allegro ¥15,000と新Max ¥15,000等が混在し、新Ultraの円額に読み替えない。公式日本語価格画面のUltra登録導線・日本有料アプリ配布・カード/Apple/Google課金案内から公開契約経路を確認。表示は「現在の購入適格性はページ参照」とし、日本限定不提供や既存者限定の記載は見つからない。実決済の承認までは全社同様に未実施。<a class="cite" href="#src-317">[317]</a>–<a class="cite" href="#src-320">[320]</a></li>
+<li>
+<p><strong>Character.AI</strong>：税の扱い未確認。c.ai+年$94.99（月換算約$7.92［計：年額÷12］）、liteは週$2.49もあるが月払いと混同しない。lite年払いは未確認。日本公式ストアはc.ai+ ¥1,500／¥15,000、lite ¥800／¥400を表示するが請求周期不明のため月額欄は公式Web/FAQのUSD。日本配布、日本語・日本語音声会話を確認。<a class="cite" href="#src-326">[326]</a>–<a class="cite" href="#src-329">[329]</a></p>
+</li>
+<li>
+<p>Midjourneyは税別相当（税が課金時に加算と明記）。Mega年$1,152（月換算$96）、Pro年$576（月換算$48）。他にBasic $10/Standard $30。追加GPU $4/時。Web料金はUSD表記、カード等Stripe。nijiと同一サブスクだがMegaはデスクトップのみとのniji公式記載あり。<a class="cite" href="#src-401">[401]</a><a class="cite" href="#src-404">[404]</a><a class="cite" href="#src-405">[405]</a><a class="cite" href="#src-408">[408]</a><a class="cite" href="#src-409">[409]</a><a class="cite" href="#src-429">[429]</a></p>
+</li>
+<li>Kling税の扱い未確認。年払い画面 Ultra $1,429.99/年（通常表示$2,160）、Premier $728.64/年（通常表示$1,104）。継続年額も同じ表示。月換算［計］は約$119.17/$60.72。Standard通常$10/Pro通常$37も存在。追加creditsは別購入。月次credits有効1か月、購入credits2年。<a class="cite" href="#src-410">[410]</a><a class="cite" href="#src-411">[411]</a></li>
+<li>Hailuo税は所在地で加算・チェックアウト計算（旧料金規約の税条項）。Max年$2,208（月換算$184）、Master年$854.40（月換算$71.20、割引表示）。年払いカードでは画像モデル等の365日無制限が増えるが、月払いカードには同じ特典がないので月払い評価に含めない。Standard通常$14.99、割引$10.50／Pro通常$54.99、割引$38。更新期間の割引条件未確認。<a class="cite" href="#src-413">[413]</a><a class="cite" href="#src-414">[414]</a></li>
+<li>Hailuo「無制限」は現行カードが2.0/2.3、FAQが1.0/2.0と範囲相違。FAQはcredits終了後、待ち行列、通常より遅い、個人利用限定、共有・再販不可と明記。<strong>H3は無制限ではない</strong>。<a class="cite" href="#src-413">[413]</a></li>
+<li>Suno Webは税が決済時に計算。Pro年$96（月換算$8）、Premier年$288（月換算$24）。月次credits繰越なし。追加credits/追加DL別売。現行価格ページでは無料v6-mini、有料2段階ともv6/v6-wild。通常の2曲生成10credits（多数画像/動画入力やMax Modeは追加負担）。2,000曲相当は全て標準生成に使った理論目安であり、DL2,000曲ではない。<a class="cite" href="#src-418">[418]</a><a class="cite" href="#src-419">[419]</a><a class="cite" href="#src-421">[421]</a></li>
+</ul>
+<p><strong>日本からの契約・支払い・日本語</strong></p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>サービス</th>
+<th>今回確認できたこと</th>
+<th>残る限定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Midjourney</td>
+<td>日本App Storeに販売元Midjourney, Inc.のniji公式アプリと月額購入。公式がniji/Midjourney同一サブスクと明記。日本語プロンプト例。WebはVisa/Mastercard/AmexなどStripe。<a class="cite" href="#src-405">[405]</a><a class="cite" href="#src-408">[408]</a><a class="cite" href="#src-409">[409]</a></td>
+<td>MegaはWebでUSD。日本住所でのMega決済まではログイン禁止のため未実施。Midjourney本体の日本語UI対応は未確認。非英語での会話プロンプト補助は公式確認。<a class="cite" href="#src-407">[407]</a></td>
+</tr>
+<tr>
+<td>Kling AI</td>
+<td>日本App Store公式販売元KLING AI PTE. LTD.、日本語UI、Premier月¥15,000まで掲載。動画の日本語発話は公式ガイド確認。<a class="cite" href="#src-412">[412]</a><a class="cite" href="#src-417">[417]</a></td>
+<td>Ultraの日本円価格/日本住所でのWeb最終決済は未確認。日本国内サービス提供と個人有料契約経路の存在は日本ストアで確認。</td>
+</tr>
+<tr>
+<td>Hailuo AI</td>
+<td>日本語Google PlayでMiniMax AI（NANONOBLE PTE. LTD.）名義公式アプリ、アプリ内購入、画像/動画機能説明を確認。<a class="cite" href="#src-416">[416]</a></td>
+<td>日本住所のMax契約・決済可否と日本語生成品質は未確認。日本語表示ページだけで最上位契約成功までは証明しない。検索上位に多数の無関係同名アプリがあり、それは使わない。</td>
+</tr>
+<tr>
+<td>Suno</td>
+<td>日本App Store Suno Inc.、日本語対応、Pro/Premier円建て購入欄。公式決済ヘルプにJPYと主要カード、iOS契約はWebにも適用。<a class="cite" href="#src-424">[424]</a><a class="cite" href="#src-425">[425]</a></td>
+<td>価格ページの地域別Web円額は未確認。iOS欄は同名価格が複数あり期間明記不足。月払いが確認できたWeb$10/$30を主表に採用し、iOS円表示は購入経路の参考値とした。</td>
+</tr>
+</tbody>
+</table></div>
+<p>全社の実決済は未実施。日本語の販売・申込経路、公式の対応国や日本向けストアを基に契約経路を判断した。日本の特定カードが承認される保証とは区別する。上位料金が不明でもAPIの価格で穴埋めしていない。今回、単一の有料プランだけと確認したサービスはなく、「直下＝無料」と評価した行はない。</p>
+<h2 id="sec-C用途プラン">C．用途×プラン</h2>
+<h3 id="sec-C1要約表">C-1．要約表</h3>
+<p>略記：文章＝文章・対話、検索＝Web検索・調査、コード＝コード・アプリ、資料＝資料・スライド・表。◎は基本＋拡張2項目をすべて確認、○は基本を確認、△は基本の対象等が限定、×は非対応を確認、？は判定根拠不足。記号は品質や精度の評価ではない。</p>
+<p>無料欄は確認できた用途、直下欄は無料から、最上位欄は直下からの拡大を示す。<strong>省略した用途は非対応ではなく、拡大がないか未確認</strong>。利用量増だけで記号を上げない。同梱別アプリはその名前を併記した。会話音声の存在だけで原稿読み上げ○とはしない。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>サービス</th>
+<th>無料でできる用途</th>
+<th>すぐ下のプランで広がる用途</th>
+<th>最上位プランで広がる用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td>文章○、検索◎（制限付きDeep Research）、画像◎。コード◎・資料◎は無料デスクトップWork／Codexの提供・利用枠に依存。<a class="cite" href="#src-102">[102]</a><a class="cite" href="#src-103">[103]</a><a class="cite" href="#src-107">[107]</a>–<a class="cite" href="#src-110">[110]</a></td>
+<td>文章？（基本○、Pro推論・量↑は確認。選択編集のProへの帰属未確認）、検索◎（量↑）、画像◎（thinking生成・量↑）、コード◎（同梱Codexのモデル・量↑）、資料◎（Work利用拡大）。<a class="cite" href="#src-101">[101]</a>–<a class="cite" href="#src-110">[110]</a></td>
+<td>同じ中核機能。文章？（基本○、選択編集のProへの帰属未確認）・検索◎・コード◎等の利用量増（Plus比5x→20x、機能別条件）。新用途解放は確認なし。$200新規停止。<a class="cite" href="#src-101">[101]</a><a class="cite" href="#src-103">[103]</a><a class="cite" href="#src-106">[106]</a></td>
+</tr>
+<tr>
+<td>Gemini</td>
+<td>文章◎・検索◎・画像○・音楽○・コード○・資料○。<a class="cite" href="#src-203">[203]</a><a class="cite" href="#src-204">[204]</a><a class="cite" href="#src-206">[206]</a><a class="cite" href="#src-207">[207]</a></td>
+<td>動画◎を追加。文章◎・検索◎・画像○等の上限／モデル拡大。資料○・コード○の作業枠も拡大。<a class="cite" href="#src-201">[201]</a><a class="cite" href="#src-203">[203]</a>–<a class="cite" href="#src-205">[205]</a></td>
+<td>文章◎・検索◎等（利用枠Pro比5x→20x、機能別制限）。新用途の解放は確認なし。別アプリFlowは月credits増。<a class="cite" href="#src-201">[201]</a><a class="cite" href="#src-202">[202]</a></td>
+</tr>
+<tr>
+<td>Claude</td>
+<td>文章◎（Artifactsの文章選択編集）、検索○、画像△（図・SVG等のみ）、コード○（実行まで）、資料◎（docx/xlsx/pptx）。<a class="cite" href="#src-112">[112]</a><a class="cite" href="#src-117">[117]</a><a class="cite" href="#src-118">[118]</a><a class="cite" href="#src-120">[120]</a></td>
+<td>検索◎（Research追加）、コード◎（同梱Claude Code）、文章◎（Opus等・量↑）、資料◎（専用Docs/Slides等・量↑）、画像△（利用量増の独立根拠は未確認）。<a class="cite" href="#src-112">[112]</a><a class="cite" href="#src-113">[113]</a><a class="cite" href="#src-117">[117]</a><a class="cite" href="#src-119">[119]</a><a class="cite" href="#src-120">[120]</a></td>
+<td>文章◎・検索◎・コード◎・資料◎（5時間枠5x→20x、週・モデル別上限あり）。主要機能の新規解放は確認なし。<a class="cite" href="#src-112">[112]</a><a class="cite" href="#src-113">[113]</a><a class="cite" href="#src-119">[119]</a></td>
+</tr>
+<tr>
+<td>Microsoft Copilot</td>
+<td>文章○、検索○、画像○。無料のその他4用途と資料成果物は今回最低条件未確認。<a class="cite" href="#src-125">[125]</a><a class="cite" href="#src-126">[126]</a></td>
+<td>文章◎（Word選択編集）、検索◎（Researcher）、コード○（Pages実行・プレビュー）、資料◎（Word/Excel/PowerPoint）、画像○（量↑）。文書系はPersonalから、ResearcherはPremiumから。<a class="cite" href="#src-123">[123]</a><a class="cite" href="#src-127">[127]</a>–<a class="cite" href="#src-130">[130]</a></td>
+<td>8用途に新たな解放を確認せず。Voice／Visionの利用量↑はあるが、指定原稿の音声生成の○条件を満たす証拠にはしない。他主要上限は現行表で同区分。<a class="cite" href="#src-123">[123]</a></td>
+</tr>
+<tr>
+<td>Grok</td>
+<td>文章○・検索○。コード◎は別アプリBuild無料試用、試用量未確認。<a class="cite" href="#src-221">[221]</a><a class="cite" href="#src-224">[224]</a><a class="cite" href="#src-226">[226]</a></td>
+<td>文章◎（Canvas）、画像○・動画○、コード◎（同梱Build、量↑）。同梱Botに検索◎・資料○。無料との差の最低条件は一部未確認。<a class="cite" href="#src-221">[221]</a><a class="cite" href="#src-224">[224]</a><a class="cite" href="#src-226">[226]</a><a class="cite" href="#src-227">[227]</a><a class="cite" href="#src-145">[145]</a></td>
+<td>文章◎等（最大週枠・複数Agent追加）。画像○・動画○・コード◎も共有枠拡大、各量・倍率未確認。新用途解放未確認。<a class="cite" href="#src-222">[222]</a><a class="cite" href="#src-223">[223]</a></td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td>文章○・検索◎（Research1/月）。画像○は専用記事で確認、比較表と相違あり。<a class="cite" href="#src-232">[232]</a><a class="cite" href="#src-238">[238]</a><a class="cite" href="#src-240">[240]</a><a class="cite" href="#src-257">[257]</a><a class="cite" href="#src-258">[258]</a></td>
+<td>検索◎・画像○（量／モデル↑）、動画○、コード○、資料◎を追加。最低Pro。<a class="cite" href="#src-234">[234]</a><a class="cite" href="#src-238">[238]</a><a class="cite" href="#src-239">[239]</a><a class="cite" href="#src-251">[251]</a></td>
+<td>文章○・検索◎・画像○・動画○・資料◎（枠／モデル↑）。Computer月10,000credits追加でコード○を含む継続作業枠↑。<a class="cite" href="#src-231">[231]</a><a class="cite" href="#src-233">[233]</a><a class="cite" href="#src-238">[238]</a><a class="cite" href="#src-239">[239]</a><a class="cite" href="#src-251">[251]</a></td>
+</tr>
+<tr>
+<td>Meta AI</td>
+<td>文章○・画像○、動画△（画像アニメ化）。<a class="cite" href="#src-302">[302]</a><a class="cite" href="#src-303">[303]</a></td>
+<td>画像○・動画△（生成量↑、数値未確認）。<a class="cite" href="#src-301">[301]</a></td>
+<td>画像○・動画△（最大容量、数値未確認）。新用途解放は確認なし。<a class="cite" href="#src-301">[301]</a></td>
+</tr>
+<tr>
+<td>DeepSeek</td>
+<td>文章○・検索○・コード○。<a class="cite" href="#src-306">[306]</a>–<a class="cite" href="#src-309">[309]</a><a class="cite" href="#src-336">[336]</a></td>
+<td>該当なし</td>
+<td>該当なし</td>
+</tr>
+<tr>
+<td>Doubao〈豆包〉</td>
+<td>文章○・画像○・動画○・コード○（中国向け）。資料は？。<a class="cite" href="#src-311">[311]</a><a class="cite" href="#src-313">[313]</a></td>
+<td>文章○・画像○・動画○等（共有枠増）。日本条件未確認、CDNの倍率は留保。<a class="cite" href="#src-311">[311]</a>–<a class="cite" href="#src-313">[313]</a></td>
+<td>文章○・画像○・動画○等（共有枠増と記載、倍率は留保）。新用途解放は未確認。<a class="cite" href="#src-311">[311]</a></td>
+</tr>
+<tr>
+<td>Qwen〈一般向けアプリ〉</td>
+<td>文章○・画像○・動画○・コード○。<a class="cite" href="#src-314">[314]</a>–<a class="cite" href="#src-316">[316]</a></td>
+<td>未確認</td>
+<td>未確認</td>
+</tr>
+<tr>
+<td>Kimi</td>
+<td>文章○・資料○（編集可能PPTX）。<a class="cite" href="#src-317">[317]</a><a class="cite" href="#src-322">[322]</a><a class="cite" href="#src-325">[325]</a></td>
+<td>検索◎・資料◎、コード◎（同梱Kimi Code）。文章○等（共通枠↑）。これら有料機能はPlusから確認。<a class="cite" href="#src-317">[317]</a><a class="cite" href="#src-321">[321]</a>–<a class="cite" href="#src-325">[325]</a></td>
+<td>検索◎・資料◎・コード◎・文章○（共通credits2倍、同時2→4）。新用途解放は確認なし。<a class="cite" href="#src-317">[317]</a><a class="cite" href="#src-325">[325]</a></td>
+</tr>
+<tr>
+<td>Character.AI</td>
+<td>文章○（対話）。音声会話だけで音声○とはしない。<a class="cite" href="#src-326">[326]</a><a class="cite" href="#src-329">[329]</a></td>
+<td>文章○（上位モデル日次体験・記憶改善）。画像等のプラン別対応は未確認。<a class="cite" href="#src-326">[326]</a><a class="cite" href="#src-327">[327]</a></td>
+<td>文章○（top models無制限、記憶最上位）。用途追加は未確認、画像等の個別機能上限は残る。<a class="cite" href="#src-326">[326]</a><a class="cite" href="#src-327">[327]</a></td>
+</tr>
+<tr>
+<td>Gemini Notebook〈旧NotebookLM〉</td>
+<td>文章○・検索◎、画像△・動画△（資料由来）、資料◎。音声は？。<a class="cite" href="#src-209">[209]</a>–<a class="cite" href="#src-213">[213]</a><a class="cite" href="#src-215">[215]</a><a class="cite" href="#src-216">[216]</a></td>
+<td>文章○・検索◎・画像△・動画△・資料◎（共通利用量↑）。コード○（クラウド実行）をUltraで確認、最低プラン未確認。<a class="cite" href="#src-201">[201]</a><a class="cite" href="#src-209">[209]</a><a class="cite" href="#src-214">[214]</a></td>
+<td>文章○・検索◎・画像△・動画△・コード○・資料◎（共通利用枠Pro比5x→20x）。新用途解放は確認なし。<a class="cite" href="#src-201">[201]</a><a class="cite" href="#src-209">[209]</a><a class="cite" href="#src-214">[214]</a></td>
+</tr>
+<tr>
+<td>Midjourney</td>
+<td>Web/Discord該当なし。別nijiアプリ画像○〈限定試用〉<a class="cite" href="#src-402">[402]</a><a class="cite" href="#src-409">[409]</a></td>
+<td>画像◎、動画△〈画像起点〉、文章△〈画像プロンプト補助〉<a class="cite" href="#src-401">[401]</a><a class="cite" href="#src-403">[403]</a><a class="cite" href="#src-406">[406]</a><a class="cite" href="#src-407">[407]</a></td>
+<td>画像◎・動画△〈Fast量↑、動画同時処理↑〉<a class="cite" href="#src-401">[401]</a></td>
+</tr>
+<tr>
+<td>Kling AI</td>
+<td>画像○・動画○の無料案内あり。ただし付与量/モデル条件の公式整合未確認<a class="cite" href="#src-412">[412]</a><a class="cite" href="#src-415">[415]</a></td>
+<td>画像○・動画◎〈量・解像度・延長〉。音声はプラン最低対応未確認<a class="cite" href="#src-410">[410]</a><a class="cite" href="#src-411">[411]</a><a class="cite" href="#src-415">[415]</a></td>
+<td>画像○・動画◎〈量↑〉、音声◎〈動画内発話・声指定・音声参照、下位との差未確認〉<a class="cite" href="#src-410">[410]</a><a class="cite" href="#src-417">[417]</a></td>
+</tr>
+<tr>
+<td>Hailuo AI</td>
+<td>動画○〈試用credits〉。画像は無料プラン最低対応未確認<a class="cite" href="#src-413">[413]</a><a class="cite" href="#src-416">[416]</a></td>
+<td>画像○、動画◎〈H3・量・複数外部モデル〉。音楽/音声はAgent比較表にチェックあり、基本条件・最低プラン未確認<a class="cite" href="#src-413">[413]</a><a class="cite" href="#src-427">[427]</a></td>
+<td>画像○・動画◎〈量↑、旧動画モデル条件付無制限〉。新しい用途の追加は未確認<a class="cite" href="#src-413">[413]</a></td>
+</tr>
+<tr>
+<td>Suno</td>
+<td>音楽○、文章△〈歌詞限定〉<a class="cite" href="#src-418">[418]</a><a class="cite" href="#src-422">[422]</a><a class="cite" href="#src-423">[423]</a></td>
+<td>音楽◎〈v6/v6-wild・区間置換・量↑〉<a class="cite" href="#src-418">[418]</a><a class="cite" href="#src-421">[421]</a><a class="cite" href="#src-423">[423]</a></td>
+<td>音楽◎〈量↑、Studio追加、通常DL枠↑〉<a class="cite" href="#src-418">[418]</a><a class="cite" href="#src-420">[420]</a></td>
+</tr>
+<tr>
+<td>Gamma</td>
+<td>文章△（資料制作中心）、検索○（Agent）、画像○・資料○、コード△（サイト制作）。<a class="cite" href="#src-241">[241]</a><a class="cite" href="#src-242">[242]</a><a class="cite" href="#src-244">[244]</a>–<a class="cite" href="#src-246">[246]</a></td>
+<td>画像○・資料○・文章△・検索○（月次4,000credits、モデル追加）。コード△（サイト公開機能拡大）。<a class="cite" href="#src-241">[241]</a><a class="cite" href="#src-242">[242]</a></td>
+<td>画像○（Ultraモデル追加）、資料○・文章△・検索○等（共通credits5倍）。コード△（独自ドメイン10→100）。<a class="cite" href="#src-241">[241]</a><a class="cite" href="#src-242">[242]</a></td>
+</tr>
+<tr>
+<td>Cursor</td>
+<td>コード◎（HobbyのAgent利用枠内）。一般文章・出典付きWeb回答・画像の無料最低プランは未確認。<a class="cite" href="#src-132">[132]</a><a class="cite" href="#src-136">[136]</a></td>
+<td>コード◎（量↑）。契約同梱Botに文章○・検索◎・資料○が加わる（最低Pro）。画像○はCursor Agent公式機能、確認プランは有料、最低プラン未確認。<a class="cite" href="#src-132">[132]</a>–<a class="cite" href="#src-136">[136]</a></td>
+<td>コード◎（Pro比3x→20x）、同梱Botの文章○・検索◎・資料○（週利用量↑）。新用途解放は確認なし。<a class="cite" href="#src-132">[132]</a><a class="cite" href="#src-135">[135]</a></td>
+</tr>
+<tr>
+<td>GitHub Copilot</td>
+<td>文章△（開発関連に限定）、コード◎（Agent mode・CLIの限られた利用）。<a class="cite" href="#src-138">[138]</a><a class="cite" href="#src-143">[143]</a><a class="cite" href="#src-146">[146]</a><a class="cite" href="#src-152">[152]</a></td>
+<td>コード◎（プレミアムモデル・7,000 AI credits、クラウドAgent、レビュー）、文章△（コード用途のモデル・量↑）。別会社Agentの利用は同じ開発用途で、Claude全機能契約が付くわけではない。<a class="cite" href="#src-138">[138]</a><a class="cite" href="#src-140">[140]</a><a class="cite" href="#src-142">[142]</a></td>
+<td>コード◎・文章△（20,000 AI credits、プレミアムモデル優先）。新しい8用途は確認なし。<a class="cite" href="#src-138">[138]</a><a class="cite" href="#src-140">[140]</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="sec-C2順位を左右した機能の根拠表">C-2．順位を左右した機能の根拠表</h3>
+<p>資料の◎は編集可能な文書・スライド・表計算を各1種類以上確認したもの。ファイルを読み込めることから生成能力を推定していない。最低プランを特定できない場合はその旨を残す。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>サービス</th>
+<th>用途</th>
+<th>最上位プランの判定</th>
+<th>基本機能・拡張機能の確認状況〈最低対応プラン〉</th>
+<th>出典番号・補足</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td>文章</td>
+<td>？〈基本○は確認〉</td>
+<td>文章・対話・添付ファイルはFreeから確認。writing blocksの指定箇所編集は機能の存在を確認したが、対象Proプランへの帰属と最低対応プランは未確認。</td>
+<td><a class="cite" href="#src-102">[102]</a><a class="cite" href="#src-106">[106]</a> 選択編集の提供はプラン・端末・モデル・ロールアウトに依存するとされ、Proへの提供を特定する記載がない。H資料の○対◎は未解消として？。</td>
+</tr>
+<tr>
+<td>ChatGPT</td>
+<td>検索</td>
+<td>◎</td>
+<td>Deep Researchが複数情報源を調査、出典付き報告。最低Free（料金表に制限付き提供）。Proは枠拡大。</td>
+<td><a class="cite" href="#src-102">[102]</a><a class="cite" href="#src-108">[108]</a> 回数は製品内カウンター等で確認する仕組み。旧固定回数は流用しない。</td>
+</tr>
+<tr>
+<td>ChatGPT</td>
+<td>画像</td>
+<td>◎</td>
+<td>テキスト生成、入力画像編集、領域選択。最低Free。thinking画像生成はPlus以上。</td>
+<td><a class="cite" href="#src-107">[107]</a> Images 2.5を確認。</td>
+</tr>
+<tr>
+<td>ChatGPT</td>
+<td>コード・資料</td>
+<td>◎／◎</td>
+<td>Codexで複数ファイルの変更・実行・検証。Workで編集可能な文書・表計算・スライド。Freeのデスクトップ提供は段階展開、Proでは同梱利用。</td>
+<td><a class="cite" href="#src-102">[102]</a><a class="cite" href="#src-103">[103]</a><a class="cite" href="#src-109">[109]</a><a class="cite" href="#src-110">[110]</a> Codexの画像生成がFree非対応である点を、ChatGPT本体の無料画像へ誤って適用しない。</td>
+</tr>
+<tr>
+<td>ChatGPT</td>
+<td>動画・音声・音楽</td>
+<td>？／？／？</td>
+<td>Sora製品は2026-04-26終了。動画を以前の付属Soraから数えない。音声会話やRead aloudは指定原稿の制作音声という基本条件の再確認不足。音楽も未確認。</td>
+<td><a class="cite" href="#src-111">[111]</a> Hの動画？対△、音声△対○は今回未解消なので？。</td>
+</tr>
+<tr>
+<td>Claude</td>
+<td>文章</td>
+<td>◎</td>
+<td>ファイル・一般文章対話、Artifacts上の文書またはMarkdownで文章を選択してEdit with Claude。Artifacts最低Free、専用Docs/Slidesテンプレートは有料。</td>
+<td><a class="cite" href="#src-112">[112]</a><a class="cite" href="#src-117">[117]</a><a class="cite" href="#src-118">[118]</a> ○対◎を解消。</td>
+</tr>
+<tr>
+<td>Claude</td>
+<td>検索</td>
+<td>◎</td>
+<td>Web検索はFree。Researchは多段階検索と引用つき報告、最低Pro。</td>
+<td><a class="cite" href="#src-112">[112]</a><a class="cite" href="#src-120">[120]</a> Max5xと20xでResearchという機能そのものの差は確認なし。</td>
+</tr>
+<tr>
+<td>Claude</td>
+<td>コード・資料</td>
+<td>◎／◎</td>
+<td>コード生成・実行と3種ファイル作成はFree。複数ファイルAgent＋実行・テストはClaude CodeのProから。Maxで枠増。</td>
+<td><a class="cite" href="#src-118">[118]</a><a class="cite" href="#src-119">[119]</a><a class="cite" href="#src-147">[147]</a> ClaudeとCodeは利用枠共有、APIは別料金。</td>
+</tr>
+<tr>
+<td>Claude</td>
+<td>画像・音声</td>
+<td>△／？</td>
+<td>画像は写真・イラスト生成をせずHTML/SVGの図解等に限定。音声モードから指定文章の読み上げ生成を推定しない。</td>
+<td><a class="cite" href="#src-150">[150]</a> 画像△対？は限定基本機能の公式説明で△、音声？対○は未解消で？。</td>
+</tr>
+<tr>
+<td>Microsoft Copilot</td>
+<td>文章・資料</td>
+<td>◎／◎</td>
+<td>Office同梱でファイル参照・選択文章書換・編集可能なWord/Excel/PowerPoint作成。最低Personal。</td>
+<td><a class="cite" href="#src-127">[127]</a><a class="cite" href="#src-129">[129]</a><a class="cite" href="#src-130">[130]</a> Copilot単独チャットの文章機能は○。契約同梱Officeを加えて◎。</td>
+</tr>
+<tr>
+<td>Microsoft Copilot</td>
+<td>検索</td>
+<td>◎</td>
+<td>基本Web検索はFree。Researcherは多段階の深い調査と出典つき報告、最低Premium。</td>
+<td><a class="cite" href="#src-125">[125]</a><a class="cite" href="#src-128">[128]</a> 旧Deep Research終了後の現行Researcherで判断。Pro限定ではない。</td>
+</tr>
+<tr>
+<td>Microsoft Copilot</td>
+<td>コード</td>
+<td>○</td>
+<td>Pagesでコード生成・実行プレビュー、最低Personal。複数ファイル変更＋検証Agentの確認不足で◎にしない。</td>
+<td><a class="cite" href="#src-131">[131]</a> GitHub Copilotという別契約をここへ混ぜない。</td>
+</tr>
+<tr>
+<td>Microsoft Copilot</td>
+<td>画像・動画・音声</td>
+<td>○／？／？</td>
+<td>無料画像生成あり、領域編集未確認。動画の一般個人向け対象プラン・生成編集まで未確認。音声は会話枠やAudio Overviewの存在だけでは○にしない。</td>
+<td><a class="cite" href="#src-123">[123]</a><a class="cite" href="#src-125">[125]</a><a class="cite" href="#src-126">[126]</a> 音声・動画のH相違は？。</td>
+</tr>
+<tr>
+<td>Cursor</td>
+<td>コード・画像</td>
+<td>◎／○</td>
+<td>Agentがファイルを編集、コマンド実行、ブラウザで動作検証。コード最低Hobby（制限）。画像は文字／参考画像から生成、範囲指定編集未確認、最低プラン未確認。</td>
+<td><a class="cite" href="#src-132">[132]</a><a class="cite" href="#src-136">[136]</a> 写真を入力として読むこととは区別。</td>
+</tr>
+<tr>
+<td>Cursor</td>
+<td>文章・検索・資料</td>
+<td>○／◎／○</td>
+<td>同じ契約の別アプリGrok Bot：多段階Web調査・出典リンク付き成果、ファイルを参照する文章、文書・新しい表の成果物作成例。最低Pro。専用指定箇所編集とスライド生成は未確認。</td>
+<td><a class="cite" href="#src-134">[134]</a>–<a class="cite" href="#src-135">[135]</a><a class="cite" href="#src-145">[145]</a> サービス単体Hは文章／検索／資料を？としてもよいが契約特典は分離評価。別契約のSaaSへの接続・権限は必要な場合あり。</td>
+</tr>
+<tr>
+<td>GitHub Copilot</td>
+<td>コード</td>
+<td>◎</td>
+<td>無料Agent mode／CLIでコード変更・実行確認。有料ProからクラウドAgent、Pro+／Maxでプレミアムモデル・大きい利用枠。</td>
+<td><a class="cite" href="#src-138">[138]</a><a class="cite" href="#src-142">[142]</a><a class="cite" href="#src-146">[146]</a><a class="cite" href="#src-152">[152]</a> cloud agentにはActions利用、AI credits、1リポジトリ・1枝・1PR、最大59分等の制約。</td>
+</tr>
+<tr>
+<td>GitHub Copilot</td>
+<td>文章・検索・資料</td>
+<td>△／？／？</td>
+<td>開発関連のチャットに限定されるため文章△。Bing検索を使う機能は確認したが、この調査では引用確認可能な一般Web回答と対象プランの組を十分確認できず検索？。編集可能Office3種成果物も未確認。</td>
+<td><a class="cite" href="#src-139">[139]</a><a class="cite" href="#src-143">[143]</a> 非対応×ではない。</td>
+</tr>
+<tr>
+<td>Gemini</td>
+<td>文章・検索</td>
+<td>◎／◎</td>
+<td>基本対話＋ファイル＋Canvasの選択編集。Web検索＋多段階Research＋出典レポート。最低無料、上位はモデル・枠が拡大。</td>
+<td><a class="cite" href="#src-203">[203]</a><a class="cite" href="#src-204">[204]</a>。機能の有無とモデル別量を分けた。</td>
+</tr>
+<tr>
+<td>Gemini</td>
+<td>動画・音楽・音声</td>
+<td>◎／○／？</td>
+<td>動画：文章・画像開始と既存動画編集、最低Google AI Plus。音楽：指示から歌詞・歌声・伴奏、無料から、区間編集未確認。音声：任意原稿の読み上げ要件は未確認。</td>
+<td><a class="cite" href="#src-205">[205]</a><a class="cite" href="#src-206">[206]</a>。音声の第1部△対○は？。音楽のモデル名Proを有料プランProと混同しない。</td>
+</tr>
+<tr>
+<td>Gemini</td>
+<td>コード・資料</td>
+<td>○／○</td>
+<td>Canvasで生成・実行プレビュー、編集可能な文書・スライド。最低無料。複数ファイル変更＋検証は本体で未確認。資料3種類目の編集可能な表計算も本体では未確認。</td>
+<td><a class="cite" href="#src-203">[203]</a>。別アプリのJulesやSheets特典は本体判定から分離。</td>
+</tr>
+<tr>
+<td>Gemini Notebook</td>
+<td>検索・資料</td>
+<td>◎／◎</td>
+<td>多段階調査・出典レポート。文書はDocs、表はSheetsへ出力、スライドはReviseで選択スライドの文章等を編集。最低無料。</td>
+<td><a class="cite" href="#src-210">[210]</a><a class="cite" href="#src-211">[211]</a><a class="cite" href="#src-213">[213]</a>。PPTXの全要素がネイティブ編集可能とは断定せず。出力後のDocs/Sheets変更はNotebookへ同期しない。</td>
+</tr>
+<tr>
+<td>Gemini Notebook</td>
+<td>画像・動画・音声・コード</td>
+<td>△／△／？／○</td>
+<td>画像・動画は資料内容を基に作る概要に限定。音声概要は原稿の指定全文読み上げとは別で？。コード生成・実行をUltraで確認、最低プラン未確認、複数ファイルAgentは未確認。</td>
+<td><a class="cite" href="#src-212">[212]</a><a class="cite" href="#src-214">[214]</a>–<a class="cite" href="#src-216">[216]</a>。Cinematic動画は英語のみ。Proへのコード提供完了を発表予定から推定しない。</td>
+</tr>
+<tr>
+<td>Grok</td>
+<td>文章・検索・コード</td>
+<td>◎／？〈本体〉／◎〈Build〉</td>
+<td>Canvasはファイル＋部分編集を確認、Plus/Heavyで評価、最低未確認。基本Web/X検索○は確認したが、多段階出典レポート条件まで本体で未確認。Buildは複数ファイル・実行テスト、無料試用あり。</td>
+<td><a class="cite" href="#src-221">[221]</a><a class="cite" href="#src-224">[224]</a><a class="cite" href="#src-226">[226]</a>。本体検索の第1部○対◎は総合判定？、基本○の確認は保持。同梱Botの検索◎・資料○は<a class="cite" href="#src-145">[145]</a><a class="cite" href="#src-227">[227]</a>。音声も△対○未解消で？。</td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td>検索・資料・コード</td>
+<td>◎／◎／○</td>
+<td>Research多段階出典報告は無料制限枠から。DOCX/XLSX/PPTX生成・追記編集・出力は最低Pro。コード生成・実行は確認、複数ファイル検証要件は未確認。</td>
+<td><a class="cite" href="#src-234">[234]</a><a class="cite" href="#src-251">[251]</a><a class="cite" href="#src-253">[253]</a><a class="cite" href="#src-257">[257]</a><a class="cite" href="#src-258">[258]</a>。Maxの月次Computer枠<a class="cite" href="#src-233">[233]</a>を重視。スライドへの自動引用保証とは区別。</td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td>画像・動画</td>
+<td>○／○</td>
+<td>画像生成・追加指示で編集、領域指定未確認。動画は文章／単一画像→最大8秒、既存編集は非対応。最低動画Pro、画像無料の専用記事と比較表が不一致。</td>
+<td><a class="cite" href="#src-238">[238]</a>–<a class="cite" href="#src-240">[240]</a>。個人生成画像は非商用限定。動画個人Maxの本数は非公開、企業15本を流用しない。</td>
+</tr>
+<tr>
+<td>Gamma</td>
+<td>文章・検索・資料・コード</td>
+<td>△／○／○／△</td>
+<td>資料中心のAgent対話、Web検索と引用、編集可能文書・スライド。資料からのサイト制作はできるが汎用コード制作の条件は一部のみ。最低無料。表計算生成は未確認。</td>
+<td><a class="cite" href="#src-241">[241]</a><a class="cite" href="#src-242">[242]</a><a class="cite" href="#src-244">[244]</a>。文章は汎用対話ではなく資料制作に制限。Ultraでも基本資料の種類は増えず、主にcredits・画像モデル増。</td>
+</tr>
+<tr>
+<td>Meta AI</td>
+<td>文章・画像・動画</td>
+<td>○／○／△</td>
+<td>無料から対話、文章→画像・写真編集、画像のアニメ化。世界向けの領域編集は確認できるが日本適用未確認。日本の汎用文章→動画も未確認。</td>
+<td><a class="cite" href="#src-301">[301]</a>–<a class="cite" href="#src-303">[303]</a>。Premiumの生成量は増えるが具体数値未確認。検索・音声・コードの第1部相違は？。</td>
+</tr>
+<tr>
+<td>Doubao・Qwen</td>
+<td>相違のある用途</td>
+<td>画像○・動画○〈サービス〉、検索？</td>
+<td>画像・動画は各公式一般向けストアで確認。検索の引用要件は未確認。Doubaoの音声・編集可能資料も？。Qwen有料プランとの対応は未確認。</td>
+<td><a class="cite" href="#src-311">[311]</a>–<a class="cite" href="#src-316">[316]</a>。最上位契約の日本適格性と、海外向けサービスの機能を分離。</td>
+</tr>
+<tr>
+<td>Kimi</td>
+<td>検索・コード・資料</td>
+<td>◎／◎／◎</td>
+<td>多段階調査・引用レポート、DOCX/XLSX/PPTX生成編集、同梱Kimi Codeの複数ファイル変更と実行検証。最低確認Plus。</td>
+<td><a class="cite" href="#src-317">[317]</a><a class="cite" href="#src-321">[321]</a>–<a class="cite" href="#src-325">[325]</a>。画像等プラグインを新たに発見したが同契約内・別料金条件は未確認で？。<a class="cite" href="#src-335">[335]</a></td>
+</tr>
+<tr>
+<td>Kimi</td>
+<td>最上位の差</td>
+<td>検索◎・コード◎・資料◎</td>
+<td>Ultraで増えるのは主にAgent creditsと同時処理。長文枠・保存容量・主要用途はMaxと共通。</td>
+<td><a class="cite" href="#src-317">[317]</a>。99→199ドルでcredits2倍、並行2→4。旧ヘルプVivaceの回数を現プランに流用しない。<a class="cite" href="#src-318">[318]</a></td>
+</tr>
+<tr>
+<td>Character.AI</td>
+<td>画像・動画・音声</td>
+<td>？〈最上位への帰属〉</td>
+<td>サービスには文章→画像、画像起点の紹介動画、指定台詞・感情付き発声がある。台詞は動画内なら音声基本○の条件を満たすが、c.ai+での提供と最低プランは未確認。</td>
+<td><a class="cite" href="#src-330">[330]</a><a class="cite" href="#src-331">[331]</a>。無料の音声クローン・会話<a class="cite" href="#src-329">[329]</a>を原稿読み上げの提供証拠に置き換えない。</td>
+</tr>
+<tr>
+<td>Midjourney</td>
+<td>画像</td>
+<td>◎</td>
+<td>文章生成、画像指示編集、Erase/Smart Selectによる範囲再生成を確認。基本生成Basicから。Editorの最低プランを明示する本文は未確認（Pro/Megaの一般画像サービスとして確認）。</td>
+<td><a class="cite" href="#src-401">[401]</a><a class="cite" href="#src-403">[403]</a><a class="cite" href="#src-406">[406]</a></td>
+</tr>
+<tr id="src-406">
+<td>Midjourney</td>
+<td>動画</td>
+<td>△</td>
+<td>画像を必須の開始フレームにする。テキストだけの直接開始条件を満たさない。画像→動画、生成動画延長は確認。BasicからFast、ProからRelax、HDはStandardから。</td>
+<td><a class="cite" href="#src-406">[406]</a></td>
+</tr>
+<tr>
+<td>Kling AI</td>
+<td>動画</td>
+<td>◎</td>
+<td>Text-to-video、image-to-video、既存動画の被写体/背景置換・延長。延長は有料会員特典、Standard以上の現行表で確認。Ultraから3.0提供は公式IR確認、3.0の現行最低プランは未確認。</td>
+<td><a class="cite" href="#src-410">[410]</a><a class="cite" href="#src-411">[411]</a><a class="cite" href="#src-415">[415]</a><a class="cite" href="#src-417">[417]</a></td>
+</tr>
+<tr id="src-417">
+<td>Kling AI</td>
+<td>音声</td>
+<td>◎（動画内）</td>
+<td>指定セリフを話す、話し方・声質を指定、アップロード動画/音声から独自声をElementに紐付け。Ultraで3.0確認、最低プラン未確認。独立音声ファイル出力は今回未確認だが要件に独立ファイル条件はない。</td>
+<td><a class="cite" href="#src-417">[417]</a></td>
+</tr>
+<tr>
+<td>Kling AI</td>
+<td>画像</td>
+<td>○</td>
+<td>文章→画像、画像指示編集あり。範囲指定の専用選択操作を確認できず◎にしない。</td>
+<td><a class="cite" href="#src-412">[412]</a><a class="cite" href="#src-415">[415]</a></td>
+</tr>
+<tr>
+<td>Hailuo AI</td>
+<td>動画</td>
+<td>◎</td>
+<td>H3でtext-to-video、image-to-video、audio-video-to-audio-video編集を公式研究本文確認、実サービスへの提供リンクと現行料金画面にH3。Master/Maxで確認。全編集機能の最低プラン未確認。</td>
+<td><a class="cite" href="#src-413">[413]</a><a class="cite" href="#src-427">[427]</a></td>
+</tr>
+<tr>
+<td>Hailuo AI</td>
+<td>音声・音楽</td>
+<td>？</td>
+<td>Agentの対応表にMusic/Audio Generationあり。ただし台本読み上げの仕様、歌声・区間編集と最低プラン未確認。MiniMax Audio別サイトへのリンクのみで機能加算しない。</td>
+<td><a class="cite" href="#src-413">[413]</a><a class="cite" href="#src-428">[428]</a></td>
+</tr>
+<tr>
+<td>Suno</td>
+<td>音楽</td>
+<td>◎</td>
+<td>指示→曲/伴奏、歌詞・歌声、選択区間再生成、歌詞差替え、延長。基本Free、Replace Section最低Pro、Studio最低Premier。</td>
+<td><a class="cite" href="#src-418">[418]</a><a class="cite" href="#src-422">[422]</a><a class="cite" href="#src-423">[423]</a></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>第1部H表との相違・変更</strong>（左＝ChatGPT側、右＝Claude側）。現在の判定根拠は上表・引用先に示す。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>サービス</th>
+<th>第1部の相違〈ChatGPT／Claude〉</th>
+<th>今回の扱い・変更</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td>文章◎/○、動画？/△、音声△/○、コード○/◎</td>
+<td>文章は基本○を確認、選択編集のProへの帰属未確認で相違未解消？。同梱Codexコード◎を再確認。動画・音声は？。Sora終了後の提供を推定しない。<a class="cite" href="#src-102">[102]</a><a class="cite" href="#src-106">[106]</a><a class="cite" href="#src-110">[110]</a><a class="cite" href="#src-111">[111]</a></td>
+</tr>
+<tr>
+<td>Gemini</td>
+<td>動画◎/○、音声△/○、音楽○/？</td>
+<td>動画◎・音楽○を再確認、音声は？。<a class="cite" href="#src-205">[205]</a><a class="cite" href="#src-206">[206]</a></td>
+</tr>
+<tr>
+<td>Claude</td>
+<td>文章○/◎、画像△/？、音声？/○、コード○/◎</td>
+<td>文章◎、図解に限る画像△、同梱Codeコード◎。音声は？。<a class="cite" href="#src-117">[117]</a><a class="cite" href="#src-147">[147]</a><a class="cite" href="#src-150">[150]</a></td>
+</tr>
+<tr>
+<td>Microsoft Copilot</td>
+<td>検索○/◎、動画？/△、音声△/○、資料○/◎</td>
+<td>Researcher検索◎、同梱Office資料◎。動画・音声は？。単体文章○とWord込み◎を分離。<a class="cite" href="#src-127">[127]</a>–<a class="cite" href="#src-130">[130]</a><a class="cite" href="#src-149">[149]</a></td>
+</tr>
+<tr>
+<td>Grok</td>
+<td>文章◎/○、検索○/◎、音声△/○</td>
+<td>文章◎。検索は基本条件を確認したが相違する多段階報告まで未解消で本体判定？、音声？。同梱Bot検索◎、Buildコード◎は別記。<a class="cite" href="#src-224">[224]</a><a class="cite" href="#src-226">[226]</a><a class="cite" href="#src-227">[227]</a><a class="cite" href="#src-145">[145]</a></td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td>動画○/△、資料○/◎</td>
+<td>文章起点動画○、三種編集可能ファイル◎で解消。<a class="cite" href="#src-239">[239]</a><a class="cite" href="#src-251">[251]</a></td>
+</tr>
+<tr>
+<td>Meta AI</td>
+<td>検索？/○、音声△/○、コード？/○</td>
+<td>3用途とも？。両資料の動画○は日本提供根拠を限定し、画像アニメ化の△へ。日本の有料Meta Oneを今回確認。<a class="cite" href="#src-301">[301]</a><a class="cite" href="#src-302">[302]</a></td>
+</tr>
+<tr>
+<td>DeepSeek</td>
+<td>記号差なし</td>
+<td>文章○・検索○・コード○再確認。残る用途は？。<a class="cite" href="#src-306">[306]</a>–<a class="cite" href="#src-309">[309]</a><a class="cite" href="#src-336">[336]</a></td>
+</tr>
+<tr>
+<td>Doubao</td>
+<td>検索？/○、画像○/？、動画○/？、音声△/？、資料○/？</td>
+<td>画像○・動画○は中国向け提供を確認。検索・音声・資料は？。日本の契約適格性は別途未確認。<a class="cite" href="#src-311">[311]</a>–<a class="cite" href="#src-313">[313]</a><a class="cite" href="#src-334">[334]</a></td>
+</tr>
+<tr>
+<td>Qwen</td>
+<td>検索？/○、画像○/？、動画○/？</td>
+<td>画像○・動画○再確認、検索？。無料のみとは断定せず有料階層未確認。<a class="cite" href="#src-314">[314]</a>–<a class="cite" href="#src-316">[316]</a></td>
+</tr>
+<tr>
+<td>Kimi</td>
+<td>検索◎/○、画像○/？、資料◎/？</td>
+<td>検索◎・資料◎。画像はプラグインの存在と契約帰属を分け、個人最上位では？。同梱Codeでコード◎へ。<a class="cite" href="#src-317">[317]</a><a class="cite" href="#src-321">[321]</a>–<a class="cite" href="#src-325">[325]</a><a class="cite" href="#src-335">[335]</a></td>
+</tr>
+<tr>
+<td>Character.AI</td>
+<td>画像△/？、動画△/？</td>
+<td>サービスの画像基本○・紹介動画△を確認したが、最上位プランに紐付けられず？。音声も動画内台詞は基本○相当、プラン判定？。<a class="cite" href="#src-330">[330]</a><a class="cite" href="#src-331">[331]</a></td>
+</tr>
+<tr>
+<td>Gemini Notebook</td>
+<td>検索◎/○、音声△/○、コード○/？、資料◎/○</td>
+<td>検索◎、コード○〈Ultra確認〉、資料◎。音声は？。正式改称と新しい計算量制を再確認。<a class="cite" href="#src-208">[208]</a>–<a class="cite" href="#src-214">[214]</a></td>
+</tr>
+<tr>
+<td>Midjourney</td>
+<td>ChatGPT側H行なし。Claude側画像◎・動画△</td>
+<td>画像◎・動画△を新たに確認。文章は画像用プロンプト補助に限り△。<a class="cite" href="#src-401">[401]</a><a class="cite" href="#src-403">[403]</a><a class="cite" href="#src-406">[406]</a><a class="cite" href="#src-407">[407]</a></td>
+</tr>
+<tr>
+<td>Kling AI</td>
+<td>画像○/？、動画◎/○、音声○/？</td>
+<td>画像○、動画◎、音声◎〈動画内〉を再確認。<a class="cite" href="#src-410">[410]</a><a class="cite" href="#src-415">[415]</a><a class="cite" href="#src-417">[417]</a></td>
+</tr>
+<tr>
+<td>Hailuo AI</td>
+<td>画像○/？</td>
+<td>画像○を再確認。両資料の動画○はH3既存編集確認で◎へ。音声・音楽は契約内仕様不足で？。<a class="cite" href="#src-413">[413]</a><a class="cite" href="#src-416">[416]</a><a class="cite" href="#src-427">[427]</a></td>
+</tr>
+<tr>
+<td>Suno</td>
+<td>文章△/？</td>
+<td>歌詞に限る文章△。音楽は有料◎、無料○に分ける。現行DL制限も追加。<a class="cite" href="#src-418">[418]</a><a class="cite" href="#src-420">[420]</a><a class="cite" href="#src-423">[423]</a></td>
+</tr>
+<tr>
+<td>Gamma</td>
+<td>文章○/△、検索○/？、コード△/？</td>
+<td>資料中心の文章△、出典付き検索○、サイト制作に限るコード△を確認。<a class="cite" href="#src-241">[241]</a><a class="cite" href="#src-242">[242]</a><a class="cite" href="#src-244">[244]</a></td>
+</tr>
+<tr>
+<td>Cursor</td>
+<td>文章○/△、検索△/？、画像○/？</td>
+<td>本体文章・検索は相違未解消？、画像○は再確認。同梱Botの文章○・検索◎・資料○は区別。<a class="cite" href="#src-134">[134]</a>–<a class="cite" href="#src-136">[136]</a><a class="cite" href="#src-145">[145]</a></td>
+</tr>
+<tr>
+<td>GitHub Copilot</td>
+<td>記号差なし</td>
+<td>文章△〈開発関連〉・コード◎再確認。他用途？を非対応と扱わない。<a class="cite" href="#src-138">[138]</a><a class="cite" href="#src-143">[143]</a><a class="cite" href="#src-146">[146]</a><a class="cite" href="#src-152">[152]</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>両資料で「？」と「？＊」だけが違う箇所は判定記号の相違に数えず、未確認のまま扱った。会社名は両参考資料の情報を出発点に、Googleの名称変更、公式アプリの販売主体、CursorのSpaceX傘下入りを今回補足した。<a class="cite" href="#src-151">[151]</a><a class="cite" href="#src-208">[208]</a><a class="cite" href="#src-225">[225]</a><a class="cite" href="#src-237">[237]</a><a class="cite" href="#src-307">[307]</a><a class="cite" href="#src-319">[319]</a><a class="cite" href="#src-412">[412]</a><a class="cite" href="#src-425">[425]</a> 親会社の資本関係全般を再監査した資料ではない。</p>
+<h2 id="sec-D課金価値ベスト10" class="deliv">D．課金価値ベスト10</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>順位</th>
+<th>サービス〈運営会社〉</th>
+<th>最上位プラン〈月額〉</th>
+<th>決め手〈20字以内〉</th>
+<th>こんな人に〈20字以内〉</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1位</td>
+<td>Gemini〈Google、Gemini Notebookを含む〉</td>
+<td>Google AI Ultra 20x：¥32,000</td>
+<td>調査と多様な制作を一契約で</td>
+<td>毎日複数形式を作る人</td>
+</tr>
+<tr>
+<td>2位</td>
+<td>ChatGPT〈OpenAI〉</td>
+<td>Pro 20x：$200、税別〈契約可能と仮定〉</td>
+<td>調査・画像・資料・開発を網羅</td>
+<td>複数の仕事を日々任せる人</td>
+</tr>
+<tr>
+<td>3位</td>
+<td>Claude〈Anthropic〉</td>
+<td>Max 20x：$200、税別</td>
+<td>5時間枠が直下の四倍</td>
+<td>長い作業を繰り返す人</td>
+</tr>
+<tr>
+<td>4位</td>
+<td>Kimi〈Moonshot AI〉</td>
+<td>Ultra：$199</td>
+<td>Agent作業を四並列</td>
+<td>複数の依頼を並行する人</td>
+</tr>
+<tr>
+<td>5位</td>
+<td>Perplexity〈Perplexity AI〉</td>
+<td>Max：$200</td>
+<td>検索拡大枠とComputer</td>
+<td>検索から成果物まで任せる人</td>
+</tr>
+<tr>
+<td>6位</td>
+<td>Cursor〈Anysphere／SpaceX傘下〉</td>
+<td>Ultra：$200、税別</td>
+<td>開発枠と同梱Botの実務</td>
+<td>開発も日常作業も任せる人</td>
+</tr>
+<tr>
+<td>7位</td>
+<td>Microsoft Copilot〈Microsoft〉</td>
+<td>Microsoft 365 Pro：¥16,000、税込</td>
+<td>調査とOffice三種を網羅</td>
+<td>Office作業が一日の中心の人</td>
+</tr>
+<tr>
+<td>8位</td>
+<td>Gamma〈Gamma〉</td>
+<td>Ultra：¥14,750</td>
+<td>資料制作の月次枠が五倍</td>
+<td>スライドを大量に直す人</td>
+</tr>
+<tr>
+<td>9位</td>
+<td>Meta AI〈Meta Platforms〉</td>
+<td>Meta One Premium：¥2,900、税込</td>
+<td>対話と画像・動画の増量</td>
+<td>日常の画像制作が多い人</td>
+</tr>
+<tr>
+<td>10位</td>
+<td>Suno〈Suno〉</td>
+<td>Premier：$30</td>
+<td>四倍の生成枠とStudio</td>
+<td>音楽制作を毎日続ける人</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>10位外</strong>（管理番号順、掲載対象以外の9サービス）：</p>
+<ul>
+<li>Grok：$300に対する直下からの増量幅を判断しにくい。<a class="cite" href="#src-222">[222]</a><a class="cite" href="#src-223">[223]</a></li>
+<li>DeepSeek：対象の個人アプリに有料最上位は該当なし。<a class="cite" href="#src-306">[306]</a><a class="cite" href="#src-307">[307]</a></li>
+<li>Doubao〈豆包〉：日本からの正規利用・契約を確認できない。<a class="cite" href="#src-312">[312]</a><a class="cite" href="#src-313">[313]</a><a class="cite" href="#src-334">[334]</a></li>
+<li>Qwen〈一般向けアプリ〉：有料プラン階層と日本契約条件が未確認。<a class="cite" href="#src-314">[314]</a>–<a class="cite" href="#src-316">[316]</a></li>
+<li>Character.AI：上位差の中心が継続的なキャラクター対話。<a class="cite" href="#src-326">[326]</a><a class="cite" href="#src-327">[327]</a></li>
+<li>Midjourney：画像中心で、直下にもRelax生成がある。<a class="cite" href="#src-401">[401]</a></li>
+<li>Kling AI：増量は明確だが、月額全体が映像制作に集中する。<a class="cite" href="#src-410">[410]</a><a class="cite" href="#src-417">[417]</a></li>
+<li>Hailuo AI：月$216と用途集中、日本のMax契約条件も未確認。<a class="cite" href="#src-413">[413]</a><a class="cite" href="#src-416">[416]</a></li>
+<li>GitHub Copilot：開発特化で、追加枠の一部は変動するFlex。<a class="cite" href="#src-138">[138]</a><a class="cite" href="#src-140">[140]</a></li>
+</ul>
+<p>税込・税別の記載がない料金は税の扱い未確認。米ドル額はWebの月払いで、円への推測換算はしていない。</p>
+<p><strong>掲載は10契約・11サービス。同率はなし。</strong> 1位にはGemini Notebookを含め、単独の順位を付けない。Geminiは自由な調査・生成、Gemini Notebookは資料を起点とした整理に向き、同じ契約で両方を使える。<strong>2位ChatGPT Pro 20xは契約可能と仮定した評価</strong>であり、調査時点の新規受付停止が解消したことを示すものではない。<a class="cite" href="#src-101">[101]</a><a class="cite" href="#src-201">[201]</a> 重要な留保はMetaの増量数値、Kimiの新旧プラン名の相違、Cursorの国別契約表、Microsoft Proの直下に対する具体枠、各社の実際の日本語品質。順位とは別にB・C・Iへ記録した。</p>
+<h2 id="sec-E用途別のおすすめ" class="deliv">E．用途別のおすすめ</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>用途</th>
+<th>おすすめ〈サービス・最上位プラン〉</th>
+<th>理由〈20字以内〉</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文章・対話</td>
+<td>Claude・Max 20x</td>
+<td>ファイル参照と指定箇所編集</td>
+</tr>
+<tr>
+<td>Web検索・調査</td>
+<td>Perplexity・Max</td>
+<td>引用付き調査から成果物へ</td>
+</tr>
+<tr>
+<td>画像</td>
+<td>Midjourney・Mega Plan</td>
+<td>範囲編集と多量のFast生成</td>
+</tr>
+<tr>
+<td>動画</td>
+<td>Kling AI・Ultra</td>
+<td>文章・画像開始と既存編集</td>
+</tr>
+<tr>
+<td>音声</td>
+<td>Kling AI・Ultra〈動画内台詞〉</td>
+<td>台詞・話し方・独自声を指定</td>
+</tr>
+<tr>
+<td>音楽</td>
+<td>Suno・Premier</td>
+<td>区間編集とStudioを反復</td>
+</tr>
+<tr>
+<td>コード・アプリ</td>
+<td>Cursor・Ultra</td>
+<td>複数ファイル変更と動作確認</td>
+</tr>
+<tr>
+<td>資料・スライド・表</td>
+<td>Gemini〈Notebookを利用〉・Google AI Ultra 20x／Gamma・Ultra</td>
+<td>三種出力／資料の大量改稿</td>
+</tr>
+</tbody>
+</table></div>
+<p>音声のKlingは<strong>動画内の台詞生成</strong>としての推薦。独立した音声ファイルの制作・書き出しは未確認。Eは各社の最上位に限定した選択で、少量利用でもその最上位が必要という意味ではない。</p>
+<h2 id="sec-F表に添える注記">F．表に添える注記</h2>
+<div class="note">順位は、生成AIを毎日高頻度に使う個人を想定し、20サービスの個人向け最上位プランを、用途別の機能、すぐ下のプランとの差、料金のバランスで、調査基準日時点の公開情報から比べた課金価値の目安です。優劣をつけがたい場合は、同じ順位に最大2サービスを掲載しています。有料プランが1つだけのサービスは、そのプランを評価し、無料との差を確認しています。性能の実測や、実際に使って比べた結果ではありません。料金・プラン・提供機能は変わることがあります。</div>
+<p><strong>改訂版の比較条件</strong>：ChatGPT Pro 20xは契約可能と仮定し、受付停止は注記として扱う。GeminiとGemini Notebookは同一契約として1行に統合し、10契約を掲載した。料金・機能の詳細表は20サービスを維持している。</p>
+<h2 id="sec-G分析本文">G．分析本文</h2>
+<p>一つだけ最上位を契約するなら、今回の利用者像にはGoogle AI Ultra 20xを第一候補とした。Geminiで自由な調査・文章・画像・動画を作り、Gemini Notebookで手元の資料を整理して文書・スライド・表にする使い方を、同じ月額に収められる。調査・画像・資料・開発をまとめて任せるならChatGPT Pro 20xが2位に続く。文章と開発が仕事の中心ならClaude、複数の調査や資料作成を並行するならKimi、Web調査から成果物まで任せるならPerplexityが続く。ただし、これは常に最上位を買うべきだという結論ではない。直下の枠に収まる人は、同じ主要機能をより低い支払いで使える。<a class="cite" href="#src-201">[201]</a><a class="cite" href="#src-203">[203]</a>–<a class="cite" href="#src-211">[211]</a><a class="cite" href="#src-101">[101]</a>–<a class="cite" href="#src-110">[110]</a><a class="cite" href="#src-113">[113]</a><a class="cite" href="#src-317">[317]</a><a class="cite" href="#src-231">[231]</a></p>
+<p>判断は無点数で行った。最初に契約全体が毎日の反復作業をどこまで引き受けるかと月額を照らし、次に直下から増える量・モデル・機能、その後に用途の広さ、日本語での利便を比べた。日本の正規契約経路は前提条件とし、ChatGPT Pro 20xは、受付停止中の最上位プランを契約できると仮定して評価した。受付停止の確認事実や料金・機能は変更していない。記号の合計、利用者数、モデルの評判だけでは順位を作らない。「？」は機能がないという意味ではなく、価値を具体的に説明できる範囲の境界である。ドルを円に換算していないため、為替を仮定した数円単位の優劣も付けていない。</p>
+<p>Googleの2サービスは購入契約と支払いが同じなので、一つの1位にまとめた。用途表では各サービスの機能を区別し、購入判断では契約全体を評価する。Ultra 5xの月14,500円に対し20xは32,000円。追加17,500円で、Pro基準の利用枠は5倍から20倍になる。直下比4倍という計算は枠の比較であり、完成する仕事が必ず4倍になる意味ではない。別アプリFlowの月間creditsも10,000から25,000へ増える。一方、Flow Musicの枠など、両Ultraで同じ特典は増分に数えなかった。自由な制作の入口はGemini、資料に基づく調査の入口はNotebookと選び分けられ、両方使っても二重払いは不要である。<a class="cite" href="#src-201">[201]</a><a class="cite" href="#src-209">[209]</a><a class="cite" href="#src-501">[501]</a></p>
+<p>Googleを2位ChatGPTより上にした理由は、両者に共通する調査・画像・資料・開発に加え、動画・音楽まで制作の行き先を広げられる点にある。ChatGPTの動画・音楽は今回の条件で未確認であり、終了したSoraを契約特典に加えていない。品質や速度の優劣を断定した順序ではない。<a class="cite" href="#src-201">[201]</a><a class="cite" href="#src-205">[205]</a><a class="cite" href="#src-206">[206]</a><a class="cite" href="#src-111">[111]</a></p>
+<p>2位ChatGPT Pro 20xは月200ドル税別。直下100ドルの5xと中核機能は同じで、Plus基準の利用枠が5倍から20倍になる。追加100ドルは、調査、画像生成・部分編集、同梱Workの三種資料、Codexの開発を毎日繰り返し、直下の枠では足りない人に意味がある。機能・モデル別制限があり、完了件数や週枠の全てが4倍になるとは扱わない。3位Claudeより上に置いたのは、同じ月200ドル税別で、写真・イラストを含む画像制作も確認でき、複数用途の日常作業を広く引き受けるためだ。文章の指定箇所編集が対象Proで使えるかは未確認のままとし、加点しない。直下の量で足りるなら100ドル版でよい。<a class="cite" href="#src-101">[101]</a>–<a class="cite" href="#src-110">[110]</a><a class="cite" href="#src-150">[150]</a><a class="cite" href="#src-501">[501]</a></p>
+<p>3位ClaudeのMax 20xは月200ドル税別で、直下100ドルの5xに対し、5時間セッション枠が4倍になる。週・モデル別上限まで一律4倍とは確認していない。文章の部分修正、編集可能な三種の資料、Claude Codeの複数ファイル変更と検証を繰り返す人には、追加100ドルを使う場面が具体的だ。反面、写真・イラスト生成は確認できず図解等に限られる。画像や映像をほとんど作らない人なら、上位のGoogle・ChatGPTとの順序は逆転しうる。<a class="cite" href="#src-113">[113]</a><a class="cite" href="#src-117">[117]</a>–<a class="cite" href="#src-120">[120]</a><a class="cite" href="#src-147">[147]</a><a class="cite" href="#src-150">[150]</a></p>
+<p>4位Kimiも調査、三種資料、同梱Kimi Codeを一契約で扱える。Ultraは月199ドル、Maxは99ドルで、Agent creditsは直下比2倍、同時実行は2から4へ増える。Kimiは直下Max比で料金がほぼ2倍、Agent creditsが2倍。Claudeは直下比で料金2倍、5時間枠4倍である。この増分と、文章の指定箇所編集まで確認できた範囲を重視してClaudeを上にした。Kimiの同時4件は待ち時間を避けたい人には魅力だが、各社の「倍」の基準単位は異なるので、処理できる仕事の絶対件数を直接比較したわけではない。<a class="cite" href="#src-317">[317]</a><a class="cite" href="#src-321">[321]</a>–<a class="cite" href="#src-325">[325]</a><a class="cite" href="#src-113">[113]</a></p>
+<p>5位Perplexityは出典を辿る調査と、DOCX・XLSX・PPTXなどの成果物作成をつなげられる。Maxに毎月含まれるComputer 10,000creditsは、定期付与がないProからの明確な差だ。ただし月20ドルから200ドルへの負担増は大きい。両者とも調査・資料の主要機能は下位から使える。現行の追加購入単価は100credits＝1ドルなので、定期枠10,000は100ドル相当、差額180ドルをそれだけでは埋めない。Kimiより下に置いたのは、Computerに加え検索・Research・動画などの拡大枠も反復利用して初めて、増額に見合う使い方を描けるためだ。個人プランの画像が非商用用途に限られる点も、仕事と制作をまたぐ一契約として留保した。Proの検索枠で足りる人やComputer中心の人には、Proと必要な追加creditsの比較が先になる。月20ドル＋10,000credits相当なら計120ドルで、Maxの定期枠だけを目的に選ぶ理由にはならない。<a class="cite" href="#src-231">[231]</a>–<a class="cite" href="#src-234">[234]</a><a class="cite" href="#src-238">[238]</a><a class="cite" href="#src-251">[251]</a><a class="cite" href="#src-501">[501]</a></p>
+<p>6位Cursorはコード変更・実行・ブラウザ検証に加え、同梱の別アプリGrok Botが調査や文書・表の作成を担う。Ultraは200ドル、直下Pro+は60ドルで、Agent枠の表示はPro基準3倍から20倍へ増える。開発量が多い人には増分が具体的だが、共通の人物像は開発専業ではない。Web調査から三種の資料を作る流れを直接確認できたPerplexityを上にした。Botの機能はCursor本体の能力とは分けたうえで契約価値に含め、SuperGrokと重ねた二重特典としては扱わなかった。<a class="cite" href="#src-132">[132]</a>–<a class="cite" href="#src-136">[136]</a><a class="cite" href="#src-145">[145]</a><a class="cite" href="#src-251">[251]</a></p>
+<p>7位Microsoft Copilotは月16,000円税込で、調査とWord・Excel・PowerPointの作成・編集を日常に組み込める。ただし直下Premiumは3,200円で、現行の利用上限表ではResearcherや文章・画像等が同じ区分になっている。追加12,800円の効果を推測して上位6契約に並べることはしなかった。Cursorのように上位の増量幅を数値で説明しにくい。それでも、契約総額で得るOffice三種と調査が毎日の複数の仕事を担う点を先に評価し、8位Gammaより上に置いた。Gammaの増量効率より一般事務全体への適合を優先した判断である。Office中心なら有力だが、VoiceやVisionの最大枠が必要でなければPremiumで十分という判断が残る。<a class="cite" href="#src-121">[121]</a>–<a class="cite" href="#src-123">[123]</a><a class="cite" href="#src-127">[127]</a>–<a class="cite" href="#src-130">[130]</a></p>
+<p>8位Gammaは月14,750円。Proの3,500円に対して月creditsが4,000から20,000へ増えるため、画像を含む資料を繰り返し生成・修正する人にはUltraの意味がある。ただし一度の100枚生成は両有料プランに共通し、最上位で表計算まで作れるようになるとは確認できなかった。Microsoftより下にしたのはこの仕事範囲、9位Metaより上にしたのは調査から編集可能な資料までの流れと増量枠の具体性による。完成した資料の品質や制作時間の短縮は実測していない。<a class="cite" href="#src-241">[241]</a>–<a class="cite" href="#src-246">[246]</a><a class="cite" href="#src-501">[501]</a></p>
+<p>9位Meta AIは月2,900円税込で、対話に加え画像作成や画像のアニメ化を日常的に使える。Premiumで生成量が増えることは日本向けに確認できたが、Core月949円から何回増えるかは未確認である。安いことだけで上位にはせず、毎日の文章と視覚制作を一契約で担える範囲を評価した。10位Sunoは用途が音楽に集中するため下に置いたが、Premier月30ドルにはPro月10ドルに対しcredits4倍、通常ダウンロード枠3倍、Studio追加という明確な内容がある。複数用途のうち楽曲制作を日々行う人には支払いを回収する使い道を描きやすい。音楽を作らない人には、この10位は購入理由にならない。<a class="cite" href="#src-301">[301]</a><a class="cite" href="#src-302">[302]</a><a class="cite" href="#src-418">[418]</a>–<a class="cite" href="#src-423">[423]</a></p>
+<p>10位外も能力の低さを意味しない。Grok Heavyは文章・画像・動画・Build・Botまで広いが、300ドルを払う際のPlus比の週枠を具体化できず、今回は総合の費用対効果を説明しやすい候補を優先した。GitHub Maxは開発を毎日行う人には強い一方、仕事全般への広がりが確認できた上位群と異なり、追加枠の一部は変更可能なFlexである。Character.AIは記憶や広告、キャラクター対話の継続性に上位価値が集中する。これらは特定の使い方なら総合掲載サービスと順序が変わる。<a class="cite" href="#src-222">[222]</a><a class="cite" href="#src-223">[223]</a><a class="cite" href="#src-226">[226]</a><a class="cite" href="#src-227">[227]</a><a class="cite" href="#src-138">[138]</a><a class="cite" href="#src-140">[140]</a><a class="cite" href="#src-326">[326]</a><a class="cite" href="#src-327">[327]</a></p>
+<p>ChatGPT Pro 20xの2位は契約可能という仮定付きであり、受付再開を確認したという意味ではない。DeepSeekは個人アプリが無料、Qwenはアプリ内購入の表示があっても定額階層を確認できず、豆包は日本で地域制限画面が出たため、いずれも存在・契約条件を補って推奨しなかった。<a class="cite" href="#src-101">[101]</a><a class="cite" href="#src-306">[306]</a><a class="cite" href="#src-307">[307]</a><a class="cite" href="#src-311">[311]</a>–<a class="cite" href="#src-316">[316]</a><a class="cite" href="#src-334">[334]</a></p>
+<p>画像専用ならMidjourney、映像ならKling、音楽ならSunoを用途別に挙げた。範囲編集、既存動画の編集、楽曲の区間置換といった制作のやり直しを支える機能が確認できるからだ。ただしMidjourneyのRelax生成は直下Proにもあり、待てる人にMegaは必須でない。Klingは動画内の指定台詞・声の参照にも対応するが、独立した音声ファイル出力は未確認。Hailuoの月払いMaxには旧モデルの条件付き無制限があっても、新H3や年払い限定特典を無制限として合算していない。<a class="cite" href="#src-401">[401]</a><a class="cite" href="#src-403">[403]</a><a class="cite" href="#src-410">[410]</a><a class="cite" href="#src-413">[413]</a><a class="cite" href="#src-417">[417]</a><a class="cite" href="#src-423">[423]</a></p>
+<p>Artificial AnalysisとArenaの公開評価も確認した。同じモデルでも推論設定で結果が変わり、各製品プランの実行条件との一致を確認できないため、今回は品質順位や課金価値の加点には使わなかった。<a class="cite" href="#src-601">[601]</a>–<a class="cite" href="#src-604">[604]</a></p>
+<p>今回の限界は、各社で消費単位が異なり、同じ入力を実行した速度・精度・完成率を測っていないことである。最上位でも混雑、モデル別枠、段階提供は残り、宣伝上の最速を作業時間の保証に置き換えられない。日本語の実際の品質、いくつかの円価格と税、旧新プラン名が混在するページ、Microsoft・Meta・Grokの具体的な追加枠は再確認で順位が動く要因になる。直下の上限に当たる作業を繰り返すかどうかが、今回の順位を自分の支払いに適用する際の分岐点である。</p>
+<h2 id="sec-H出典の対応">H．出典の対応</h2>
+<p>料金表・用途表・本文の出典番号に対応する。全件の閲覧日は2026年9月24日。［公］は公式本文または未ログイン料金画面を確認した。検索結果の宣伝文だけで品質順位をつけていない。第三者評価［調］は実行条件の対応を確認できず、順位の加点には不採用。報道［報］は根拠に採用していない。</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>出典番号</th>
+<th>主張・数値</th>
+<th>対象・時点</th>
+<th>出典名</th>
+<th>URL</th>
+<th>情報源区分</th>
+</tr>
+</thead>
+<tbody>
+<tr id="src-101">
+<td><a class="cite" href="#src-101">[101]</a></td>
+<td>Pro5x $100・20x $200、中核機能同一、20x新規停止、年払いなし</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>About ChatGPT Pro tiers</td>
+<td><a href="https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-102">
+<td><a class="cite" href="#src-102">[102]</a></td>
+<td>Free/Go/Plus/Proの現行モデルと画像・検索・Work・Codex</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>ChatGPT料金</td>
+<td><a href="https://chatgpt.com/ja-JP/pricing/" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-103">
+<td><a class="cite" href="#src-103">[103]</a></td>
+<td>Work/Codex同梱、プラン価格、モデル別推定量</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Pricing – ChatGPT Learn</td>
+<td><a href="https://learn.chatgpt.com/docs/pricing" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-104">
+<td><a class="cite" href="#src-104">[104]</a></td>
+<td>日本消費税10%</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Japanese Consumption Tax</td>
+<td><a href="https://help.openai.com/en/articles/10242647-the-japanese-consumption-tax-on-your-openai-invoices" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-105">
+<td><a class="cite" href="#src-105">[105]</a></td>
+<td>日本はChatGPT対応国</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Supported countries</td>
+<td><a href="https://help.openai.com/en/articles/7947663-chatgpt-supported-countries" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-106">
+<td><a class="cite" href="#src-106">[106]</a></td>
+<td>専用writing blockの選択文章修正、コード実行プレビュー</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Writing blocks and code blocks</td>
+<td><a href="https://help.openai.com/en/articles/20001246-working-with-writing-blocks-and-code-blocks-in-chatgpt" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-107">
+<td><a class="cite" href="#src-107">[107]</a></td>
+<td>全プラン画像生成・入力編集・領域選択、Plus以上thinking</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Images in ChatGPT</td>
+<td><a href="https://help.openai.com/en/articles/11084440-images-in-chatgpt" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-108">
+<td><a class="cite" href="#src-108">[108]</a></td>
+<td>多段階調査、引用つき結果、上限可変</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Deep research in ChatGPT</td>
+<td><a href="https://help.openai.com/en/articles/10500283-deep-research-in-chatgpt" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-109">
+<td><a class="cite" href="#src-109">[109]</a></td>
+<td>Workの3種編集可能成果物</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Creating and editing documents, spreadsheets, and presentations with ChatGPT Work</td>
+<td><a href="https://help.openai.com/en/articles/20001278" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-110">
+<td><a class="cite" href="#src-110">[110]</a></td>
+<td>Codex複数ファイル変更、テスト、実行</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Prompting – ChatGPT Learn</td>
+<td><a href="https://learn.chatgpt.com/docs/prompting" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-111">
+<td><a class="cite" href="#src-111">[111]</a></td>
+<td>Sora製品2026-04-26終了</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Sora</td>
+<td><a href="https://openai.com/index/sora/" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-112">
+<td><a class="cite" href="#src-112">[112]</a></td>
+<td>Claude無料／Pro／Maxとモデル、機能差</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Claude pricing</td>
+<td><a href="https://claude.com/pricing" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-113">
+<td><a class="cite" href="#src-113">[113]</a></td>
+<td>個人Max5x100／20x200、月額のみ</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>What is the Max plan?</td>
+<td><a href="https://support.claude.com/en/articles/11049741-what-is-the-max-plan" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-114">
+<td><a class="cite" href="#src-114">[114]</a></td>
+<td>Claude日本対応</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Where can I access Claude?</td>
+<td><a href="https://support.claude.com/en/articles/8461763-where-can-i-access-claude" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-115">
+<td><a class="cite" href="#src-115">[115]</a></td>
+<td>Claude日本JCT10%、2026-04-01以降</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Notice regarding consumption tax for Japanese customers</td>
+<td><a href="https://support.claude.com/en/articles/14051822-notice-regarding-consumption-tax-jct-for-japanese-customers" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-116">
+<td><a class="cite" href="#src-116">[116]</a></td>
+<td>Claude日本語UI対応</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Preferred language</td>
+<td><a href="https://support.claude.com/en/articles/10769299-how-to-use-claude-in-your-preferred-language" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-117">
+<td><a class="cite" href="#src-117">[117]</a></td>
+<td>ArtifactsはFree含む、文書／Markdown指定箇所編集</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>What are Artifacts?</td>
+<td><a href="https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-118">
+<td><a class="cite" href="#src-118">[118]</a></td>
+<td>全プランコード実行、Word/Excel/PowerPointファイル作成</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Create and edit files with Claude</td>
+<td><a href="https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-119">
+<td><a class="cite" href="#src-119">[119]</a></td>
+<td>Pro/MaxにClaude Code、共通使用枠</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Use Claude Code with your Pro or Max plan</td>
+<td><a href="https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-120">
+<td><a class="cite" href="#src-120">[120]</a></td>
+<td>Research多段階・引用、Pro/Max</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Use Research on Claude</td>
+<td><a href="https://support.claude.com/en/articles/11088861-use-research-on-claude" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-121">
+<td><a class="cite" href="#src-121">[121]</a></td>
+<td>日本Pro¥16,000税込／月、AIは所有者</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Microsoft 365 Pro</td>
+<td><a href="https://www.microsoft.com/ja-jp/microsoft-365/p/microsoft-365-pro/cfq7ttbzzcmc" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-122">
+<td><a class="cite" href="#src-122">[122]</a></td>
+<td>日本個人Pro・Premiumほか価格、年額</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>個人向けMicrosoft Copilot料金</td>
+<td><a href="https://www.microsoft.com/ja-jp/microsoft-365-copilot/pricing/individuals" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-123">
+<td><a class="cite" href="#src-123">[123]</a></td>
+<td>Sept2026のプラン別AI上限</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>AI credits and limits</td>
+<td><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/ai-credits-and-limits-for-microsoft-365-subscriptions" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-124">
+<td><a class="cite" href="#src-124">[124]</a></td>
+<td>Copilot日本語テキスト・音声</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>サポート地域と言語</td>
+<td><a href="https://support.microsoft.com/ja-jp/microsoft-copilot/supported-regions-and-languages-in-microsoft-copilot" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-125">
+<td><a class="cite" href="#src-125">[125]</a></td>
+<td>無料文章・Web・画像</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Free and Microsoft 365 comparison</td>
+<td><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/what-s-the-difference-between-microsoft-copilot-free-and-copilot-in-microsoft-365" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-126">
+<td><a class="cite" href="#src-126">[126]</a></td>
+<td>無料維持、更新アプリ、旧機能退役</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Copilot App Updates</td>
+<td><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/learning/changes-microsoft-copilot-app" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-127">
+<td><a class="cite" href="#src-127">[127]</a></td>
+<td>個人Personal以上Office3種生成・編集</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Get started editing with Copilot in Office</td>
+<td><a href="https://support.microsoft.com/en-us/office/copilot-frontier/get-started-editing-with-copilot-in-office" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-128">
+<td><a class="cite" href="#src-128">[128]</a></td>
+<td>Researcher多段階出典付きレポート</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Get started with Researcher</td>
+<td><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/get-started-with-researcher-in-microsoft-365-copilot" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-129">
+<td><a class="cite" href="#src-129">[129]</a></td>
+<td>Wordの文章選択修正</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Edit content and rewrite</td>
+<td><a href="https://support.microsoft.com/en-us/word/copilot/edit-rewrite-content" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-130">
+<td><a class="cite" href="#src-130">[130]</a></td>
+<td>Word/Excel/PowerPoint編集可能成果物</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Word, Excel, PowerPoint Agents</td>
+<td><a href="https://support.microsoft.com/en-us/office/365-copilot-app/get-started-with-word-excel-and-powerpoint-agents-in-microsoft-365-copilot" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-131">
+<td><a class="cite" href="#src-131">[131]</a></td>
+<td>Pagesコード生成編集プレビュー、Personal以上</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Build lightweight apps within Copilot Pages</td>
+<td><a href="https://support.microsoft.com/en-us/microsoft-365-copilot/build-lightweight-apps-within-microsoft-365-copilot-pages" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-132">
+<td><a class="cite" href="#src-132">[132]</a></td>
+<td>Cursor各月額、年払い換算、3倍／20倍、税別</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Cursor日本語料金</td>
+<td><a href="https://cursor.com/ja/pricing" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-133">
+<td><a class="cite" href="#src-133">[133]</a></td>
+<td>Cursorモデル群と他社群、消費体系</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Models and pricing</td>
+<td><a href="https://cursor.com/docs/models-and-pricing" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-134">
+<td><a class="cite" href="#src-134">[134]</a></td>
+<td>全有料個人にGrok Bot同梱、持続PC</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Grok Bot</td>
+<td><a href="https://cursor.com/docs/grok-bot" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-135">
+<td><a class="cite" href="#src-135">[135]</a></td>
+<td>Bot週枠、Ultra最大、SuperGrokと重複不可</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Plans and billing</td>
+<td><a href="https://cursor.com/help/grok-bot/plans" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-136">
+<td><a class="cite" href="#src-136">[136]</a></td>
+<td>Agentの生成画像・ファイル編集・実行・ブラウザ検証</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Cursor Agent Overview</td>
+<td><a href="https://cursor.com/docs/agent/overview" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-137">
+<td><a class="cite" href="#src-137">[137]</a></td>
+<td>モデル提供元の地域制限</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Cursor Regions</td>
+<td><a href="https://cursor.com/docs/account/regions" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-138">
+<td><a class="cite" href="#src-138">[138]</a></td>
+<td>個人Max100／Pro+39、クレジット、FreeAuto</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Plans for GitHub Copilot</td>
+<td><a href="https://docs.github.com/en/copilot/get-started/plans" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-139">
+<td><a class="cite" href="#src-139">[139]</a></td>
+<td>日本語公式価格と英語以外品質差</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>GitHub Copilot日本語</td>
+<td><a href="https://github.com/features/copilot?locale=ja" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-140">
+<td><a class="cite" href="#src-140">[140]</a></td>
+<td>基礎＋Flex、月次リセット・繰越なし</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Usage-based billing for individuals</td>
+<td><a href="https://docs.github.com/en/copilot/concepts/billing-and-usage/individuals/billing" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-141">
+<td><a class="cite" href="#src-141">[141]</a></td>
+<td>旧年額は満了時Freeへ、月払いへ移行可</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>What changed with Copilot billing (legacy)</td>
+<td><a href="https://docs.github.com/en/copilot/reference/copilot-billing/request-based-billing-legacy/what-changed-with-billing" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-142">
+<td><a class="cite" href="#src-142">[142]</a></td>
+<td>cloud agentの変更・テスト・制限</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>About Copilot cloud agent</td>
+<td><a href="https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-143">
+<td><a class="cite" href="#src-143">[143]</a></td>
+<td>開発向け対話、英語中心、一般会話と区別</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Responsible use of Copilot Chat</td>
+<td><a href="https://docs.github.com/en/copilot/responsible-use/chat" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-144">
+<td><a class="cite" href="#src-144">[144]</a></td>
+<td>GitHub地域制限</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>GitHub and Trade Controls</td>
+<td><a href="https://docs.github.com/en/site-policy/other-site-policies/github-and-trade-controls" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-145">
+<td><a class="cite" href="#src-145">[145]</a></td>
+<td>Botの出典リンク・文書／表成果物・ブラウザ</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Work with Grok Bot</td>
+<td><a href="https://cursor.com/docs/grok-bot/work" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-146">
+<td><a class="cite" href="#src-146">[146]</a></td>
+<td>GitHub FreeにもAgent mode／CLI、Cloud有料</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Copilot plans comparison</td>
+<td><a href="https://github.com/features/copilot/plans" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-147">
+<td><a class="cite" href="#src-147">[147]</a></td>
+<td>Claude Codeプロジェクト変更・テスト実行</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Claude Code Overview</td>
+<td><a href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-148">
+<td><a class="cite" href="#src-148">[148]</a></td>
+<td>税・年額・枠比の参考計算：100×1.1、200×1.1、32000÷12、160×12、48×12、20÷3、100÷39、20000÷7000</td>
+<td>個人プラン・2026-09-24計算</td>
+<td>本稿の計算</td>
+<td>元データ <a class="cite" href="#src-101">[101]</a><a class="cite" href="#src-104">[104]</a><a class="cite" href="#src-113">[113]</a><a class="cite" href="#src-115">[115]</a><a class="cite" href="#src-122">[122]</a><a class="cite" href="#src-132">[132]</a><a class="cite" href="#src-138">[138]</a></td>
+<td>［計］</td>
+</tr>
+<tr id="src-149">
+<td><a class="cite" href="#src-149">[149]</a></td>
+<td>Copilot旧Deep Research終了2026-08-18</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Deep Research in Microsoft Copilot</td>
+<td><a href="https://support.microsoft.com/en-us/microsoft-copilot/deep-research-in-microsoft-copilot" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-150">
+<td><a class="cite" href="#src-150">[150]</a></td>
+<td>写真・イラスト生成なし、HTML/SVG図解等</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Can Claude produce images?</td>
+<td><a href="https://support.claude.com/en/articles/9002504-can-claude-produce-images" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-151">
+<td><a class="cite" href="#src-151">[151]</a></td>
+<td>Cursorは2026-08-14にSpaceX買収完了を発表</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Cursor is now a part of SpaceX</td>
+<td><a href="https://cursor.com/blog/joining-spacex" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-152">
+<td><a class="cite" href="#src-152">[152]</a></td>
+<td>Agent modeで複数ファイル変更、アプリ実行、テスト検証</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Mastering GitHub Copilot: When to use AI agent mode</td>
+<td><a href="https://github.blog/ai-and-ml/github-copilot/mastering-github-copilot-when-to-use-ai-agent-mode/" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-201">
+<td><a class="cite" href="#src-201">[201]</a></td>
+<td>日本月額：Plus725円、Pro2900円、Ultra5x14500円／20x32000円。Ultraは20TB／30TB、Flow月10000／25000credits、Flow Musicは両30000。</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Google AIプラン 日本</td>
+<td><a href="https://one.google.com/intl/ja_jp/about/google-ai-plans/" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-202">
+<td><a class="cite" href="#src-202">[202]</a></td>
+<td>個人Ultra 5x／20xの提供国に日本。米国限定のAgent等とは区別。</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Google AI Ultraについて</td>
+<td><a href="https://support.google.com/googleone/answer/16476748?hl=ja" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-203">
+<td><a class="cite" href="#src-203">[203]</a></td>
+<td>Canvasでdoc/app/slides/code、ファイル入力、選択箇所指示編集、コードプレビュー、Docs/Slidesへの出力</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Gemini Canvas</td>
+<td><a href="https://support.google.com/gemini/answer/16047321?hl=en" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-204">
+<td><a class="cite" href="#src-204">[204]</a></td>
+<td>Deep Researchは全ユーザーThinking、Pro/UltraはProでも生成</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Gemini Deep Research</td>
+<td><a href="https://support.google.com/gemini/answer/15719111?hl=en&amp;ref_topic=16079905" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-205">
+<td><a class="cite" href="#src-205">[205]</a></td>
+<td>動画Gemini Omni、個人Google AIプラン必要（Plus以上）</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Gemini動画生成・編集</td>
+<td><a href="https://support.google.com/gemini/answer/16126339?hl=en" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-206">
+<td><a class="cite" href="#src-206">[206]</a></td>
+<td>音楽Lyria、文章から歌詞/歌声/伴奏</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Gemini音楽生成</td>
+<td><a href="https://support.google.com/gemini/answer/16901237?hl=en" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-207">
+<td><a class="cite" href="#src-207">[207]</a></td>
+<td>画像生成と入力画像編集</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Gemini画像生成・編集</td>
+<td><a href="https://support.google.com/gemini/answer/14286560?hl=en&amp;ref_topic=16079905" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-208">
+<td><a class="cite" href="#src-208">[208]</a></td>
+<td>7/16 NotebookLM→Gemini Notebook、独立製品を維持、個人アカウントも対象</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>NotebookLM is now Gemini Notebook</td>
+<td><a href="https://workspaceupdates.googleblog.com/2026/07/notebooklm-now-gemini-notebook.html" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-209">
+<td><a class="cite" href="#src-209">[209]</a></td>
+<td>9月2日から5時間・週の計算量枠。Plusは無料比2倍、Pro4倍、UltraはPro比5倍／20倍。</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Gemini Notebookの使用量上限</td>
+<td><a href="https://support.google.com/gemininotebook/answer/17670842?hl=ja" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-210">
+<td><a class="cite" href="#src-210">[210]</a></td>
+<td>資料起点の対話・レポートと、編集可能なDocs／Sheetsへの出力。</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Create a notebook</td>
+<td><a href="https://support.google.com/gemininotebook/answer/16206563?hl=en" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-211">
+<td><a class="cite" href="#src-211">[211]</a></td>
+<td>スライドの指示編集/並替、PPTX・PDF出力（詳細追補）</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Generate a Slide Deck</td>
+<td><a href="https://support.google.com/gemininotebook/answer/16757456?hl=en" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-212">
+<td><a class="cite" href="#src-212">[212]</a></td>
+<td>音声概要は資料要約</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Generate an Audio Overview</td>
+<td><a href="https://support.google.com/gemininotebook/answer/16212820?hl=en" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-213">
+<td><a class="cite" href="#src-213">[213]</a></td>
+<td>検索計画→多段階調査→引用付きレポート</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>NotebookLM adds Deep Research</td>
+<td><a href="https://blog.google/innovation-and-ai/models-and-research/google-labs/notebooklm-deep-research-file-types/" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-214">
+<td><a class="cite" href="#src-214">[214]</a></td>
+<td>Gemini Notebook内のコード生成・クラウド実行。Ultraで提供、Proは展開予定。</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>NotebookLM is now Gemini Notebook</td>
+<td><a href="https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-215">
+<td><a class="cite" href="#src-215">[215]</a></td>
+<td>画像は入力資料に基づくInfographic生成</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Generate an Infographic</td>
+<td><a href="https://support.google.com/gemininotebook/answer/16758265" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-216">
+<td><a class="cite" href="#src-216">[216]</a></td>
+<td>動画は資料概要に限定して△</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Generate Video Overviews</td>
+<td><a href="https://support.google.com/gemininotebook/answer/16454555" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-221">
+<td><a class="cite" href="#src-221">[221]</a></td>
+<td>Free、SuperGrok月30ドル、Plus100ドル。Heavy/Liteの存在と機能階層。</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Grok Pricing</td>
+<td><a href="https://x.ai/pricing" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-222">
+<td><a class="cite" href="#src-222">[222]</a></td>
+<td>公開月払い画面：Heavy300ドル、Plus100ドル。Heavyに最大枠・複数Agent・X Premium+。</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>SuperGrok公開料金画面</td>
+<td><a href="https://grok.com/supergrok?referrer=grok-build" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-223">
+<td><a class="cite" href="#src-223">[223]</a></td>
+<td>現行全製品共有の週間使用枠</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Grok FAQ</td>
+<td><a href="https://docs.x.ai/grok/faq" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-224">
+<td><a class="cite" href="#src-224">[224]</a></td>
+<td>文章対話、ファイルPDF、Canvas inline編集、検索引用、生成画像動画（文章/画像/指示編集）、voice会話、コード</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Grok機能紹介</td>
+<td><a href="https://x.ai/grok" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-225">
+<td><a class="cite" href="#src-225">[225]</a></td>
+<td>日本配信・日本語。円IAP Heavy50000、Plus15000、SuperGrok5000、Lite1500。請求周期未確認。</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Grok 日本App Store</td>
+<td><a href="https://apps.apple.com/jp/app/grok-%E7%94%9F%E6%88%90ai/id6670324846?platform=mac" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-226">
+<td><a class="cite" href="#src-226">[226]</a></td>
+<td>コード生成、複数ファイル変更、実行・テスト、無料試用</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Grok Build</td>
+<td><a href="https://x.ai/build" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-227">
+<td><a class="cite" href="#src-227">[227]</a></td>
+<td>BotはSuperGrok/Plus/HeavyおよびCursorPro/Pro+/Ultraで現在提供</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Grok Bot</td>
+<td><a href="https://x.ai/bot" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-231">
+<td><a class="cite" href="#src-231">[231]</a></td>
+<td>9/14更新、Max $200/月 $2,000/年</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Perplexity Max 日本語ヘルプ</td>
+<td><a href="https://www.perplexity.ai/help-center/ja/articles/11680686-perplexity-max" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-232">
+<td><a class="cite" href="#src-232">[232]</a></td>
+<td>公式FAQ Pro $20/月 $200/年</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Perplexity公式Hub</td>
+<td><a href="https://www.perplexity.ai/hub" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-233">
+<td><a class="cite" href="#src-233">[233]</a></td>
+<td>Computerの定期月次creditsはProなし／Max10000。初回特典Pro4000／Max35000は30日限り。現行追加購入は100credits＝1ドル。</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>How Credits Work on Perplexity</td>
+<td><a href="https://www.perplexity.ai/help-center/en/articles/13838041-how-credits-work-on-perplexity" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-234">
+<td><a class="cite" href="#src-234">[234]</a></td>
+<td>ProでResearch、画像/限定動画、Create資料アプリ</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>What is Perplexity Pro?</td>
+<td><a href="https://www.perplexity.ai/help-center/en/articles/10352901-what-is-perplexity-pro" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-236">
+<td><a class="cite" href="#src-236">[236]</a></td>
+<td>Webは通貨選択可、実際の円価格はcheckoutで表示（未ログイン制限で未確認）</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Paying in Local Currency</td>
+<td><a href="https://www.perplexity.ai/help-center/en/articles/13182759-paying-in-local-currency" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-237">
+<td><a class="cite" href="#src-237">[237]</a></td>
+<td>日本配信、日本語、IAP Pro ¥3,000 / ¥30,000、Max ¥30,000</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Perplexity 日本App Store</td>
+<td><a href="https://apps.apple.com/jp/app/perplexity-%E8%87%AA%E7%94%B1%E3%81%AB%E5%B0%8B%E3%81%AD%E3%82%8B/id1668000334" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-238">
+<td><a class="cite" href="#src-238">[238]</a></td>
+<td>無料の限定画像生成と有料拡大、指示による編集。個人生成画像は非商用限定。比較表との無料提供の不一致。</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Generating Images with Perplexity</td>
+<td><a href="https://www.perplexity.ai/help-center/en/articles/10354781-generating-images-with-perplexity" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-239">
+<td><a class="cite" href="#src-239">[239]</a></td>
+<td>動画はPro以上、文章・単一画像起点、8秒まで。既存動画編集不可。Max回数は非公開、追加枠購入不可。</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Generating Videos with Perplexity</td>
+<td><a href="https://www.perplexity.ai/help-center/en/articles/11985060-generating-videos-with-perplexity" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-240">
+<td><a class="cite" href="#src-240">[240]</a></td>
+<td>無料Research月1回、Pro Search1日3回。無料画像の表記は専用記事<a class="cite" href="#src-238">[238]</a>と不一致。</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Which Perplexity Subscription Plan is right for you?</td>
+<td><a href="https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-241">
+<td><a class="cite" href="#src-241">[241]</a></td>
+<td>日本月額Plus1800、Pro3500、Ultra14750円。年額Pro30000／Ultra159291円。月credits4000／20000。</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Gamma Pricing</td>
+<td><a href="https://gamma.app/pricing" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-242">
+<td><a class="cite" href="#src-242">[242]</a></td>
+<td>無料初回400credits、有料Pro4000／Ultra20000月次、両100枚/指示。繰越最大2か月分、ドメイン10／100。</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>How can I upgrade my Gamma subscription?</td>
+<td><a href="https://help.gamma.app/en/articles/8077107-how-can-i-upgrade-my-gamma-subscription" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-243">
+<td><a class="cite" href="#src-243">[243]</a></td>
+<td>大手クレジット/デビットカード世界のどの国からも利用可能</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Gamma Payment Methods</td>
+<td><a href="https://help.gamma.app/en/articles/11048302-what-payment-methods-does-gamma-accept" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-244">
+<td><a class="cite" href="#src-244">[244]</a></td>
+<td>Agent対話でWeb検索・引用・画像/資料編集</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Introducing Gamma 3.0</td>
+<td><a href="https://gamma.app/insights/introducing-gamma-3-0" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-245">
+<td><a class="cite" href="#src-245">[245]</a></td>
+<td>テキスト画像生成</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Generate images with AI in Gamma</td>
+<td><a href="https://help.gamma.app/en/articles/11047176-how-do-i-generate-images-with-ai-in-gamma" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-246">
+<td><a class="cite" href="#src-246">[246]</a></td>
+<td>7/30、全個人planにImagine編集、restyle/erase等、クレジット消費、SVG/video編集対象外</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Edit images with Gamma Imagine</td>
+<td><a href="https://help.gamma.app/en/articles/16154694-how-do-i-edit-images-with-gamma-imagine" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-247">
+<td><a class="cite" href="#src-247">[247]</a></td>
+<td>多言語UI、入力言語でAI生成・編集</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Use Gamma in your preferred language</td>
+<td><a href="https://help.gamma.app/en/articles/11016506-how-do-i-use-gamma-in-my-preferred-language" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-251">
+<td><a class="cite" href="#src-251">[251]</a></td>
+<td>ProからDOCX/XLSX/PPTX/HTML生成、編集、履歴、ダウンロード。資料◎、コード○</td>
+<td>個人Pro/Max、2026-09-03更新</td>
+<td>Creating assets with Perplexity: Overview</td>
+<td><a href="https://www.perplexity.ai/help-center/en/articles/12528830-creating-assets-with-perplexity-overview" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-253">
+<td><a class="cite" href="#src-253">[253]</a></td>
+<td>Computer購読者向け、コード・アプリ・文書作成、Max月10,000、ボーナス別</td>
+<td>個人Pro/Max、2026-09-18更新</td>
+<td>What is Computer?</td>
+<td><a href="https://www.perplexity.ai/help-center/en/articles/13837784-what-is-computer" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-257">
+<td><a class="cite" href="#src-257">[257]</a></td>
+<td>多段階の自律調査、計画更新、レポート化。Free制限付き、Pro拡大</td>
+<td>Research、2026-09-03更新</td>
+<td>What is Research mode?</td>
+<td><a href="https://www.perplexity.ai/help-center/en/articles/10738684-what-is-research-mode" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-258">
+<td><a class="cite" href="#src-258">[258]</a></td>
+<td>調査計画・複数検索・一次情報参照・引用付き構造化レポート</td>
+<td>Deep Research、2026-09-24確認。Computer版中心</td>
+<td>Deep Research, Now in Computer</td>
+<td><a href="https://www.perplexity.ai/en-GB/hub/products/deep-research" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-301">
+<td><a class="cite" href="#src-301">[301]</a></td>
+<td>日本Meta One：Core月949円、Premium2900円、税込。画像・動画の生成枠増、数値未確認。Restyle日本未対応。</td>
+<td>一般向け・2026-09-24確認</td>
+<td>新たなサブスクリプション「Meta One」の提供を開始</td>
+<td><a href="https://about.fb.com/ja/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-302">
+<td><a class="cite" href="#src-302">[302]</a></td>
+<td>日本で対話・画像カスタマイズ・画像アニメ化を段階提供。一般的な文章からの動画生成とは区別。</td>
+<td>一般向け・2026-09-24確認</td>
+<td>Meta AIを日本で段階的に提供開始</td>
+<td><a href="https://about.fb.com/ja/news/2025/11/meta-ai-gradual-rollout-begins-in-japan/" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-303">
+<td><a class="cite" href="#src-303">[303]</a></td>
+<td>画像の文章生成・入力画像変換・囲みや描画による部分編集、無料提供と地域拡大。日本の全機能適用は未確認。</td>
+<td>一般向け・2026-09-24確認</td>
+<td>Introducing Muse Image: Image Generation Built for Your World</td>
+<td><a href="https://about.fb.com/news/2026/07/introducing-muse-image-meta-ai/" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-306">
+<td><a class="cite" href="#src-306">[306]</a></td>
+<td>個人アプリを無料・広告なし・アプリ内購入なしと案内。Web検索・DeepThink・読取。API料金は別。</td>
+<td>一般向け・2026-09-24確認</td>
+<td>Introducing DeepSeek App!</td>
+<td><a href="https://api-docs.deepseek.com/news/news250115/" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-307">
+<td><a class="cite" href="#src-307">[307]</a></td>
+<td>日本のDeepSeek公式配布、無料、日本語。</td>
+<td>一般向け・2026-09-24確認</td>
+<td>DeepSeek - AI アシスタント</td>
+<td><a href="https://apps.apple.com/jp/app/deepseek-ai-%E3%82%A2%E3%82%B7%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%88/id6737597349?platform=ipad" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-308">
+<td><a class="cite" href="#src-308">[308]</a></td>
+<td>公式本文取得。Web検索の展開、複数の検索情報集約。2024年発表のため現行価格証拠には使わない</td>
+<td>一般向け・2026-09-24確認</td>
+<td>DeepSeek V2 系列收官，联网搜索上线官网</td>
+<td><a href="https://deepseek.com/news/v2-5-final/" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-309">
+<td><a class="cite" href="#src-309">[309]</a></td>
+<td>公式本文取得。テキスト・表・コード、Searchに関する条項。機能存在補助、APIとWeb共通条項はプラン独占証明ではない</td>
+<td>一般向け・2026-09-24確認</td>
+<td>DeepSeek Terms of Use</td>
+<td><a href="https://cdn.deepseek.com/policies/en-US/deepseek-terms-of-use.html" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-311">
+<td><a class="cite" href="#src-311">[311]</a></td>
+<td>月500/200元・枠10倍/4倍・年額。公式系CDNだが公式サイトからのリンク連鎖未確認</td>
+<td>一般向け・2026-09-24確認</td>
+<td>豆包官方帮助中心手册-beta版本</td>
+<td><a href="https://lf9-cdn-tos.draftstatic.com/obj/ies-hotsoon-draft/grace_legal/doubao_member_copywrite_for_ai.html" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］候補・帰属留保</td>
+</tr>
+<tr id="src-312">
+<td><a class="cite" href="#src-312">[312]</a></td>
+<td>Doubaoの個人有料サービスと自動更新の公式規約。</td>
+<td>一般向け・2026-09-24確認</td>
+<td>豆包付费服务协议（含自动续费服务规则）</td>
+<td><a href="https://www.doubao.com/legal/ey01" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-313">
+<td><a class="cite" href="#src-313">[313]</a></td>
+<td>中国公式アプリに月68／200／500元の階層。画像・動画・コード生成。最上位の名称はCDN資料と相違。</td>
+<td>一般向け・2026-09-24確認</td>
+<td>豆包 - 生活工作 AI 助手</td>
+<td><a href="https://apps.apple.com/cn/app/id6459478672" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-314">
+<td><a class="cite" href="#src-314">[314]</a></td>
+<td>Qwen一般向け公開画面で無料案内、画像・動画・コード生成を確認。</td>
+<td>一般向け・2026-09-24確認</td>
+<td>Qwen consumer landing page</td>
+<td><a href="https://qwen.ai/qwenchat" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-315">
+<td><a class="cite" href="#src-315">[315]</a></td>
+<td>Qwen公式アプリで画像・動画・コード、アプリ内購入の存在表示。定額有料階層は未確認。</td>
+<td>一般向け・2026-09-24確認</td>
+<td>Qwen - Alibaba AI Assistant</td>
+<td><a href="https://play.google.com/store/apps/details?id=com.tongyi.intl" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-316">
+<td><a class="cite" href="#src-316">[316]</a></td>
+<td>公式インドネシアAppStore本文取得、日本語言語表記。日本配布の根拠に代用しない</td>
+<td>一般向け・2026-09-24確認</td>
+<td>Qwen - Alibaba AI Assistant</td>
+<td><a href="https://apps.apple.com/id/app/qwen-alibaba-ai-assistant/id6757738627?platform=ipad" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-317">
+<td><a class="cite" href="#src-317">[317]</a></td>
+<td>現行月額Plus19、Pro39、Max99、Ultra199ドル。Ultra／MaxはAgent枠10倍／5倍、同時4／2、年1908／948ドル。</td>
+<td>一般向け・2026-09-24確認</td>
+<td>Kimiの料金／メンバーシッププランとサブスクリプションオプション</td>
+<td><a href="https://www.kimi.ai/membership/pricing?from=footer_nav" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-318">
+<td><a class="cite" href="#src-318">[318]</a></td>
+<td>旧名Vivace／Allegroと旧credits記載。現行Ultra／Max料金画面との差異を記録。</td>
+<td>一般向け・2026-09-24確認</td>
+<td>Pricing details</td>
+<td><a href="https://www.kimi.ai/help/membership/membership-pricing" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-319">
+<td><a class="cite" href="#src-319">[319]</a></td>
+<td>日本公式アプリと日本語。円IAPは新Max15000と旧Vivace30000等が混在し、現Ultra円月額は未確認。</td>
+<td>一般向け・2026-09-24確認</td>
+<td>Kimi – Kimi K3 is Live!</td>
+<td><a href="https://apps.apple.com/jp/app/kimi-kimi-k3-is-live/id6474233312" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-320">
+<td><a class="cite" href="#src-320">[320]</a></td>
+<td>Kimiの正規支払手段：Apple ID、Google Play、カード。</td>
+<td>一般向け・2026-09-24確認</td>
+<td>Payment issues</td>
+<td><a href="https://www.kimi.ai/help/membership/membership-payment-issues" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-321">
+<td><a class="cite" href="#src-321">[321]</a></td>
+<td>Kimiで編集可能なDOCX・XLSXを生成・出力。</td>
+<td>一般向け・2026-09-24確認</td>
+<td>Docs &amp; Sheets overview</td>
+<td><a href="https://www.kimi.ai/help/docs-and-sheets/docs-and-sheets-overview" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-322">
+<td><a class="cite" href="#src-322">[322]</a></td>
+<td>Kimi Slidesの編集可能PPTX出力、無料credits。無料で三種全て作れるとの証拠にはしない。</td>
+<td>一般向け・2026-09-24確認</td>
+<td>Slides overview</td>
+<td><a href="https://www.kimi.ai/help/slides/ppt-overview" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-323">
+<td><a class="cite" href="#src-323">[323]</a></td>
+<td>公式本文取得。反復調査・本文引用・調査報告書が検索◎を支える</td>
+<td>一般向け・2026-09-24確認</td>
+<td>Deep Research overview</td>
+<td><a href="https://www.kimi.ai/help/deep-research/deep-research-overview" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-324">
+<td><a class="cite" href="#src-324">[324]</a></td>
+<td>公式本文取得。複数ファイル編集、実行・検証、テストのコーディングエージェント</td>
+<td>一般向け・2026-09-24確認</td>
+<td>Kimi Code CLI use cases</td>
+<td><a href="https://www.kimi.ai/help/kimi-code/cli-use-cases" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-325">
+<td><a class="cite" href="#src-325">[325]</a></td>
+<td>Kimi Agentのアプリ生成・展開とKimi Code共有枠、5時間・週上限。旧長文上限と現行UIを区別。</td>
+<td>一般向け・2026-09-24確認</td>
+<td>Kimi Agent overview / features &amp; limitations</td>
+<td><a href="https://www.kimi.ai/help/agent/agent-overview" target="_blank" rel="noopener">公式ページ</a> / <a href="https://www.kimi.ai/help/agent/agent-features-and-limits" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-326">
+<td><a class="cite" href="#src-326">[326]</a></td>
+<td>c.ai+月9.99／年94.99ドル。top models無制限、記憶Best・広告なし、その他機能の上限は残る。</td>
+<td>一般向け・2026-09-24確認</td>
+<td>c.ai+ Subscribe</td>
+<td><a href="https://character.ai/subscribe" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-327">
+<td><a class="cite" href="#src-327">[327]</a></td>
+<td>(c.ai) lite月4.99／週2.49ドル。上位モデルの日次体験、plusとの差。</td>
+<td>一般向け・2026-09-24確認</td>
+<td>About (c.ai) lite</td>
+<td><a href="https://support.character.ai/hc/en-us/articles/56173313531675-About-c-ai-lite" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-328">
+<td><a class="cite" href="#src-328">[328]</a></td>
+<td>公式日本AppStore本文取得。円IAP、JA言語表記。請求周期不明の円額を通常月額に断定しない</td>
+<td>一般向け・2026-09-24確認</td>
+<td>Character AI: Chat, Talk, Text</td>
+<td><a href="https://apps.apple.com/jp/app/character-ai-chat-talk-text/id1671705818" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-329">
+<td><a class="cite" href="#src-329">[329]</a></td>
+<td>Characterの日本語音声会話・Voice作成は無料。任意原稿読み上げを証明するものではない。</td>
+<td>一般向け・2026-09-24確認</td>
+<td>Character Calls &amp; Voice FAQ</td>
+<td><a href="https://support.character.ai/hc/en-us/articles/23957274129691-Character-Calls-Voice-FAQ" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-330">
+<td><a class="cite" href="#src-330">[330]</a></td>
+<td>紹介動画内の指定台詞と感情指定。画像・人物からの短動画。対応する最小／最高プランの帰属未確認。</td>
+<td>一般向け・2026-09-24確認</td>
+<td>7. Introduction Videos</td>
+<td><a href="https://support.character.ai/hc/en-us/articles/50609298782619-7-Introduction-Videos-%EF%BE%89%EF%BE%9E" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-331">
+<td><a class="cite" href="#src-331">[331]</a></td>
+<td>文章や参考画像によるImagine／Comicsの現行画像生成。プラン別対応は未確認。</td>
+<td>一般向け・2026-09-24確認</td>
+<td>Post-training image models for fandom</td>
+<td><a href="https://blog.character.ai/cai-image-models/" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-334">
+<td><a class="cite" href="#src-334">[334]</a></td>
+<td>日本環境の公開/chat/から地域制限画面へ転送。ログイン後の利用・課金可否は未確認。</td>
+<td>一般向け・2026-09-24確認</td>
+<td>豆包地域制限画面</td>
+<td><a href="https://www.doubao.com/security/doubao-region-ban?source=1" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-335">
+<td><a class="cite" href="#src-335">[335]</a></td>
+<td>Kimiの創作プラグインに画像・動画・中国語TTS。追加費用・最低会員・日本提供の対応未確認。</td>
+<td>一般向け・2026-09-24確認</td>
+<td>What can Kimi do?</td>
+<td><a href="https://www.kimi.ai/help/others/capability" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-336">
+<td><a class="cite" href="#src-336">[336]</a></td>
+<td><a class="cite" href="#src-308">[308]</a>からリンク、公開ブラウザで画像を視認。検索結果30件と本文内の引用番号を確認。検索基本○の出典提示要件を補強</td>
+<td>一般向け・2026-09-24確認</td>
+<td>DeepSeek公式検索結果スクリーンショット</td>
+<td><a href="https://deepseek.com/images/blog/v2-5-final/deepseek_v2_5_search_example_zh.png" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-401">
+<td><a class="cite" href="#src-401">[401]</a></td>
+<td>4プラン、月年価格、Fast/Relax/同時数</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Comparing Midjourney Plans</td>
+<td><a href="https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-402">
+<td><a class="cite" href="#src-402">[402]</a></td>
+<td>本体無料試用なし、niji限定試用</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Free Trials</td>
+<td><a href="https://docs.midjourney.com/hc/en-us/articles/27870399340173-Free-Trials" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-403">
+<td><a class="cite" href="#src-403">[403]</a></td>
+<td>外部画像編集・範囲選択再生成</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Editor</td>
+<td><a href="https://docs.midjourney.com/hc/en-us/articles/32764383466893-Editor" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-404">
+<td><a class="cite" href="#src-404">[404]</a></td>
+<td>税が表示価格に追加</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Tax / VAT Charges</td>
+<td><a href="https://docs.midjourney.com/hc/en-us/articles/27868801261325-Tax-VAT-Charges" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-405">
+<td><a class="cite" href="#src-405">[405]</a></td>
+<td>Stripe主要カード支払</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Accepted Payment Methods</td>
+<td><a href="https://docs.midjourney.com/hc/en-us/articles/27868831972365-Accepted-Payment-Methods" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-406">
+<td><a class="cite" href="#src-406">[406]</a></td>
+<td>画像起点動画、全有料Fast、Pro/Mega Relax、延長</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Video</td>
+<td><a href="https://docs.midjourney.com/hc/en-us/articles/37460773864589-Video" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-407">
+<td><a class="cite" href="#src-407">[407]</a></td>
+<td>限定的会話・非英語指示</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Draft &amp; Conversational Modes</td>
+<td><a href="https://docs.midjourney.com/hc/en-us/articles/35577175650957-Draft-Conversational-Modes" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-408">
+<td><a class="cite" href="#src-408">[408]</a></td>
+<td>nijiとMidjourney同一サブスク</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>How do I bind an account</td>
+<td><a href="https://nijijourney.com/en/help-center/account-how-to-bind" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-409">
+<td><a class="cite" href="#src-409">[409]</a></td>
+<td>日本提供・円建て月額・日本語指示例</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>にじジャーニー 日本App Store</td>
+<td><a href="https://apps.apple.com/jp/app/%E3%81%AB%E3%81%98%E3%82%B8%E3%83%A3%E3%83%BC%E3%83%8B%E3%83%BC-ai-%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A2%E3%83%BC%E3%83%88/id6446376937" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-410">
+<td><a class="cite" href="#src-410">[410]</a></td>
+<td>Kling現行個人最上位・直下・月年価格・量</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Kling Membership Plans</td>
+<td><a href="https://kling.ai/app/membership/membership-plan" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-411">
+<td><a class="cite" href="#src-411">[411]</a></td>
+<td>個人契約主体、月年契約、延長、credit有効期間</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Kling Terms of Paid Service</td>
+<td><a href="https://kling.ai/docs/payment-policy" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-412">
+<td><a class="cite" href="#src-412">[412]</a></td>
+<td>日本提供、日本語UI、円建て月額、画像動画</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Kling日本App Store</td>
+<td><a href="https://apps.apple.com/jp/app/kling-ai-ai-image-video-maker/id6738049229" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-413">
+<td><a class="cite" href="#src-413">[413]</a></td>
+<td>Hailuo現行価格・量・無制限条件</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Hailuo Subscription</td>
+<td><a href="https://hailuoai.video/subscribe" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-414">
+<td><a class="cite" href="#src-414">[414]</a></td>
+<td>Hailuo旧料金との相違、税、無料利用</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Hailuo Subscription Service Terms</td>
+<td><a href="https://hailuoai.video/doc/payment-policy.html" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-415">
+<td><a class="cite" href="#src-415">[415]</a></td>
+<td>Kling生成/既存編集/画像編集</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Text to Video／Image to Video／Video Editor／Photo Editor</td>
+<td><a href="https://kling.ai/feature/text-to-video" target="_blank" rel="noopener">公式ページ</a> / <a href="https://kling.ai/feature/image-to-video" target="_blank" rel="noopener">公式ページ</a> / <a href="https://kling.ai/feature/ai-video-editor" target="_blank" rel="noopener">公式ページ</a> / <a href="https://kling.ai/feature/ai-photo-editor" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-416">
+<td><a class="cite" href="#src-416">[416]</a></td>
+<td>日本語公式アプリ・購入・画像と動画</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Hailuo Google Play</td>
+<td><a href="https://play.google.com/store/apps/details?hl=ja&amp;id=ai.hailuo.video" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-417">
+<td><a class="cite" href="#src-417">[417]</a></td>
+<td>Kling3.0音声・音声参照・最低提供確認</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>VIDEO 3.0 Model Guide／Kuaishou Launch 3.0</td>
+<td><a href="https://kling.ai/quickstart/klingai-video-3-model-user-guide" target="_blank" rel="noopener">公式ページ</a> / <a href="https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-30-model-ushering-era-where-everyone-can-be" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-418">
+<td><a class="cite" href="#src-418">[418]</a></td>
+<td>Suno価格・量・モデル・Studio・税</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Suno Pricing</td>
+<td><a href="https://suno.com/pricing" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-419">
+<td><a class="cite" href="#src-419">[419]</a></td>
+<td>Suno月払い$10/$30、年払い$8/$24換算</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Suno AI Music Software</td>
+<td><a href="https://suno.com/hub/ai-music-software" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-420">
+<td><a class="cite" href="#src-420">[420]</a></td>
+<td>9/3 DL制度・Studio例外・無料生涯7</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Upcoming Changes FAQ</td>
+<td><a href="https://help.suno.com/en/articles/13614785" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-421">
+<td><a class="cite" href="#src-421">[421]</a></td>
+<td>v6モデル別プラン、旧モデル廃止、10credit/2曲</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>v6 FAQ</td>
+<td><a href="https://help.suno.com/en/articles/13924481" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-422">
+<td><a class="cite" href="#src-422">[422]</a></td>
+<td>Suno文章指示楽曲生成</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Simple Mode</td>
+<td><a href="https://help.suno.com/en/articles/2462273" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-423">
+<td><a class="cite" href="#src-423">[423]</a></td>
+<td>区間選択・歌詞差替・延長、最低Pro</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Song Editor／Replace Section</td>
+<td><a href="https://help.suno.com/en/articles/6141505" target="_blank" rel="noopener">公式ページ</a> / <a href="https://help.suno.com/en/articles/3271873" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-424">
+<td><a class="cite" href="#src-424">[424]</a></td>
+<td>JPY支払、カード、iOS契約Web共通</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Accepted Payments</td>
+<td><a href="https://help.suno.com/en/articles/2421185" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-425">
+<td><a class="cite" href="#src-425">[425]</a></td>
+<td>Suno日本契約/円価格/日本語</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Suno日本App Store</td>
+<td><a href="https://apps.apple.com/jp/app/suno-%E3%82%B9%E3%83%BC%E3%83%8E-ai%E9%9F%B3%E6%A5%BD%E4%BD%9C%E6%88%90-%E4%BD%9C%E6%9B%B2%E3%82%A2%E3%83%97%E3%83%AA/id6480136315" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-427">
+<td><a class="cite" href="#src-427">[427]</a></td>
+<td>Hailuo H3各生成/編集と提供開始</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>MiniMax H3</td>
+<td><a href="https://www.minimax.io/blog/minimax-h3" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-428">
+<td><a class="cite" href="#src-428">[428]</a></td>
+<td>外部AudioリンクとAgent別の区別</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>Hailuo Tools／Agent</td>
+<td><a href="https://hailuoai.video/tool" target="_blank" rel="noopener">公式ページ</a> / <a href="https://hailuoai.video/agent" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-429">
+<td><a class="cite" href="#src-429">[429]</a></td>
+<td>Megaデスクトップ限定</td>
+<td>個人プラン・2026-09-24確認</td>
+<td>niji Group Billing Options</td>
+<td><a href="https://nijijourney.com/help-center/are-there-group-plan-discounts-or-enterprise-billing-options" target="_blank" rel="noopener">公式ページ</a></td>
+<td>［公］</td>
+</tr>
+<tr id="src-501">
+<td><a class="cite" href="#src-501">[501]</a></td>
+<td>直下比等：Google枠20÷5＝4、差32000−14500＝17500、Flow25000÷10000＝2.5。ChatGPT表示枠20÷5＝4、差200−100＝100。Claude5時間枠20÷5＝4。Kimi枠10÷5＝2。Perplexity差200−20＝180、10000÷100＝100ドル相当、Pro20＋100＝120。Gamma20000÷4000＝5、14750÷3500≒4.21。Suno枠10000÷2500＝4、DL60÷20＝3。年額の月換算＝年額÷12。</td>
+<td>2026-09-24算出</td>
+<td>本稿の比較計算</td>
+<td>元データ <a class="cite" href="#src-101">[101]</a><a class="cite" href="#src-113">[113]</a><a class="cite" href="#src-201">[201]</a><a class="cite" href="#src-231">[231]</a><a class="cite" href="#src-232">[232]</a><a class="cite" href="#src-233">[233]</a><a class="cite" href="#src-241">[241]</a><a class="cite" href="#src-317">[317]</a><a class="cite" href="#src-418">[418]</a><a class="cite" href="#src-419">[419]</a></td>
+<td>［計］</td>
+</tr>
+<tr id="src-601">
+<td><a class="cite" href="#src-601">[601]</a></td>
+<td>同一Opus 5.5でも推論設定で値が異なる。製品プランの品質順位へ転記しない。</td>
+<td>Index v4.3.2・2026-09-24閲覧</td>
+<td>Artificial Analysis Intelligence Index</td>
+<td><a href="https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index" target="_blank" rel="noopener">評価ページ</a></td>
+<td>［調］</td>
+</tr>
+<tr id="src-602">
+<td><a class="cite" href="#src-602">[602]</a></td>
+<td>複合評価の方法。日本語文章品質の代用にしない。</td>
+<td>v4.3.2・2026-09-24閲覧</td>
+<td>Artificial Analysis Methodology</td>
+<td><a href="https://artificialanalysis.ai/methodology/intelligence-benchmarking" target="_blank" rel="noopener">評価方法</a></td>
+<td>［調］</td>
+</tr>
+<tr id="src-603">
+<td><a class="cite" href="#src-603">[603]</a></td>
+<td>設定名・暫定表示・信頼区間を持つ対戦選好評価。各有料プランと実行条件の一致は未確認。</td>
+<td>表示2026-09-13・閲覧09-24</td>
+<td>Text Arena Overall</td>
+<td><a href="https://arena.ai/leaderboard/text" target="_blank" rel="noopener">評価ページ</a></td>
+<td>［調］</td>
+</tr>
+<tr id="src-604">
+<td><a class="cite" href="#src-604">[604]</a></td>
+<td>対戦での選好、confidence interval、Rank Spreadの説明。</td>
+<td>2026-09-24閲覧</td>
+<td>Arena Leaderboards methodology</td>
+<td><a href="https://help.arena.ai/articles/7011479247-how-to-see-ai-rankings-in-arena-leaderboards-2-0-wip" target="_blank" rel="noopener">評価方法</a></td>
+<td>［調］</td>
+</tr>
+</tbody>
+</table></div>
+<p>提供参考資料（公式情報源には分類しない）：<a class="cite" href="https://gift-from-sky.github.io/ai-power-map/chatgpt.html" target="_blank" rel="noopener">[R1]</a> ChatGPT側「生成AI勢力図」2026-09-21、<a class="cite" href="https://gift-from-sky.github.io/ai-power-map/claude.html" target="_blank" rel="noopener">[R2]</a> Claude側「分析対決007 v2」。H表の出発点・相違と会社情報に使用。これらの元出典を一括して再確認した扱いにはしていない。今回の再確認箇所は上記の公式出典を付した。</p>
+<h2 id="sec-I自己点検作業記録">I．自己点検・作業記録</h2>
+<ul>
+<li><strong>料金・プラン</strong>：20対象の行を照合。日本円／公式外貨、税別・税込・未確認、月払いと年払い換算を分離した。最上位と直下は細分された課金段階まで比較し、追加creditsや企業契約を最上位にしていない。単一有料と確認できた対象はなく、Qwenの不明な階層を「該当なし」にしなかった。</li>
+<li><strong>機能・プランの帰属</strong>：B・C-1を同じ管理番号順で照合。記号と量・モデル追加に出典を付け、C-2に最低確認プランと未確認を記載。Codex・Claude Code・Kimi Code・Office・Grok Botなどの同梱別アプリを明記した。Googleの同一契約を二重の支払価値として合算していない。</li>
+<li><strong>順位・記事形式</strong>：Dは10契約・11サービス、Eは指定8用途、短い理由欄は20字以内。Gは3,000〜5,000字の範囲。全順位と隣接順位の理由を記し、Googleの2対象は1位の1契約に統合し、同率はなし。10位外は9サービス。単位の異なるcreditsや「倍」を実際の完了件数として比べていない。順位は点数化せず、同じ重視順を全対象に適用した。</li>
+<li><strong>中立性・参考資料</strong>：ChatGPT Pro 20xは契約可能と仮定した比較であることを明示した。受付停止の事実を残し、料金・機能・利用量の評価基準は他社と共通にした。第1部の51セルの記号差とMidjourneyの片側欠落を照合し、未解消箇所を「？」とした。元資料由来の会社情報等と今回の公式再確認を分け、利用者数を評価に含めていない。</li>
+<li><strong>出典</strong>：出典番号の参照先、表の件数・列、本文字数を機械照合し、料金・機能の主要根拠を読み合わせた。引用は公式の事実・条件の確認に使用し、順位は本稿の判断とした。見つからない情報を「非公開」「非対応」に置き換えていない。自己点検は無誤謬の保証ではない。</li>
+</ul>
+<p><strong>残った問題と、順位が変わる条件</strong></p>
+<ol>
+<li>ChatGPT Pro 20xは契約可能と仮定した2位。新規申込・アップグレード停止の事実は残るため、今すぐ新規購入できる候補だけを求める場合には、そのまま適用できない。文章の指定箇所編集のProへの帰属も未確認。</li>
+<li>Perplexity Maxの定期Computer枠は現行追加購入単価で100ドル相当で、Proとの差額180ドルの全額を埋めない。Microsoft Pro、Grok Heavy、Meta Premiumの直下に対する実際の追加量、各社の同一課題での消費量・待ち時間は未確認。公式表の同じ表現から量の同一性や速度を断定していない。</li>
+<li>Cursorは日本語公式販売・直接支払導線を確認したが、日本を名指しする契約国一覧と日本語UIの全範囲は未確認。Kimiは日本語Ultra申込導線・日本有料配布を確認したが、購入適格性は実アカウントで試していない。全社で決済は行っていない。</li>
+<li>QwenのIAPの内容・最高定額、Doubaoの日本正規利用・支払、Hailuo Maxの日本契約条件は未確認。DoubaoのCDN資料は公式サイトからのリンク連鎖を確認できず、量・年額の値は留保した。</li>
+<li>Kimiの新旧プラン名、Hailuoの現行価格と旧規約・無制限対象モデル、Gammaの年払い表示と旧FAQ、Perplexityの無料画像の公式ページ間相違が残る。現行UIまたは該当機能の専用説明を優先した理由を本文に残した。</li>
+<li>音声会話と指定原稿の音声生成、資料閲覧と編集可能な成果物作成を区別した。各社音声制作の細部、Character.AIの画像・動画・指定台詞のプラン帰属、Kimi創作プラグインの同契約内提供、生成物の実際の編集しやすさは未確認。</li>
+</ol>
+<p><strong>作業記録：初版</strong></p>
+<ul>
+<li>開始：2026-09-24 <strong>10:31:46 JST</strong>〈依頼後に最初に取得した時刻〉。</li>
+<li>初版提出直前：<strong>2026-09-24 11:00:13 JST</strong>。</li>
+<li>初版の計測経過時間：<strong>28分27秒</strong>。調査、分担調査の並行経過、外部取得待ち、執筆、自己点検を含む。各担当の作業時間を足し上げた値ではない。</li>
+<li>時間内の調査範囲から外したもの：ログインを要する購入最終画面、全モデルの消費量、日本語品質の実測、全購入経路の税込円額、全機能の地域別展開状況。第三者評価は別記の採否記録による。実購入・実測を行っていないことと、機能非対応とは別である。</li>
+</ul>
+<p><strong>作業記録：第1回改訂</strong></p>
+<ul>
+<li>改訂内容：ChatGPT Pro 20xを契約可能と仮定して2位へ、GeminiとGemini Notebookを1位の1契約へ統合。本文の比較理由・掲載数・注記も更新。</li>
+<li>料金・機能は初回調査の確認結果を使用し、受付再開や新機能を新たに確認したものではない。</li>
+<li>改訂開始：2026-09-24 <strong>11:11:11 JST</strong>。</li>
+<li>改訂提出直前：<strong>2026-09-24 11:13:18 JST</strong>。</li>
+<li>改訂作業時間：<strong>2分7秒</strong>。初版からの会話待ち時間は含めず、今回の編集・整合確認を計測。</li>
+</ul>
+<p><strong>作業記録：第2回改訂・検品反映</strong></p>
+<ul>
+<li>題名を「課金価値分析対決008」に訂正。第1部の参考資料名・リンクに含まれる007は、その資料の正しい番号として維持。</li>
+<li>同一契約のGoogle 2サービスを1行にまとめる方針と順位は維持。比較条件の説明を読者向けの表現に整え、受付停止の事実と契約可能の仮定は明示。</li>
+<li>改訂開始：2026-09-24 <strong>11:59:09 JST</strong>。</li>
+<li>改訂提出直前：<strong>2026-09-24 12:00:04 JST</strong>。</li>
+<li>改訂作業時間：<strong>0分55秒</strong>。料金・機能の追加調査は行わず、題名・表現と整合性を確認。</li>
+</ul>
+<p class="foot">この文書は、共通の依頼文に対するAIの回答をそのまま公開したものです（誤字・表記の修正なし）。順位は調査基準日時点の公開情報にもとづく目安で、性能の実測ではありません。料金・プラン・提供機能は変わることがあります。</p>
+</div>
+</body>
+</html>
